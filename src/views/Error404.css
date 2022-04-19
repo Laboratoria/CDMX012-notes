@@ -1,0 +1,16 @@
+.container__error {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container__img {
+  width: 50%;
+  padding: 20px;
+}
+
+.error__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

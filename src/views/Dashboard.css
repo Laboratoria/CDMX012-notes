@@ -1,0 +1,36 @@
+.container_dashboard {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.dashboard__container {
+  display: flex;
+  flex-direction: row;
+  width: 95vw;
+  height: 100vh;
+}
+
+.heroDashboard {
+  position: relative;
+  right: 55px;
+  top: 960px;
+}
+
+.dashboard {
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  background-color: white;
+  border-top-left-radius: 115px;
+}
+
+.dashboard__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard__title--text {
+  color: var(--DeepPink);
+  margin: 50px 0;
+}
