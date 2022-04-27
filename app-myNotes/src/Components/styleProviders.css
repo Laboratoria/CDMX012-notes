@@ -1,0 +1,75 @@
+.providers_content{
+  width: 70%;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+.btn_provider{
+  width: 100%;
+  height: 10rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: none;
+  border: 3px solid #00f7ff;
+  border-radius: 11px;
+}
+
+.provider_icon {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 1.5rem 2rem;
+}
+
+.btn_send_prov{
+  width:100%;
+  height: 5rem;
+  background-color: #23262F;  
+  color: white;
+  font-family: 'Inter';
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  outline: none;
+  border: none;
+}
+
+/* .btn_provider, .btn_send_prov :hover{
+  background: #035050;
+} */
+
+.register_content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.register_text{
+  color: white;
+  font-family: 'Inter';
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.btn_register{
+  color: #00f7ff;
+  font-family: 'Inter';
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin: 0 1rem
+}

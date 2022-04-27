@@ -1,0 +1,83 @@
+.logo_mynotes{
+  position: absolute;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  top: 10%;
+}
+.slogan{
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: 21%;
+  text-align: center;
+  font-family: 'Work Sans';
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  color: #6f6e6e;
+
+}
+.welcome{
+  position: absolute;
+  width: 60%;
+  top:30%;
+  left: 20%;
+  font-family:'Inter';
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.9rem;
+  letter-spacing: -0.02em;
+  color: #00FFFF;
+}
+
+.footer{
+  position: absolute;
+  width: 60%;
+  top: 90%;
+  left: 25%;
+  font-family:'Inter';
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #00FFFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.input_iconr{
+width: 1.7rem;
+height: 1.7rem;
+margin: 0 1rem;
+
+}
+
+
+
+
+
+/* h1 {
+  position:relative;
+  font-family:'Inter';
+  text-align: center;
+  font-weight: 200;
+  color: #00FFFF;
+
+}
+h1 span {
+  background-color: #23262F;
+  z-index:100;
+  position:relative;
+  padding:15px;
+}
+h1::after  {
+  content: '';
+  position: absolute;
+  width:100%;
+  height:3px;
+  left:3%;
+  top:50%;
+  background: white;
+  z-index:50;
+} */

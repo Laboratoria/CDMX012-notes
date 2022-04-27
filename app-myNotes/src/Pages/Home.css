@@ -1,0 +1,138 @@
+.header {
+  background: linear-gradient(to right, #b2fefa, #0ed2f7);
+  width: 100%;
+  height: 22%;
+  position: absolute;
+}
+
+.logo_n {
+  position: absolute;
+  width: 6rem;
+  height: auto;
+  top: 2rem;
+  left: 4rem;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2rem;
+  left: 12rem;
+}
+
+.user_name {
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #23262F;
+  margin: .5rem 0;
+}
+
+.current_date {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  color: #646464;
+}
+
+.input_search {
+  position: absolute;
+  width: 80%;
+  height: 3.5rem;
+  left: 95px;
+  top: 70%;
+  background: rgb(255 255 255 / 59%);
+  border-radius: 21px;
+}
+
+input {
+  width: 85%;
+  height: 2.5rem;
+  border-radius: 21px;
+  padding-left: 2rem;
+  background: rgb(255 255 255 / 0%);
+  outline: none;
+  border: none;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.search_icon {
+  width: 2rem;
+  height: 2rem;
+  right: 5%;
+  margin-top: .5rem;
+}
+
+.nav_menu {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 22%;
+
+}
+
+.all_notes_cont {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.colections_cont {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_notes {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.all_notes {
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #00FFFF;
+}
+
+.colections {
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #646464;
+}
+
+
+.footer_menu {
+  background-color: #343846;
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon_add {
+  position: absolute;
+  top: -90%;
+  width: 9rem;
+  height: auto;
+}
