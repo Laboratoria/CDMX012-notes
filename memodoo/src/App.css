@@ -1,0 +1,79 @@
+.Home,
+.Signup {
+  text-align: center;
+  font-family: neue-haas-unica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: neue-haas-unica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.App-logo,
+.logo-vertical {
+  height: 18vmin;
+  pointer-events: none;
+  padding: 0px;
+}
+
+.Home-header h1{
+  padding: 0%;
+  margin: 0%;
+}
+
+.Home-header,
+.Signup-header {
+  background-color: #10B76F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  background-image: url("img/girl-taking-notes.png");
+  background-size: 80vh;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.Home-content p {
+  margin: 5%;
+  padding: 0 10%;
+  font-size: 20px;
+}
+
+.intro-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-register {
+  width: 338px;
+  height: 53px;
+  background: #F8DB5D;
+  border-radius: 10px;
+  border-style: none;
+  font-family: 'Neue Haas Unica W1G';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #000;
+}
+
+
+
