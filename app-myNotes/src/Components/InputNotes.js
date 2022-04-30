@@ -10,14 +10,18 @@ import iconDelete from "../Assets/icons/eliminar.png";
 const InputNotes = (props) => {
   const navigate = useNavigate();
   let noteDate = new Date().toDateString();
+  let hour = new Date();
 
   const initialStateVAlues = {
     title: "",
     note: "",
     date: noteDate,
+    hour: hour,
     color: "",
     colection: "",
-    userId:""
+    userId:"",
+    id:""
+
   };
   const [notes, setNotes] = useState(initialStateVAlues);
 

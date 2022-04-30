@@ -1,6 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import { useNavigate} from 'react-router-dom';
-import { useAuth } from '../firebase-config'
+import { useAuth} from '../firebase-config'
 import './Home.css';
 import NotesContainer from '../Components/NotesContainer'
 import BtnLogOut from '../Components/LogOut'
@@ -23,8 +23,6 @@ function HomePage () {
     navigate('/CreateNote');
    };
   
-
-
   return (
     <>
     <header className= "header"> 
@@ -56,6 +54,7 @@ function HomePage () {
 
     <section className='notes_section'>
       <NotesContainer/>
+      
     </section>
 
     <div className='footer_menu'>
