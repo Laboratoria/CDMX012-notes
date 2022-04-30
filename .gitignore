@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# myNotes
+app-myNotes\src\firebase-config.js
+node_modules
+app-myNotes\package-lock.json
+app-myNotes\package.json
+app-myNotes\README.md
+

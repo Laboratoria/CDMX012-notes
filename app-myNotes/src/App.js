@@ -1,16 +1,18 @@
-import './App.css';
+
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import LogInPage from './Pages/LogIn'
 import HomePage from './Pages/Home'
+import CreateNote from './Pages/CreateNote'
 // Switch, Link,  Redirect ,
 
 function App() {
   return (
-    <div className='App'>
+    <div>
     <Routes>
       <Route exact path='/' element={<LogInPage />} />
       <Route exact path='/Home' element={<HomePage />} />
+      <Route exact path='/CreateNote' element={<CreateNote/>} />
     </Routes>
   </div>
 );

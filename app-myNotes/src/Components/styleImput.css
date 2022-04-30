@@ -1,0 +1,98 @@
+.background_notes{
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  background-color: #343846;
+  z-index: -1;
+}
+
+.input_section {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8%;
+  left: 10%;
+}
+
+.tittle {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 1rem;
+}
+
+.input_tittle {
+  width: 96%;
+  height: 80%;
+  font-size: 3rem;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-bottom: 3px solid #00f7ff;
+}
+
+input {
+  width: 80%;
+  height: 20%;
+  color: #00f7ff;
+  padding-left: 1.5rem;
+  font-family: 'Inter';
+  text-align: left;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  background-color: rgb(255 255 255 / 0%);
+}
+
+.input_tittle::placeholder {
+  color: #00f7ff;
+}
+
+.text_note {
+  width: 100%;
+  height: 75%;
+  border-radius: 3%;
+  border-color: #00f7ff;
+  border-width: 3px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  width: 90%;
+  height: 90%;
+  color: #ffff;
+  margin: 0;
+  font-family: 'Inter';
+  text-align: left;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  background-color: rgb(255 255 255 / 0%);
+}
+
+.current_note_date {
+  width: 100%;
+  height: auto;
+  position:absolute;
+  top: 59%;
+  font-family: 'Inter';
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* .input_icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin: .5rem;
+} */

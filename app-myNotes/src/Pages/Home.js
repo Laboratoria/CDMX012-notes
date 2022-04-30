@@ -1,19 +1,28 @@
 import React  from 'react';
+import { useNavigate} from 'react-router-dom';
 import { useAuth } from '../firebase-config'
 import './Home.css';
+import NotesContainer from '../Components/NotesContainer'
+import BtnLogOut from '../Components/LogOut'
 import logoN from "../Assets/logo/LogoN.png"
 import iconSearch from '../Assets/icons/lupa.png'
 import iconNote from '../Assets/icons/nota-adhesiva.png'
 import iconColections from '../Assets/icons/colecciones.png'
 import iconHome from '../Assets/icons/casa.png'
 import iconAdd from '../Assets/icons/addBtn.png'
-import iconLogOut from '../Assets/icons/logout.png'
+
 
 function HomePage () {
   const User= useAuth();
   const name =  User?.displayName.split(" ")[0];
   // const UserImage = User?.photoURL;
   let date = new Date().toDateString();
+  const navigate = useNavigate();
+
+  const BtnCreateNote = ()=>{
+    navigate('/CreateNote');
+   };
+  
 
 
   return (
@@ -45,12 +54,14 @@ function HomePage () {
       </section>
     </nav>
 
-    <main id='notes_container'/>
+    <section className='notes_section'>
+      <NotesContainer/>
+    </section>
 
     <div className='footer_menu'>
     <img src= {iconHome} alt= '' className='icon_notes'/>
-    <img src= {iconAdd} alt= '' className='icon_add'/>
-    <img src= {iconLogOut} alt= '' className='icon_notes'/>
+    <img src= {iconAdd} alt= '' className='icon_add' onClick={BtnCreateNote}/>
+    <BtnLogOut/>
     </div>
 
     </>

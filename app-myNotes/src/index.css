@@ -9,5 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #23262F; 
   color: #FFFFFF;
+  width: 100vh;
+  height: auto;
 }
 

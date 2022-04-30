@@ -48,10 +48,9 @@
   border-radius: 21px;
 }
 
-input {
-  width: 85%;
-  height: 2.5rem;
-  border-radius: 21px;
+input[type=text]{
+  width: 80%;
+  height: 85%;
   padding-left: 2rem;
   background: rgb(255 255 255 / 0%);
   outline: none;
@@ -64,7 +63,8 @@ input {
   width: 2rem;
   height: 2rem;
   right: 5%;
-  margin-top: .5rem;
+  top: 20%;
+  position: absolute;
 }
 
 .nav_menu {
@@ -117,6 +117,14 @@ input {
   color: #646464;
 }
 
+.notes_section{
+  width: 85%;
+  height: 65%;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  background-color: rgb(84, 84, 84);
+}
 
 .footer_menu {
   background-color: #343846;
