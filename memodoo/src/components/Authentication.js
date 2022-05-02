@@ -10,7 +10,8 @@ export function GoogleSignIn() {
   
     signInWithPopup(auth, provider)
       .then((result) => {
-      navigate('/Notes')
+        //setisAuth(true);
+        navigate('/Notes')
       //console.log(result)
     }).catch((error) => {
       console.log(error)
