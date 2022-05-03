@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {DateHour, DateDay} from "../Components/Date";
 import "./styleImput.css";
 import "./styleActionNotes.css";
 import iconSave from "../Assets/icons/guardar.png";
@@ -9,19 +10,13 @@ import iconDelete from "../Assets/icons/eliminar.png";
 
 const InputNotes = (props) => {
   const navigate = useNavigate();
-  let noteDate = new Date().toDateString();
-  let hour = new Date();
 
   const initialStateVAlues = {
     title: "",
     note: "",
-    date: noteDate,
-    hour: hour,
+    date: DateHour,
     color: "",
-    colection: "",
-    userId:"",
-    id:""
-
+    colection: ""
   };
   const [notes, setNotes] = useState(initialStateVAlues);
 
@@ -60,7 +55,7 @@ const InputNotes = (props) => {
           />
         </div>
       </form>
-      <div className="current_note_date"> {noteDate} </div>
+      <div className="current_note_date"> {DateDay} </div>
 
       <section className="action_content">
         <div className="note_colors">

@@ -1,12 +1,15 @@
 
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
+import {useAuth} from './firebase-config'
 import LogInPage from './Pages/LogIn'
 import HomePage from './Pages/Home'
 import CreateNote from './Pages/CreateNote'
 // Switch, Link,  Redirect ,
 
 function App() {
+  useAuth();
+
   return (
     <div>
     <Routes>

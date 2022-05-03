@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth, saveNote } from "../firebase-config";
+import { saveNote } from "../firebase-config";
 import InputNotes from "../Components/InputNotes";
 import iconNote from "../Assets/icons/apunte.png";
 import iconBack from "../Assets/icons/flecha.png";
 import "./CreateNote.css";
 
 function CreateNote() {
-  useAuth();
   const navigate = useNavigate();
 
   const BtnBack = () => {

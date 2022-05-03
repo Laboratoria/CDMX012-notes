@@ -1,8 +1,10 @@
+
 .header {
   background: linear-gradient(to right, #b2fefa, #0ed2f7);
   width: 100%;
   height: 22%;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
 }
 
 .logo_n {
@@ -10,7 +12,7 @@
   width: 6rem;
   height: auto;
   top: 2rem;
-  left: 4rem;
+  left: 7%;
 }
 
 .info_container {
@@ -18,7 +20,7 @@
   flex-direction: column;
   position: absolute;
   top: 2rem;
-  left: 12rem;
+  left: 25%;
 }
 
 .user_name {
@@ -38,11 +40,21 @@
   color: #646464;
 }
 
+.user_img{
+  width: 6rem;
+  height: 6rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 360px;
+  position: absolute;
+  top: 2.5rem;
+  right: 8%;
+} 
+
 .input_search {
   position: absolute;
   width: 80%;
   height: 3.5rem;
-  left: 95px;
+  left: 7%;
   top: 70%;
   background: rgb(255 255 255 / 59%);
   border-radius: 21px;
@@ -70,11 +82,12 @@ input[type=text]{
 .nav_menu {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 10%;
   top: 22%;
-
+  z-index: 1;
+  background-color: #23262F;
 }
 
 .all_notes_cont {
@@ -117,20 +130,19 @@ input[type=text]{
   color: #646464;
 }
 
-.notes_section{
+main{
   width: 85%;
   height: 65%;
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 7%;
-  background-color: rgb(84, 84, 84);
 }
 
 .footer_menu {
   background-color: #343846;
   width: 100%;
   height: 7%;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   display: flex;
   flex-direction: row;

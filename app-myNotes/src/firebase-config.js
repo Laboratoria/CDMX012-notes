@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut,} from "firebase/auth";
-import { getFirestore, collection, addDoc} from "firebase/firestore";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-
-// , , doc, addDoc, getDoc, getDocs, where, setDoc, deleteDoc  onSnapshot
-// , ref, uploadBytes, getDownloadURL, getBytes
+export { signOut } from "firebase/auth";
 
 // myNotes app's Firebase configuration
 const firebaseConfig = {
@@ -24,29 +28,26 @@ export const provider = new GoogleAuthProvider();
 export const LogInGoogle = signInWithPopup;
 export const db = getFirestore(app);
 export const storage = getStorage(app);
-
-export { signOut } from "firebase/auth";
+export const colRef = collection(db, "notes");
 
 export function useAuth() {
   const [currentUser, setCurrentUser] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => setCurrentUser(user));
-    console.log('ue stetechange');
+    if (!unsub) {
+      navigate("/login");
+    }
     return unsub;
-    
   });
   return currentUser;
 }
 
-const colRef = collection(db, "notes");
-
 export const saveNote = async (newNotes) => {
-  const auth = getAuth();
   const user = auth.currentUser;
   newNotes.userId = user.email;
-  
+
   await addDoc(colRef, newNotes);
   console.log("nueva nota creada");
 };
-

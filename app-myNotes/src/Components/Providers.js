@@ -8,8 +8,8 @@ import { auth, provider, LogInGoogle } from "../firebase-config";
 function Providers() {
   const navigate = useNavigate();
 
-  const loginWithGoogle = (app) => {
-    LogInGoogle(auth, provider).then((loginDone) => {
+  const loginWithGoogle = async (app) => {
+   await LogInGoogle(auth, provider).then((loginDone) => {
       navigate("/Home");
     });
   };
@@ -34,7 +34,3 @@ function Providers() {
 }
 export default Providers;
 
-/* <div className="register_content">
-  <div className="register_text"> ¿No tienes una cuenta?  </div>
-  <div className="btn_register">Regístrate</div>
-</div> */
