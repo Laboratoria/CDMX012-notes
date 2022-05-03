@@ -1,8 +1,9 @@
+import React from 'react';
 import logo from '../img/logos/logo-white-v.svg';
-import GoogleSignIn from './Authentication';
+import GoogleSignIn from './Googleauth';
 import '../App.css';
 
-export function Authscreen()
+export function Home()
 {
     return (
         <div className="Home">
@@ -11,18 +12,15 @@ export function Authscreen()
                 <h1>
                 Never forget a thing!
                 </h1>
-                <h2>
-                Please Log in to continue
-                </h2>
                 <section className="Home-content">
                     <p>
                     Memodoo is a simple app to take notes for boosting your creative and productive self.
                     </p>
-                    <GoogleSignIn />
+                    <GoogleSignIn/>
                 </section>
             </section>
         </div>
     );
 }
 
-export default Authscreen;
+export default Home;

@@ -1,5 +1,6 @@
 .Home,
-.Signup {
+.Signup,
+.Authscreen {
   text-align: center;
   font-family: neue-haas-unica,sans-serif;
   font-weight: 400;
@@ -34,7 +35,9 @@ h2 {
 }
 
 .Home-header,
-.Signup-header {
+.Signup-header,
+.Signin-header,
+.authscreen-header {
   background-color: #10B76F;
   min-height: 100vh;
   display: flex;
@@ -44,6 +47,13 @@ h2 {
   font-size: calc(10px + 2vmin);
   color: black;
   background-image: url("img/girl-taking-notes.png");
+  background-size: 80vh;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.authscreen-header {
+  background-image: url("img/boy-logging-in.png");
   background-size: 80vh;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -80,6 +90,91 @@ a, a:hover, a:focus, a:active {
   line-height: 21px;
   text-align: center;
   color: #000;
+}
+
+.Signup-header {
+  background-color: #FEFEF9;
+  background-image: none;
+}
+
+.Signin-header {
+  background-image: none;
+}
+
+.Signup h2,
+.Signin h2 {
+  color: #000;
+}
+
+.signupform,
+.signinform {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  padding: 45px;
+  text-align: center;
+}
+
+.signupform input,
+.signinform input {
+  background: #fff;
+  width: 100%;
+  outline: 0;
+  border-color: #C5C5C5;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style:solid;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.signupform button 
+{
+  background: #10B76F;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.signinform button {
+  background: #000;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.Signup-header p,
+.Signin-header p {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.buttonAuth {
+  background: #000;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
 }
 
 

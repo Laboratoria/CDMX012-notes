@@ -1,6 +1,9 @@
+import React from 'react';
 import logo from '../img/logos/logo-color-h.svg';
-import '../App.css';
 import { LogOut } from './Logout';
+import '../App.css';
+
+
 
 export function Notes()
 {
