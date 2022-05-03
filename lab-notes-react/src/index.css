@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Hepta Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #A32A22;
+}
+
+h1 {
+  color: #F9E8C6;
+  font-family: 'Hepta Slab', serif;
+  font-weight: bolder;
+}
+
+.loginButton {
+  color: #F9E8C6;
+  background-color: #E94726;
+  font-family: 'Hepta Slab', serif;
+  font-weight: lighter;
+  width: 204px;
+  height: 53px;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
+}
