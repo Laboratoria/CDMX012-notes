@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc ,query, orderBy, onSnapshot} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 export { signOut } from "firebase/auth";
 
@@ -50,4 +50,20 @@ export const saveNote = async (newNotes) => {
 
   await addDoc(colRef, newNotes);
   console.log("nueva nota creada");
+};
+
+
+export const getNote = (newNotes) => {
+  try {
+    const q = query(colRef, orderBy("date", "desc"));
+
+    onSnapshot(q, (querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      console.log(docs);
+      return docs;
+    });
+  } catch (error) {}
 };

@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { auth, signOut } from "../firebase-config";
 import iconHome from "../Assets/icons/casa.png";
 import iconLogOut from "../Assets/icons/logout.png";
+import iconBack from "../Assets/icons/flecha.png";
+import iconAdd from "../Assets/icons/addBtn.png";
 
 export function BackToTop() {
   window.scrollTo({
@@ -14,6 +16,15 @@ export function BackToTop() {
   );
 }
 
+export function BtnAddNote() {
+  const navigate = useNavigate();
+  function BtnAddNewNote() {
+    navigate("/CreateNote");
+  }
+  return (
+    <img src={iconAdd} alt="" className="icon_add" onClick={BtnAddNewNote} />
+  );
+}
 
 export function BtnLogOut() {
   const navigate = useNavigate();
@@ -24,5 +35,14 @@ export function BtnLogOut() {
   }
   return (
     <img src={iconLogOut} alt="" className="icon_notes" onClick={logOut} />
+  );
+}
+export function BtnBack() {
+  const navigate = useNavigate();
+  function btnReturn() {
+    navigate("/Home");
+  }
+  return (
+    <img src={iconBack} alt="" className="icon_back" onClick={btnReturn} />
   );
 }
