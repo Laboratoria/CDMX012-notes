@@ -4,7 +4,7 @@ import './Header.css';
 // Contiene bienvenida y boton de cerrar sesión
 function Header () {
     return (
-        <><h2 className="header"> Bienevenida a tus notas  </h2><button>Cerrar Sesión</button></>
+        <><h2 className="header"> Bienvenida a tus notas  </h2><button>Cerrar Sesión</button></>
     )
 }
 export {Header}
