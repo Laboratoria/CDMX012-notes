@@ -1,62 +1,86 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {DateHour, DateDay} from "../Components/Date";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase-config";
+import { DateHour, DateDay } from "./Date";
+import { BtnDelete } from "../Components/Buttons";
 import "./styleImput.css";
 import "./styleActionNotes.css";
 import iconSave from "../Assets/icons/guardar.png";
 import iconAdd from "../Assets/icons/image.png";
 import iconColection from "../Assets/icons/nota-adhesiva.png";
-import iconDeleteGray from "../Assets/icons/eliminarGray.png";
 
-const InputNotes = (props) => {
+const EditNotesImput = (props) => {
+  let Id = localStorage.getItem("noteId");
   const navigate = useNavigate();
-  
+
   const initialStateVAlues = {
-    title: "Título",
-    note: "Nota",
-    date: DateHour,
-    modif: "",
+    title: "",
+    note: "",
+    modif: "Modificación: " + DateHour,
     color: "",
-    colection: ""
+    colection: "",
   };
-  const [notes, setNotes] = useState(initialStateVAlues);
+  const [loading, setLoading] = useState(true);
+  const [note, setNote] = useState(initialStateVAlues);
+
+  const getNote = async (newNotes) => {
+    setLoading(true);
+    const snap = await getDoc(doc(db, "notes", Id));
+
+    let data = snap.data();
+
+    setLoading(false);
+    setNote(data);
+  };
+
+  useEffect(() => {
+    getNote();
+  }, []);
 
   /////inputs
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setNotes({ ...notes, [name]: value });
+    setNote({ ...note, [name]: value });
   };
 
-  //boton
+  // boton
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addOrEdit(notes);
+    props.addOrEdit(note);
     navigate("/Home");
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }else {
 
   return (
     <div className="input_container">
       <div className="background_notes" />
-      <form className="input_section">
-        <div className="tittle">
-          <input
-            className="input_tittle"
-            name="title"
-            placeholder="Título"
-            onChange={handleInputChange}
-          />
-        </div>
+      {
+        <form className="input_section">
+          <div className="tittle">
+            <input
+              className="input_tittle"
+              name="title"
+              value= {note.title}
+              onChange={handleInputChange}
+            />
+          </div>
 
-        <div className="text_note">
-          <textarea
-            type="text"
-            name="note"
-            placeholder="Nota"
-            onChange={handleInputChange}
-          />
-        </div>
-      </form>
+          <div className="text_note">
+            <textarea
+              type="text"
+              name="note"
+              value= {note.note}
+              onChange={handleInputChange}
+            />
+          </div>
+        </form>
+      }
+
       <div className="current_note_date"> {DateDay} </div>
 
       <section className="action_content">
@@ -75,7 +99,8 @@ const InputNotes = (props) => {
           <div className="btn_actions">
             <img src={iconSave} alt="" className="note_icon" />
             <button className="btn_action" onClick={handleSubmit}>
-              Guardar
+              {" "}
+              Guardar{" "}
             </button>
           </div>
 
@@ -92,14 +117,11 @@ const InputNotes = (props) => {
             <button className="btn_action"> Agregar imágen </button>
           </div>
 
-          <div className="btn_action_delete">
-            <img src={iconDeleteGray} alt="" className="note_icon" />
-            <button className="btn_actionDelete"> Eliminar </button>
-          </div>
+          <BtnDelete />
         </section>
       </section>
     </div>
   );
+    }
 };
-export default InputNotes;
-
+export default EditNotesImput;

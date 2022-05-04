@@ -1,57 +1,124 @@
-.logo_mynotes{
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+.logo_mynotes {
   position: absolute;
-  width: 70%;
+  width: 35%;
   height: auto;
-  left: 15%;
-  top: 10%;
+  left: 32.5%;
+  top: 7%;
 }
-.slogan{
+
+.slogan {
   position: absolute;
-  width: 70%;
-  left: 15%;
-  top: 21%;
+  width: 75%;
+  left: 12.5%;
+  top: 24%;
   text-align: center;
   font-family: 'Work Sans';
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 0.5rem;
   letter-spacing: -0.02em;
   color: #6f6e6e;
-
 }
-.welcome{
+
+.welcome {
   position: absolute;
-  width: 60%;
-  top:30%;
-  left: 20%;
-  font-family:'Inter';
+  width: 75%;
+  top: 35%;
+  left: 12.5%;
+  font-family: 'Inter';
   text-align: center;
   font-weight: 400;
-  font-size: 1.9rem;
+  font-size: .3rem;
   letter-spacing: -0.02em;
   color: #00FFFF;
 }
 
-.footer{
+.footer {
   position: absolute;
-  width: 60%;
+  width: 75%;
   top: 90%;
-  left: 25%;
-  font-family:'Inter';
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.5rem;
+  left: 12.5%;
+  font-family: 'Inter';
+  font-size: .2rem;
   letter-spacing: -0.02em;
   color: #00FFFF;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
-.input_iconr{
-width: 1.7rem;
-height: 1.7rem;
-margin: 0 1rem;
-
+.input_iconr {
+  width: .25rem;
+  height: .25rem;
+  margin: 0 .1rem;
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .logo_mynotes {
+    width: 40%;
+    left: 30%;
+    top: 7%;
+  }
+
+  .slogan {
+    font-size: 2.8rem;
+    top: 24%;
+  }
+
+  .welcome {
+    font-size: 2.5rem;
+    top: 35%;
+  }
+
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  .input_iconr {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 600px) {
+  .logo_mynotes {
+    width: 60%;
+    left: 20%;
+    top: 10%;
+  }
+
+  .slogan {
+    font-size: 2rem;
+    top: 25%;
+  }
+
+  .welcome {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  .input_iconr {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

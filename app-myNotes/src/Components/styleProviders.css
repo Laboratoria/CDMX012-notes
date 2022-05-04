@@ -1,29 +1,68 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 .providers_content{
-  width: 70%;
-  height: 14rem;
+  position: absolute;
+  width: 40%;
+  height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 30%;
+}
+
+.btn_provider{
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #00f7ff;
+  margin: 0.2rem 0;
+}
+
+.provider_icon {
   position: absolute;
+  width: .5rem;
+  height: .5rem;
+  margin: 0.1rem 0.5rem ;
+}
+
+.btn_send_prov{
+  width: 100%;
+  height: 0.8rem;
+  background-color: #23262F;
+  color: white;
+  font-family: 'Inter';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: .3rem;
+  outline: none;
+  border: none;
+}
+
+
+ @media only screen and (min-width: 620px) { 
+
+  .providers_content{
+  width: 70%;
+  height: 14rem;
   top: 40%;
   left: 15%;
 }
 
 .btn_provider{
-  width: 100%;
   height: 10rem;
   font-size: 1.2rem;
   text-align: center;
   margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  border: none;
-  background-color: none;
   border: 3px solid #00f7ff;
   border-radius: 11px;
 }
 
 .provider_icon {
-  position: absolute;
   width: 2.2rem;
   height: 2.2rem;
   margin: 1.5rem 2rem;
@@ -32,44 +71,8 @@
 .btn_send_prov{
   width:100%;
   height: 5rem;
-  background-color: #23262F;  
-  color: white;
-  font-family: 'Inter';
   justify-content: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.7rem;
-  outline: none;
-  border: none;
-}
-
-/* .btn_provider, .btn_send_prov :hover{
-  background: #035050;
-} */
-
-.register_content{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-
-.register_text{
-  color: white;
-  font-family: 'Inter';
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.7rem;
 }
 
-.btn_register{
-  color: #00f7ff;
-  font-family: 'Inter';
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.7rem;
-  margin: 0 1rem
-}
+} 

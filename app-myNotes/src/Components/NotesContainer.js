@@ -17,7 +17,7 @@ const NotesContainer = () => {
         querySnapshot.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
         });
-        console.log(docs);
+
         setNotes(docs);
       });
     } catch (error) {}
