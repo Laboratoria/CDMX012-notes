@@ -60,6 +60,11 @@
   border-radius: 21px;
 }
 
+.input_search::placeholder {
+  color: #292929;
+}
+
+
 input[type=text]{
   width: 80%;
   height: 85%;

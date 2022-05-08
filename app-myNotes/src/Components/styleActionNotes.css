@@ -7,7 +7,7 @@
   background-color: #23262F;
 }
 
-.text_colors{
+.text_colors {
   width: 100%;
   height: auto;
   font-family: 'Inter';
@@ -18,36 +18,41 @@
   top: 5%;
 }
 
-.color_notes{
+.color_notes {
   width: 40%;
   height: auto;
   display: inline-flex;
   justify-content: space-around;
   position: absolute;
-  top:15%;
+  top: 15%;
   left: 30%;
 }
-.color{
+
+#color {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
 }
 
-#gray{
+.gray {
   background-color: #343846;
 }
 
-#blue{
+.Maldives {
   background: linear-gradient(to right, #b2fefa, #0ed2f7);
+
+
 }
 
-#purpure{
+.Purpink {
   background: linear-gradient(to right, #7f00ff, #e100ff);
 }
-#green{
+
+.Neonlife {
   background: linear-gradient(to right, #b3ffab, #12fff7);
 }
-#pink{
+
+.Neuromancer {
   background: linear-gradient(to right, #f953c6, #b91d73);
 }
 
@@ -101,7 +106,7 @@
   margin-left: 5%;
 }
 
-.btn_actionDelete{
+.btn_actionDelete {
   width: 90%;
   height: auto;
   background-color: #23262F;

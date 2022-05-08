@@ -8,22 +8,23 @@ import iconEdit from "../Assets/icons/editar.png";
 export default function ModalNote({ currentNote, onClose }) {
   const navigate = useNavigate();
 
-  if (!currentNote) {
-    return null;
-  } else {
+  if (currentNote) {
+    
     function BtnEdit() {
       localStorage.setItem("noteId", currentNote.id);
-      localStorage.setItem('noteTittle', currentNote.title);
-      localStorage.setItem('noteNote', currentNote.note);
+      localStorage.setItem("noteTittle", currentNote.title);
+      localStorage.setItem("noteNote", currentNote.note);
+      // localStorage.setItem("noteColor", currentNote.color);
 
       ////////////////////////////////////////enviar props
       navigate("/EditNotes");
     }
+    console.log(currentNote);
 
     return ReactDOM.createPortal(
       <>
         <div className="modal_Overlay" />
-        <div className="modal_container">
+        <div className={`modal_container  ${currentNote.color} `}>
           <img
             src={iconBack}
             alt=""
@@ -45,7 +46,7 @@ export default function ModalNote({ currentNote, onClose }) {
             <p className="note_mofifDate" id="modification_date">
               {" "}
             </p>
-            <p className="note_Date"> Creación: {currentNote.date}</p>
+            <p className="note_Date"> {currentNote.create}</p>
           </section>
         </div>
       </>,
@@ -53,3 +54,4 @@ export default function ModalNote({ currentNote, onClose }) {
     );
   }
 }
+

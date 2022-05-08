@@ -96,3 +96,10 @@ textarea {
   height: 1.7rem;
   margin: .5rem;
 } */
+
+.tenor-gif-embed{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -59,6 +59,7 @@ export const editNote = async (newNotes) => {
 };
 
 export const deletedNote = async(note) => {
+  console.log(note);
   await deleteDoc(doc( colRef, note.id));
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {DateHour, DateDay} from "../Components/Date";
+import { getDates, DateHour, DateDay } from "./Date";
 import "./styleImput.css";
 import "./styleActionNotes.css";
 import iconSave from "../Assets/icons/guardar.png";
@@ -10,16 +10,19 @@ import iconDeleteGray from "../Assets/icons/eliminarGray.png";
 
 const InputNotes = (props) => {
   const navigate = useNavigate();
-  
+
   const initialStateVAlues = {
     title: "Título",
     note: "Nota",
-    date: DateHour,
-    modif: "",
-    color: "",
-    colection: ""
+    date: getDates,
+    create: "Creación: " + DateHour,
+    modif: "Modificación: " + DateHour,
+    color: "gray",
+    colection: "apuntes",
   };
+
   const [notes, setNotes] = useState(initialStateVAlues);
+  const [themeColor, setThemeColor] = useState();
 
   /////inputs
   const handleInputChange = (e) => {
@@ -34,10 +37,17 @@ const InputNotes = (props) => {
     navigate("/Home");
   };
 
+  //boton
+  const handleChangeColor = (color) => {
+    setThemeColor(color);
+    setNotes({ ...notes, color: color });
+
+    //console.log(themeColor);
+  };
 
   return (
-    <div className="input_container">
-      <div className="background_notes" />
+    <div className="input_container ">
+      <div className={`background_notes ${themeColor}`} />
       <form className="input_section">
         <div className="tittle">
           <input
@@ -62,12 +72,29 @@ const InputNotes = (props) => {
       <section className="action_content">
         <div className="note_colors">
           <div className="text_colors"> Color de la nota </div>
+
           <section className="color_notes">
-            <div name="default" id="gray" className="color"></div>
-            <div name="Maldives" id="blue" className="color"></div>
-            <div name="Purpink" id="purpure" className="color"></div>
-            <div name="Neonlife" id="green" className="color"></div>
-            <div name="Neuromancer" id="pink" className="color"></div>
+            <div id="color" className="gray" onClick={() => handleChangeColor("gray")}></div>
+            <div
+              id="color"
+              className="Maldives"
+              onClick={() => handleChangeColor("Maldives")}
+            ></div>
+            <div
+              id="color"
+              className="Purpink"
+              onClick={() => handleChangeColor("Purpink")}
+            ></div>
+            <div
+              id="color"
+              className="Neonlife"
+              onClick={() => handleChangeColor("Neonlife")}
+            ></div>
+            <div
+              id="color"
+              className="Neuromancer"
+              onClick={() => handleChangeColor("Neuromancer")}
+            ></div>
           </section>
         </div>
 
@@ -91,15 +118,15 @@ const InputNotes = (props) => {
             <img src={iconAdd} alt="" className="note_icon" />
             <button className="btn_action"> Agregar imágen </button>
           </div>
-
-          <div className="btn_action_delete">
-            <img src={iconDeleteGray} alt="" className="note_icon" />
-            <button className="btn_actionDelete"> Eliminar </button>
-          </div>
+          {false ? (
+            <div className="btn_action_delete">
+              <img src={iconDeleteGray} alt="" className="note_icon" />
+              <button className="btn_actionDelete"> Eliminar </button>
+            </div>
+          ) : undefined}
         </section>
       </section>
     </div>
   );
 };
 export default InputNotes;
-

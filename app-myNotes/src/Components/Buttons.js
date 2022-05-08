@@ -49,34 +49,18 @@ export function BtnBack() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export function BtnDelete(noteToDelete) {
+export function BtnDelete(note) {
   const navigate = useNavigate();
 
-  function deleteNote(noteToDelete) {
-    deletedNote(noteToDelete);
+  function deleteNote(note) {
+    deletedNote(note);
     navigate("/Home");
   }
 
   return (
     <div className="btn_actions">
       <img src={iconDelete} alt="" className="note_icon" onClick={deleteNote}/>
-      <button className="btn_action"> Eliminar </button>
+      <button className="btn_action" note = {note} > Eliminar </button>
     </div>
   );
 }

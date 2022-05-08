@@ -17,6 +17,7 @@ const EditNotesImput = (props) => {
   const initialStateVAlues = {
     title: "",
     note: "",
+    date: "",
     modif: "Modificación: " + DateHour,
     color: "",
     colection: "",
@@ -54,6 +55,9 @@ const EditNotesImput = (props) => {
 
   if (loading) {
     return <div>Loading...</div>;
+    //  <img className="tenor-gif-embed"  src="https://tenor.com/es/ver/loading-gif-hr-gif-23067502" alt =""/>
+    
+   
   }else {
 
   return (
@@ -117,7 +121,7 @@ const EditNotesImput = (props) => {
             <button className="btn_action"> Agregar imágen </button>
           </div>
 
-          <BtnDelete />
+          <BtnDelete note = {note} />
         </section>
       </section>
     </div>
