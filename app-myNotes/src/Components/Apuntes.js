@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import NoteModal from "../Components/NoteModal";
 import "../Components/styleNotesContainer.css";
-import { query, orderBy, onSnapshot } from "firebase/firestore";
+import { query, orderBy, where,  onSnapshot } from "firebase/firestore";
 import { colRef } from "../firebase-config";
 
-const NotesContainer = () => {
+const ListColection = ({selectedColection}) => {
   const [currentNote, setCurrentNote] = useState("");
   const [notes, setNotes] = useState([]);
 
   const getNotes = (newNotes) => {
     try {
-      const q = query(colRef, orderBy("date", "desc"));
-
+      console.log(selectedColection);
+      let q = query(colRef);
+      
+      q = q.where("colection", "==", selectedColection);
+    
       onSnapshot(q, (querySnapshot) => {
         const docs = [];
         querySnapshot.forEach((doc) => {
@@ -27,7 +30,13 @@ const NotesContainer = () => {
   }, []);
 
   return (
-    <div className="getNote_container">
+    <div className="getNote_container"> 
+    
+    
+    hola apuntes
+
+
+
       <NoteModal onClose={() => setCurrentNote("")} currentNote={currentNote} />
       {notes.map((note) => (
         <div
@@ -50,4 +59,4 @@ const NotesContainer = () => {
     </div>
   );
 };
-export default NotesContainer;
+export default ListColection;

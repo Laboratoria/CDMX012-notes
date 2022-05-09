@@ -57,7 +57,6 @@ const EditNotesImput = (props) => {
     return <div>Loading...</div>;
     //  <img className="tenor-gif-embed"  src="https://tenor.com/es/ver/loading-gif-hr-gif-23067502" alt =""/>
     
-   
   }else {
 
   return (

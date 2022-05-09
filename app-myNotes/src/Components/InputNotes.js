@@ -15,7 +15,7 @@ const InputNotes = (props) => {
     title: "Título",
     note: "Nota",
     date: getDates,
-    create: "Creación: " + DateHour,
+    create: "Creación: " + DateHour,  
     modif: "Modificación: " + DateHour,
     color: "gray",
     colection: "apuntes",
@@ -41,8 +41,6 @@ const InputNotes = (props) => {
   const handleChangeColor = (color) => {
     setThemeColor(color);
     setNotes({ ...notes, color: color });
-
-    //console.log(themeColor);
   };
 
   return (
@@ -100,6 +98,7 @@ const InputNotes = (props) => {
 
         <section className="btns_content">
           <div className="btn_actions">
+            
             <img src={iconSave} alt="" className="note_icon" />
             <button className="btn_action" onClick={handleSubmit}>
               Guardar
@@ -118,12 +117,17 @@ const InputNotes = (props) => {
             <img src={iconAdd} alt="" className="note_icon" />
             <button className="btn_action"> Agregar imágen </button>
           </div>
+
+
           {false ? (
             <div className="btn_action_delete">
               <img src={iconDeleteGray} alt="" className="note_icon" />
               <button className="btn_actionDelete"> Eliminar </button>
             </div>
-          ) : undefined}
+          ) : undefined
+          }
+
+
         </section>
       </section>
     </div>

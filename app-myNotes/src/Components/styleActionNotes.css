@@ -39,21 +39,24 @@
 }
 
 .Maldives {
-  background: linear-gradient(to right, #b2fefa, #0ed2f7);
-
-
+  text-shadow: 4px 4px 9px #424242;
+  background: linear-gradient(to right, #72e4de, #0ed2f7);
 }
 
 .Purpink {
-  background: linear-gradient(to right, #7f00ff, #e100ff);
+  background: linear-gradient(to left, #8818f7, #e100ff);
 }
 
 .Neonlife {
-  background: linear-gradient(to right, #b3ffab, #12fff7);
+  background: linear-gradient(to right, #aeb530, #57b95a);
 }
 
 .Neuromancer {
   background: linear-gradient(to right, #f953c6, #b91d73);
+}
+
+.themeBlackFont {
+  color: #23262F;
 }
 
 .btns_content {
