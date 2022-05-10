@@ -28,7 +28,7 @@ const EditNotesImput = (props) => {
   /////setea los valores a editar
   const [note, setNote] = useState(initialStateVAlues);
   /////set del color de la nota
-  const [themeColor, setThemeColor] = useState();
+  const setThemeColor = useState();
 
   /////trae la nota seleccionada segun el id del local storage
   const getNote = async (newNotes) => {
@@ -73,6 +73,7 @@ const EditNotesImput = (props) => {
   if (loading) {
     return <div>Loading...</div>;
   } else {
+
     return (
       <div className="input_container">
         <div className={`background_notes ${note.color}`} />

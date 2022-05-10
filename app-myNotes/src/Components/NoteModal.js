@@ -8,17 +8,14 @@ import iconEdit from "../Assets/icons/editar.png";
 export default function ModalNote({ currentNote, onClose }) {
   const navigate = useNavigate();
 
+/////envia el id de la nota a editar a la vista de editado mediante localStorage y redirige
   if (currentNote) {
     function BtnEdit() {
       localStorage.setItem("noteId", currentNote.id);
-      // localStorage.setItem("noteTittle", currentNote.title);
-      // localStorage.setItem("noteNote", currentNote.note);
-      // localStorage.setItem("noteColor", currentNote.color);
-
-      ////////////////////////////////////////enviar props
+  
       navigate("/EditNotes");
     }
-
+/////crea el Dom con info de la nota a renderizar
     return ReactDOM.createPortal(
       <>
         <div className="modal_Overlay" />

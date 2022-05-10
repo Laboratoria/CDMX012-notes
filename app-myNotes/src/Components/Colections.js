@@ -10,9 +10,10 @@ import iconArchived from "../Assets/icons/papelera.png";
 import iconTrash from "../Assets/icons/archivado.png";
 
 function Colections() {
+   /////setea los valores de la coleccion
   const [handleColection, setHandleColection] = useState("menuColections");
 
-
+   /////setea con los valores de la coleccion seleccionada
   const handleSetColection = () => {
       return <ListColection selectedColection = {handleColection}/>
   };
@@ -20,11 +21,12 @@ function Colections() {
   const MenuColection = () => {
     return (
       <section className="set_colections_content">
+
         <div className="colection_style">
           <img src={iconApunte} alt="" className="colection_icon" />
           <button
             className="btn_colection"
-            onClick={() => setHandleColection("Apuntes")}
+            onClick={() => setHandleColection("apuntes")}
           >
             Apuntes
           </button>
@@ -33,18 +35,22 @@ function Colections() {
         <div className="colection_style">
           <img src={iconWork} alt="" className="colection_icon" />
           <button className="btn_colection" 
-          onClick={() => setHandleColection("Trabajo")}
+          onClick={() => setHandleColection("trabajo")}
           > Trabajo </button>
         </div>
 
         <div className="colection_style">
           <img src={iconReminder} alt="" className="colection_icon" />
-          <button className="btn_colection"> Recordatorios </button>
+          <button className="btn_colection"
+          onClick={() => setHandleColection("recordatorios")}
+          > Recordatorios </button>
         </div>
 
         <div className="colection_style">
           <img src={iconIdeas} alt="" className="colection_icon" />
-          <button className="btn_colection"> Ideas </button>
+          <button className="btn_colection"
+          onClick={() => setHandleColection("ideas")}
+          > Ideas </button>
         </div>
 
         <section className="deleted_notes_content">

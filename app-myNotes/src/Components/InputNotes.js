@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 import { getDates, DateHour, DateDay } from "./Date";
 import "./styleImput.css";
 import "./styleActionNotes.css";
+import { BtnBack } from "../Components/Buttons";
+import iconNote from "../Assets/icons/apunte.png";
 import iconSave from "../Assets/icons/guardar.png";
 import iconAdd from "../Assets/icons/image.png";
 import iconColection from "../Assets/icons/nota-adhesiva.png";
@@ -11,6 +14,7 @@ import iconDeleteGray from "../Assets/icons/eliminarGray.png";
 const InputNotes = (props) => {
   const navigate = useNavigate();
 
+  ///// valores iniciales de la nota
   const initialStateVAlues = {
     title: "Título",
     note: "Nota",
@@ -19,30 +23,56 @@ const InputNotes = (props) => {
     color: "gray",
     colection: "apuntes",
   };
+
+  ///// valores de la coleccion
+  const ColectionOptions = [
+    { value: "apuntes", label: "Apuntes" },
+    { value: "trabajo", label: "Trabajo" },
+    { value: "recordatorios", label: "Recordatorios" },
+    { value: "ideas", label: "Ideas" },
+  ];
+
+  /////setea los valores a guardar
   const [notes, setNotes] = useState(initialStateVAlues);
+  /////setea los valores de coleccion a guardar
+  const [colection, setColection] = useState("apuntes");
+  /////set del color de la nota
   const [themeColor, setThemeColor] = useState();
 
-  /////inputs
+  /////inputs valores a editar
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNotes({ ...notes, [name]: value });
   };
-  //boton
+
+  // boton guardar con funcion saveNotes
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addOrEdit(notes);
     navigate("/Home");
   };
-
-  //boton 
+  //botones colores
   const handleChangeColor = (color) => {
     setThemeColor(color);
     setNotes({ ...notes, color: color });
   };
 
+  //select valor colecciones
+  const ChangeColections = (value) => {
+    setColection(value);
+    console.log(value);
+  };
+
   return (
     <div className="input_container ">
       <div className={`background_notes ${themeColor}`} />
+      
+      <div className="header_container">
+        <img src={iconNote} alt="" className="icon_create_note" />
+        <div className="note_colection"> Apuntes </div>
+        <BtnBack />
+        </div>
+
       <form className="input_section">
         <div className="tittle">
           <input
@@ -107,9 +137,12 @@ const InputNotes = (props) => {
 
           <div className="btn_actions">
             <img src={iconColection} alt="" className="note_icon" />
-            <button name="Apuntes" className="btn_action">
-              Agregar a lista
-            </button>
+       
+            <Select className="select_colections"
+            options={ColectionOptions} 
+            value = {colection}
+            onChange={ChangeColections} />
+
           </div>
 
           <div className="btn_actions">

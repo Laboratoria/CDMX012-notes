@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { auth, signOut, deletedNote } from "../firebase-config";
+import { auth, signOut } from "../firebase-config";
 import iconHome from "../Assets/icons/casa.png";
 import iconLogOut from "../Assets/icons/logout.png";
 import iconBack from "../Assets/icons/flecha.png";
