@@ -9,17 +9,15 @@ export default function ModalNote({ currentNote, onClose }) {
   const navigate = useNavigate();
 
   if (currentNote) {
-    
     function BtnEdit() {
       localStorage.setItem("noteId", currentNote.id);
-      localStorage.setItem("noteTittle", currentNote.title);
-      localStorage.setItem("noteNote", currentNote.note);
+      // localStorage.setItem("noteTittle", currentNote.title);
+      // localStorage.setItem("noteNote", currentNote.note);
       // localStorage.setItem("noteColor", currentNote.color);
 
       ////////////////////////////////////////enviar props
       navigate("/EditNotes");
     }
-    console.log(currentNote);
 
     return ReactDOM.createPortal(
       <>
@@ -54,4 +52,3 @@ export default function ModalNote({ currentNote, onClose }) {
     );
   }
 }
-

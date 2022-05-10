@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import NoteModal from "../Components/NoteModal";
+import NoteModal from "./NoteModal";
 import "../Components/styleNotesContainer.css";
-import { query, orderBy, where,  onSnapshot } from "firebase/firestore";
+import { query, orderBy, where, onSnapshot } from "firebase/firestore";
 import { colRef } from "../firebase-config";
+import iconNote from "../Assets/icons/apunte.png";
 
-const ListColection = ({selectedColection}) => {
+const ListColection = ({ selectedColection }) => {
   const [currentNote, setCurrentNote] = useState("");
   const [notes, setNotes] = useState([]);
 
@@ -12,9 +13,9 @@ const ListColection = ({selectedColection}) => {
     try {
       console.log(selectedColection);
       let q = query(colRef);
-      
-      q = q.where("colection", "==", selectedColection);
-    
+
+      q = q.where("colection", "==", {selectedColection});
+
       onSnapshot(q, (querySnapshot) => {
         const docs = [];
         querySnapshot.forEach((doc) => {
@@ -30,12 +31,11 @@ const ListColection = ({selectedColection}) => {
   }, []);
 
   return (
-    <div className="getNote_container"> 
-    
-    
-    hola apuntes
-
-
+    <div className="getNote_container">
+      <div className="header_container">
+        <img src={iconNote} alt="" className="icon_create_note" />
+        <div className="note_colection"> {selectedColection} </div>
+      </div>
 
       <NoteModal onClose={() => setCurrentNote("")} currentNote={currentNote} />
       {notes.map((note) => (

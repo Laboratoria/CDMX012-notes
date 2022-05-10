@@ -4,7 +4,7 @@ import iconHome from "../Assets/icons/casa.png";
 import iconLogOut from "../Assets/icons/logout.png";
 import iconBack from "../Assets/icons/flecha.png";
 import iconAdd from "../Assets/icons/addBtn.png";
-import iconDelete from "../Assets/icons/eliminar.png";
+
 
 export function BackToTop() {
   window.scrollTo({
@@ -45,22 +45,5 @@ export function BtnBack() {
   }
   return (
     <img src={iconBack} alt="" className="icon_back" onClick={btnReturn} />
-  );
-}
-
-
-export function BtnDelete(note) {
-  const navigate = useNavigate();
-
-  function deleteNote(note) {
-    deletedNote(note);
-    navigate("/Home");
-  }
-
-  return (
-    <div className="btn_actions">
-      <img src={iconDelete} alt="" className="note_icon" onClick={deleteNote}/>
-      <button className="btn_action" note = {note} > Eliminar </button>
-    </div>
   );
 }

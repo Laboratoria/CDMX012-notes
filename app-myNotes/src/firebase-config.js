@@ -52,14 +52,19 @@ export const saveNote = async (newNotes) => {
   console.log("nueva nota creada");
 };
 
+export const editNote = async (note, Id) => {
+  const noteToEdit = doc(db, 'notes', Id)
 
-export const editNote = async (newNotes) => {
-  await updateDoc(colRef, newNotes);
-  console.log("nueva notaeditada");
+  await updateDoc(noteToEdit, {
+    title: note.title,
+    note: note.note,
+    date: note.date,
+    modif: note.modif,
+    color: note.color,
+    colection: note.colection,
+  })
+}
+
+export const deletedNote = async(Id) => {
+  await deleteDoc(doc( colRef, Id));
 };
-
-export const deletedNote = async(note) => {
-  console.log(note);
-  await deleteDoc(doc( colRef, note.id));
-};
-

@@ -1,6 +1,6 @@
 import React from "react";
 import { BtnBack } from "../Components/Buttons";
-import { editNote } from "../firebase-config";
+import { editNote, deletedNote } from "../firebase-config";
 import EditNotesImput from "../Components/EditNotesInput";
 import iconNote from "../Assets/icons/apunte.png";
 import "./CreateNote.css";
@@ -13,7 +13,7 @@ function EditNotes() {
         <div className="note_colection"> Apuntes </div>
         <BtnBack />
       </div>
-      <EditNotesImput addOrEdit={editNote} />
+      <EditNotesImput addOrEdit={editNote} deletedNote={deletedNote}  />
     </div>
   );
 }

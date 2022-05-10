@@ -15,12 +15,10 @@ const InputNotes = (props) => {
     title: "Título",
     note: "Nota",
     date: getDates,
-    create: "Creación: " + DateHour,  
-    modif: "Modificación: " + DateHour,
+    create: "Creación: " + DateHour,
     color: "gray",
     colection: "apuntes",
   };
-
   const [notes, setNotes] = useState(initialStateVAlues);
   const [themeColor, setThemeColor] = useState();
 
@@ -29,7 +27,6 @@ const InputNotes = (props) => {
     const { name, value } = e.target;
     setNotes({ ...notes, [name]: value });
   };
-
   //boton
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,7 +34,7 @@ const InputNotes = (props) => {
     navigate("/Home");
   };
 
-  //boton
+  //boton 
   const handleChangeColor = (color) => {
     setThemeColor(color);
     setNotes({ ...notes, color: color });
@@ -72,7 +69,11 @@ const InputNotes = (props) => {
           <div className="text_colors"> Color de la nota </div>
 
           <section className="color_notes">
-            <div id="color" className="gray" onClick={() => handleChangeColor("gray")}></div>
+            <div
+              id="color"
+              className="gray"
+              onClick={() => handleChangeColor("gray")}
+            ></div>
             <div
               id="color"
               className="Maldives"
@@ -98,7 +99,6 @@ const InputNotes = (props) => {
 
         <section className="btns_content">
           <div className="btn_actions">
-            
             <img src={iconSave} alt="" className="note_icon" />
             <button className="btn_action" onClick={handleSubmit}>
               Guardar
@@ -108,8 +108,7 @@ const InputNotes = (props) => {
           <div className="btn_actions">
             <img src={iconColection} alt="" className="note_icon" />
             <button name="Apuntes" className="btn_action">
-              {" "}
-              Agregar a lista{" "}
+              Agregar a lista
             </button>
           </div>
 
@@ -118,16 +117,12 @@ const InputNotes = (props) => {
             <button className="btn_action"> Agregar imágen </button>
           </div>
 
-
-          {false ? (
+          {true ? (
             <div className="btn_action_delete">
               <img src={iconDeleteGray} alt="" className="note_icon" />
               <button className="btn_actionDelete"> Eliminar </button>
             </div>
-          ) : undefined
-          }
-
-
+          ) : undefined}
         </section>
       </section>
     </div>

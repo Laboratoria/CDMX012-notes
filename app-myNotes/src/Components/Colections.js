@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ListColection from "../Components/Apuntes";
+import ListColection from "../Components/ListColection";
 
 import "../Components/styleColections.css";
 import iconApunte from "../Assets/icons/apunte.png";
