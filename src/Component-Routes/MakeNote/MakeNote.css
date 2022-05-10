@@ -1,0 +1,168 @@
+*{
+    background-color: #2a324b;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.buttonsStyles {
+  color: #2a324b;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  border-radius: 15px;
+  width: 30%;
+  margin: 2% 0 0 0;
+}
+.User-photo{
+  height: auto;
+  width: 8%;
+  border-radius: 50%;
+  border: 1px solid aliceblue;
+  margin: 0 2% 0 2%;
+}
+.inputNotes{
+  width: 80%;
+  height: 3rem;
+  background-color: aliceblue;
+  margin: 2% 0 2% 0;
+  border-radius: 1em;
+  color: black;
+  font-size: larger;
+  padding: 0%;
+}
+#makeNoteContent{
+  height: 20rem;
+}
+.LogOut{
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+  background-color:#2a324b;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  width: 10%;
+  height: 3rem;
+  border-radius: 15px;
+  margin-left:48%;
+}
+label{
+  font-size: x-large;
+  font-weight: 800;
+  margin-top: 3%;
+}
+.makeNotePage{
+  width: 100vw;
+  height: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  background-color: #C4C4C4;
+  width: 100%;
+  height: 6rem;
+  align-items: center;
+}
+h3{
+  background-color: #C4C4C4;
+  color: #2a324b;
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+}
+h1{
+  font-size: xx-large;
+  margin-top: 6%;
+}
+
+/* AQUI VA LA TABLET DE MANERA HORIZONTAL*/
+@media (min-width: 1024px) {
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  background-color: #C4C4C4;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+}
+h1{
+  font-size: xx-large;
+  margin-top: 0;
+  padding: 0%;
+}
+label{
+  font-size: x-large;
+  font-weight: 800;
+  margin-top: 1%;
+}
+.inputNotes{
+  width: 80%;
+  height: 3rem;
+  background-color: aliceblue;
+  margin: 0%;
+  border-radius: 1em;
+  color: black;
+  font-size: larger;
+  padding: 0%;
+}
+#makeNoteContent{
+  height: 18rem;
+}
+.buttonsStyles {
+  color: #2a324b;
+  font-size: x-large;
+  font-weight: 600;
+  background-color:#C4C4C4;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 15px;
+  width: 30%;
+  margin: 1%;
+}
+.makeNotePage{
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+}
+
+}  
+@media (max-width: 480px) {
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: #C4C4C4;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+  }
+  h3{
+    background-color: #C4C4C4;
+    color: #2a324b;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+  }
+  
+.LogOut{
+  background-color:#2a324b;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  width: 10%;
+  height:fit-content;
+  border-radius: 20%;
+  margin: 2%;
+}
+.exit-Logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+}

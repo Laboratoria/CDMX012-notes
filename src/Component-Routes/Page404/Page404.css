@@ -1,0 +1,50 @@
+.errorContainer{
+  display: flex;
+  align-items:center;
+}
+.errorLogo{
+  display: flex;
+  width: 70%;
+  margin: 5%;
+}
+.goBackbtn{
+  color: #2a324b;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  border-radius: 15px;
+  width: 50%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-top: 8%
+}
+@media (min-width: 1024px) {
+.errorContainer{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content:space-around;
+}
+.errorLogo{
+  display: flex;
+  width: 50%;
+  margin: 2%
+}
+.goBackbtn{
+  color: #2a324b;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  border-radius: 15px;
+  width: 50%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-top: 2%
+}
+}

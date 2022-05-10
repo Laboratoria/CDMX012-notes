@@ -1,0 +1,90 @@
+/* AQUI VA LA TABLET DE MANERA VERTICAL */
+* {
+  background-color: #2a324b;
+  margin: 0%;
+  padding: 0%;
+}
+.swal2-container.swal2-center>.swal2-popup{
+  background-color: #767B91;
+  border-radius: 10%;
+  padding: 6%;
+  border: 5px solid aliceblue;
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+  background: transparent;
+}
+.swal2-html-container{
+  background-color: transparent;
+}
+.swal2-title{
+  background-color: transparent;
+}
+.swal2-actions{
+  background-color: transparent;
+}
+.swal2-actions{
+  background-color: transparent;
+}
+.swal2-icon.swal2-warning.swal2-icon-show {
+  background-color: transparent;
+}
+.swal2-icon .swal2-icon-content{
+  background-color: transparent;
+}
+h1{
+  font-size: 32px;
+  padding: 2% 0 2% 0;
+}
+@media (max-width: 768px) {
+  .App {
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .App-header {
+    background-color: #2a324b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+}
+/* AQUI VA LA TABLET DE MANERA HORIZONTAL*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .App {
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .App-header {
+    background-color: #2a324b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+}
