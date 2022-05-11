@@ -1,7 +1,6 @@
 import React from "react";
-import { GoogleAuthProvider } from "firebase/auth";
-import {authentication} from "../firebase/firebaseConfig"
-import {signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {authentication} from "../firebase/firebaseConfig";
 
 
 function Login  () {
@@ -13,7 +12,6 @@ function Login  () {
           console.log(re);
       }).catch((err) => {
           console.log(err);
-
       });
 
    }
