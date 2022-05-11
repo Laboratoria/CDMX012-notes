@@ -1,11 +1,17 @@
 import React from "react";
-
-const NewNote = ()=> (
+import { useNavigate } from "react-router-dom";
+function NewNote (){
+    const navigate = useNavigate();
+    const loginClick = ()=>{
+     navigate("/home");
+    }
+    return ( 
     <div>
         <input></input>
-        <button>Guardar</button>
+        <button onClick={loginClick}>Guardar</button>
 
     </div>
-)
+    )
+}
 
 export default NewNote;
