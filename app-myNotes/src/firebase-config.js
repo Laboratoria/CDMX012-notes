@@ -9,7 +9,9 @@ import {
 } from "firebase/auth";
 import { getFirestore, collection, addDoc, deleteDoc, doc, updateDoc} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { getDates, DateHour} from "./Components/Date";
 export { signOut } from "firebase/auth";
+
 
 // myNotes app's Firebase configuration
 const firebaseConfig = {
@@ -49,22 +51,29 @@ export const saveNote = async (newNotes) => {
   newNotes.userId = user.email;
 
   await addDoc(colRef, newNotes);
-  console.log("nueva nota creada");
+  localStorage.clear();
 };
 
-export const editNote = async (note, Id) => {
+export const toEditNote = async (note, Id) => {
   const noteToEdit = doc(db, 'notes', Id)
+
+
+  console.log(note);
+  console.log(Id);
+  console.log(noteToEdit);
 
   await updateDoc(noteToEdit, {
     title: note.title,
     note: note.note,
-    date: note.date,
-    modif: note.modif,
+    date: getDates,
+    modif: "Modificacion: " + DateHour,
     color: note.color,
     colection: note.colection,
+    
   })
 }
 
 export const deletedNote = async(Id) => {
   await deleteDoc(doc( colRef, Id));
+  localStorage.clear();
 };

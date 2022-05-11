@@ -5,7 +5,6 @@ import {useAuth} from './firebase-config'
 import LogInPage from './Pages/LogIn'
 import HomePage from './Pages/Home'
 import CreateNote from './Pages/CreateNote'
-import EditNotes from './Pages/EditNotes'
 
 function App() {
   useAuth();
@@ -16,7 +15,6 @@ function App() {
       <Route exact path='/' element={<LogInPage />} />
       <Route exact path='/Home' element={<HomePage />} />
       <Route exact path='/CreateNote' element={<CreateNote/>} />
-      <Route exact path='/EditNotes' element={<EditNotes/>} />
     </Routes>
   </div>
 );

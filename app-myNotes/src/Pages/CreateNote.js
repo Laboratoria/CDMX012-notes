@@ -1,5 +1,5 @@
 import React from "react";
-import { saveNote } from "../firebase-config";
+import { saveNote, toEditNote, deletedNote } from "../firebase-config";
 import InputNotes from "../Components/InputNotes";
 
 import "./CreateNote.css";
@@ -7,7 +7,7 @@ import "./CreateNote.css";
 function CreateNote() {
   return (
     <div className="Create_note_container">
-      <InputNotes addOrEdit={saveNote} />
+      <InputNotes saveNote={saveNote} toEditNote={toEditNote} deletedNote={deletedNote} />
     </div>
   );
 }

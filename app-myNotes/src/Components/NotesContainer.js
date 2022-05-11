@@ -35,9 +35,13 @@ const NotesContainer = () => {
           key={note.id}
           onClick={() => setCurrentNote(note)}
         >
-          <div className="note_tittle">{note.title}</div>
-          <p className="note_text"> {note.note} </p>
-          <p className="line"></p>
+          <section className="header_note_container">
+            <div className="note_tittle">{note.title}</div>
+            <div className="colection_saved">{note.colection} </div>
+          </section>
+
+          <div className="note_text"> {note.note} </div>
+          <div className="line"></div>
           <section className="date_container">
             <p className="note_mofifDate" id="modification_date">
               {" "}

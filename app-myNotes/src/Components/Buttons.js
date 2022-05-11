@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { auth, signOut } from "../firebase-config";
 import iconHome from "../Assets/icons/casa.png";
 import iconLogOut from "../Assets/icons/logout.png";
-import iconBack from "../Assets/icons/flecha.png";
+import iconBack from "../Assets/icons/flecha-izquierda.png";
 import iconAdd from "../Assets/icons/addBtn.png";
 
 
@@ -41,6 +41,7 @@ export function BtnLogOut() {
 export function BtnBack() {
   const navigate = useNavigate();
   function btnReturn() {
+    localStorage.clear();
     navigate("/Home");
   }
   return (

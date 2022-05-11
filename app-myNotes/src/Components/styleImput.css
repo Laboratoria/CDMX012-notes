@@ -1,4 +1,4 @@
-.background_notes{
+.background_notes {
   width: 100%;
   height: 70%;
   position: absolute;
@@ -30,13 +30,13 @@
   display: flex;
   flex-direction: row;
   border: none;
-  border-bottom: 3px solid #00f7ff;
+  border-bottom: 3px solid #ffffff;
 }
 
 input {
   width: 80%;
   height: 20%;
-  color: #00f7ff;
+  color: #ffffff;
   padding-left: 1.5rem;
   font-family: 'Inter';
   text-align: left;
@@ -49,19 +49,24 @@ input {
 }
 
 .input_tittle::placeholder {
-  color: #00f7ff;
+  color: #dcdcdc;
+}
+
+textarea::placeholder {
+  color: #dcdcdc;
 }
 
 .text_note {
   width: 100%;
   height: 75%;
   border-radius: 3%;
-  border-color: #00f7ff;
+  border-color: #ffffff;
   border-width: 3px;
   border-style: solid;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }
 
 textarea {
@@ -79,10 +84,11 @@ textarea {
   background-color: rgb(255 255 255 / 0%);
 }
 
+
 .current_note_date {
   width: 100%;
   height: auto;
-  position:absolute;
+  position: absolute;
   top: 59%;
   font-family: 'Inter';
   font-size: 2rem;
@@ -97,9 +103,27 @@ textarea {
   margin: .5rem;
 } */
 
-.tenor-gif-embed{
+.tenor-gif-embed {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.select_colections {
+  width: 90%;
+  background-color: #23262F;
+  color: white;
+  font-family: 'Inter';
+  font-size: 1.7rem;
+  outline: none;
+  border: none;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.select_colections .option {
+  width: 90%;
+  text-align: center;
+  background-color: #00f7ff;
 }

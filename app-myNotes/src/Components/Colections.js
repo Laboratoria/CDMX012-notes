@@ -9,14 +9,20 @@ import iconIdeas from "../Assets/icons/idea.png";
 import iconArchived from "../Assets/icons/papelera.png";
 import iconTrash from "../Assets/icons/archivado.png";
 
-function Colections() {
-   /////setea los valores de la coleccion
+function Colections({setFlagFalse, flag}) {
+   /////setea con la coleccion seleccionada para renserizado condicional
   const [handleColection, setHandleColection] = useState("menuColections");
 
-   /////setea con los valores de la coleccion seleccionada
+   ///// hace renderizado condicional en main 
   const handleSetColection = () => {
       return <ListColection selectedColection = {handleColection}/>
   };
+
+  // hace set de la coleccion seleccionada y entra la funcion de comunicacion con el padre
+  const setColection = (currentColection) => {
+    setFlagFalse();
+    setHandleColection(currentColection);
+};
 
   const MenuColection = () => {
     return (
@@ -26,7 +32,7 @@ function Colections() {
           <img src={iconApunte} alt="" className="colection_icon" />
           <button
             className="btn_colection"
-            onClick={() => setHandleColection("apuntes")}
+            onClick={() => setColection("Apuntes")}
           >
             Apuntes
           </button>
@@ -35,21 +41,21 @@ function Colections() {
         <div className="colection_style">
           <img src={iconWork} alt="" className="colection_icon" />
           <button className="btn_colection" 
-          onClick={() => setHandleColection("trabajo")}
+          onClick={() => setColection("Trabajo")}
           > Trabajo </button>
         </div>
 
         <div className="colection_style">
           <img src={iconReminder} alt="" className="colection_icon" />
           <button className="btn_colection"
-          onClick={() => setHandleColection("recordatorios")}
+          onClick={() => setColection("Recordatorios")}
           > Recordatorios </button>
         </div>
 
         <div className="colection_style">
           <img src={iconIdeas} alt="" className="colection_icon" />
           <button className="btn_colection"
-          onClick={() => setHandleColection("ideas")}
+          onClick={() => setColection("Ideas")}
           > Ideas </button>
         </div>
 
@@ -76,9 +82,9 @@ function Colections() {
 
   return (
     <div className="colections_content">
-      {handleColection === "menuColections"
-        ? MenuColection()
-        : handleSetColection()}
+      {
+        flag ? MenuColection() : handleSetColection()
+      }
     </div>
   );
 }

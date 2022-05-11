@@ -6,20 +6,74 @@
   z-index: -1;
 }
 
+.getNote_colection_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  position: absolute;
+  top: 6%;
+}
+
+.header_colection_container{
+  width: 90%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content:center;
+  align-items: center;
+  position: fixed;
+  top: 29%;
+  left: 5%;
+  background-color: #23262F;
+  z-index: 99;
+}
+.note_colection_select{
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: right;
+  margin: 1rem;
+  text-transform: capitalize;
+}
+
 .printNote_container {
   width: 100%;
-  height: 14rem;
+  height: 16rem;
   border-radius: 35px;
   margin: .3rem 0;
+  background-color: #00FFFF;
 }
 
 .printNote_container:last-of-type {
   margin-bottom: 20%;
 }
 
+.header_note_container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.colection_saved {
+  width: 50%;
+  height: 4rem;
+  margin: 1rem 0;
+  padding-right: 2.5rem;
+  font-family: 'Inter';
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: right;
+}
+
 .note_tittle {
-  padding: 1rem 3rem;
-  margin: 0;
+  width: 50%;
+  height: 4rem;
+  margin: 1rem 0;
+  padding: 0 3rem;
   font-family: 'Inter';
   font-weight: 500;
   font-size: 2rem;
@@ -65,7 +119,6 @@
   justify-content: flex-start;
 
 }
-
 
 .note_Date {
   width: 50%;

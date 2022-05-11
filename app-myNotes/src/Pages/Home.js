@@ -16,6 +16,21 @@ function HomePage() {
   const UserImage = user?.photoURL;
   const [handleColection, setHandleColection] = useState("allNotes");
 
+  // crea una flag para saber si esta en menu o lista de colecciones
+  const [flag, setFlag] = useState(true);
+// hace set a false para comunicar el componente con el padre
+  const setFlagFalse = () => {
+    setFlag(false);
+  };
+  // convierte a true el flag para saber que esta en menu
+  const setFlagTrue = () => {
+    setFlag(true);
+  };
+// hace la redireccion en el boton colecciones
+  const redirectNav = () => {
+    setFlagTrue();
+    setHandleColection("menuColections")
+  };
 
   return (
     <>
@@ -45,7 +60,7 @@ function HomePage() {
 
         <div
           className="colections_cont"
-          onClick={() => setHandleColection("colectionsSection") }
+          onClick={() => redirectNav() }
         >
           <img src={iconColections} alt="" className="icon_notes" />
           <div className="colections">Colecciones</div>
@@ -53,7 +68,7 @@ function HomePage() {
       </nav>
 
       <main className="notes_section">
-        {handleColection ===  "allNotes" ? <NotesContainer /> : < Colections/>}
+        {handleColection ===  "allNotes" ? <NotesContainer /> : < Colections setFlagFalse={setFlagFalse}  flag={flag}/>}
       </main>
 
       <div className="footer_menu">
