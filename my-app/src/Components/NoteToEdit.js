@@ -1,8 +1,9 @@
 function NoteToEdit () {
     return (
-        <div>
-            
-        </div>
+    <div>
+        <input></input>
+    </div>
+        
     )
 }
 export default NoteToEdit;

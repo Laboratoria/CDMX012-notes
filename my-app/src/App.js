@@ -4,8 +4,9 @@ import Register from './Routes/Register';
 import Home from './Routes/Home';
 import CreateNote from './Routes/CreateNote';
 import NotesView from './Routes/NotesView';
-import DisplaynNote from './Routes/DisplayNote';
-import EditNote from './Routes/EditNote';
+import DisplayNote from './Routes/DisplayNote';
+import EditNote from './Routes/EditNote'
+
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Route path='/home' element = {<Home/>}/>
       <Route path='/createNote' element = {<CreateNote/>}/>
       <Route path='/notesView' element = {<NotesView/>}/>
-      <Route path='/displayNote' element = {<DisplaynNote/>}/>
+      <Route path='/displayNote' element = {<DisplayNote/>}/>
       <Route path='/EditNote' element = {<EditNote/>}/>
     </Routes>
     </BrowserRouter>
