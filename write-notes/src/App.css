@@ -1,5 +1,8 @@
-body {
 
+
+body {
+  margin: 10px;
+  padding: 20px; 
 }
   
   .footer{
@@ -17,30 +20,23 @@ body {
   
   .btnGoogle{
     display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 12px 19px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 19px;
+    position: absolute;
+    width: 404.27px;
+    height: 62px;
+    left: 150px;
+    top: 500px;
+    background: #9BA6A3;
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+  }
+  @media only screen and (min-width: 768px) {
 
-position: absolute;
-width: 404.27px;
-height: 62px;
-left: 150px;
-top: 700px;
-
-background: #9BA6A3;
-backdrop-filter: blur(4px);
-/* Note: backdrop-filter has minimal browser support */
-
-border-radius: 30px;
-      }
-  @media only screen and (min-width: 600px) {
-  
-   
-  
     #note{
       width: 80%;
-      align-items: center;
-        }
+    }
     
     .btnGoogle{
       display: flex;
@@ -48,16 +44,20 @@ border-radius: 30px;
       align-items: flex-start;
       padding: 12px 19px;
       position: absolute;
-      width: 404.27px;
+      width: 350px;
       height: 62px;
-      left: 184px;
-      top: 950px;
+      left: 360px;
+      top: 1050px;
       background: #9BA6A3;
       backdrop-filter: blur(4px);
       border-radius: 30px;
+      font-family: habibi;
+      font-size: 20px;
+      align-items: center;
+    }
 
-
-
+    .google{
+      left: 4000px;
     }
     
   

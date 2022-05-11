@@ -221,7 +221,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   <details><summary>Links</summary><p>
 
   * [Primeros pasos con Firebase Authentication en sitios web - Documentación oficial](https://firebase.google.com/docs/auth/web/start?hl=es)
-  * [Administra usuarios en Firebase (onAuthStateChanged)](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
+  * [Administra usuarios en  (onAuthStateChanged)](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
 </p></details>
 
 - [ ] **Firestore**
