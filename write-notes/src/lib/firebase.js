@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 
-export { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged }
+export { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut }
 
 
 

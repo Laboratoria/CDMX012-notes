@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line
-import  { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import  { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { auth } from '../lib/firebase'
 
 
-export const loginWhitGoogle = (auth, provider) => {
+export const loginWithGoogle = (auth, provider) => {
   signInWithPopup(auth, provider)
     .then((result) => {
       console.log(auth,provider)
@@ -24,4 +25,15 @@ export const loginWhitGoogle = (auth, provider) => {
       const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
     });
+};
+
+
+export const logOut = () => {
+  signOut(auth).then(() => {
+  // Sign-out successful.
+  console.log("Cerrar Sesión")
+  }).catch((error) => {
+    console.log(error.message)
+  // An error happened.
+  });
 };

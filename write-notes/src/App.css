@@ -1,8 +1,6 @@
-
-
 body {
-  margin: 10px;
-  padding: 20px; 
+  margin: 0;
+  padding: 10px;  
 }
   
   .footer{
@@ -24,14 +22,15 @@ body {
     align-items: flex-start;
     padding: 12px 19px;
     position: absolute;
-    width: 404.27px;
+    width: 200px;
     height: 62px;
-    left: 150px;
-    top: 500px;
+    left: 0;
+    top: 0;
     background: #9BA6A3;
     backdrop-filter: blur(4px);
     border-radius: 30px;
   }
+
   @media only screen and (min-width: 768px) {
 
     #note{

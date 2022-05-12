@@ -1,22 +1,26 @@
 import React from 'react'
 import buscar  from '../../assets/buscar.png';
+import write from '../../assets/write.jpeg'
 import { auth, provider } from '../../lib/firebase';
-import { loginWhitGoogle } from '../../lib/firebaseAuth';
+import { loginWithGoogle } from '../../lib/firebaseAuth';
+import { useNavigate } from 'react-router-dom';
 
 export function Home() {
+  const navigate = useNavigate();
 
   const loginGoogle = () =>{
-    loginWhitGoogle(auth, provider) 
+    loginWithGoogle(auth, provider);
+    navigate("/timeline");
   }
 
     return (
     
     <div>
         <div className='container'>
-          <img id='note' src="https://imgur.com/x2eC1lG.jpeg" alt="Note" />
+          <img id='note' src = { write } alt="Note" />
         </div>
 
-        <button className='btnGoogle' onClick= { loginGoogle } > LOGIN WHIT GOOGLE
+        <button className='btnGoogle' onClick= { loginGoogle } > LOGIN WITH GOOGLE
         <img src= { buscar } className="google" alt="Google"/>
         </button>
 

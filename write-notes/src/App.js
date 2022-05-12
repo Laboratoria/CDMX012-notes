@@ -1,18 +1,23 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { AccesTimeline } from './components/noautenticate/Timeline';
+import { Route, Routes, } from 'react-router-dom';
+import { Timeline } from './components/noautenticate/Timeline';
 import { Home } from './components/autenticate/Home';
-import { loginWhitGoogle } from './lib/firebaseAuth';
+import { loginWithGoogle } from './lib/firebaseAuth';
+import { logOut } from './lib/firebaseAuth';
 import './App.css';
+import NotFound from './components/noautenticate/NotFound';
+
 
 export function App() {
   
   return (
        
       <Routes>
-       <Route path="/" element={<Home loginGoogle = { loginWhitGoogle } />} />
-       <Route path="/Timeline" element={<AccesTimeline/>}/>
-     </Routes>
+       <Route path="/" element = {<Home loginGoogle = { loginWithGoogle } />} />
+       <Route path="/timeline" element = {< Timeline signOut = { logOut } />} />
+       <Route path="*" element = {< NotFound />} />
+
+       </Routes>
 
     
   );
