@@ -9,8 +9,7 @@ export function Home() {
   const navigate = useNavigate();
 
   const loginGoogle = () =>{
-    loginWithGoogle(auth, provider);
-    navigate("/timeline");
+    loginWithGoogle(auth, provider, navigate);
   }
 
     return (

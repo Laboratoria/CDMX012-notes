@@ -1,65 +1,66 @@
-body {
-  margin: 0;
-  padding: 10px;  
+#note {
+  position: relative;
+  width: 434px;
+  height: 794px;
 }
-  
-  .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    background-color: #E75956;
-    color: white;
-    text-align: center;
-    align-items: center;
-    padding: 1%;
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #E75956;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.btnGoogle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 19px;
+  position: absolute;
+  width: 200px;
+  height: 62px;
+  left: 0;
+  top: 0;
+  background: #9BA6A3;
+  backdrop-filter: blur(4px);
+  border-radius: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #note {
+    position: relative;
+    padding: 30px;
+    width: 834px;
+    height: 1194px;
   }
-  
-  .btnGoogle{
+
+  .btnGoogle {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     padding: 12px 19px;
     position: absolute;
-    width: 200px;
+    width: 350px;
     height: 62px;
-    left: 0;
-    top: 0;
+    left: 260px;
+    top: 950px;
     background: #9BA6A3;
-    backdrop-filter: blur(4px);
     border-radius: 30px;
+    font-family: habibi;
+    font-size: 20px;
+    align-items: center;
   }
 
-  @media only screen and (min-width: 768px) {
+  .google {
+    left: 4000px;
+  }
 
-    #note{
-      width: 80%;
-    }
-    
-    .btnGoogle{
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 12px 19px;
-      position: absolute;
-      width: 350px;
-      height: 62px;
-      left: 360px;
-      top: 1050px;
-      background: #9BA6A3;
-      backdrop-filter: blur(4px);
-      border-radius: 30px;
-      font-family: habibi;
-      font-size: 20px;
-      align-items: center;
-    }
 
-    .google{
-      left: 4000px;
-    }
-    
-  
-  
-    }
 
+}
