@@ -1,0 +1,74 @@
+/* button-65 */
+button {
+  margin-top: 5.6%;
+  width: 33%;
+  height: 8.5%;
+  font-size: 16px;
+  background-color: #c4c4c4;
+  color: #894c3a;
+  border-radius: 10px;
+  font-family: "Mulish", sans-serif;
+  appearance: none;
+  backface-visibility: hidden;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 0.7;
+  outline: none;
+  overflow: hidden;
+  padding: 14px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #b59395;
+  color: #f9f8fc;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 5px 30px, rgba(0, 0, 0, 0.05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+.clickButton {
+  background-color: #c4c4c4;
+}
+
+.submitButton {
+  background-color: #f9f8fc;
+}
+
+/* VERSION PARA CELULAR */
+/* On screens that are 428px or less */
+@media only screen and (max-width: 428px) {
+  button {
+    margin-top: 17.6%;
+    width: 66%;
+    height: 8.5%;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+/* VERSION PARA ESCRITORIO */
+/* On screens that are 1195px or more */
+@media only screen and (min-width: 1195px) {
+  button {
+    margin-top: 4.4%;
+    width: 60%;
+    height: 8.5%;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
