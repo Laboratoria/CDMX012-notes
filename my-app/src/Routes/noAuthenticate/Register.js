@@ -1,5 +1,5 @@
-import Login from "../Components/Login"
-import Welcome from "../Components/Welcome";
+import Login from "../../Components/Login"
+import Welcome from "../../Components/Welcome";
 function Register () {
     return (
         <div>

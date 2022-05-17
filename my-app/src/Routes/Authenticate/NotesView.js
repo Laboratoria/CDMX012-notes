@@ -1,7 +1,7 @@
-import Header from "../Components/Header";
-import Note from "../Components/Note";
-import OpenNote from "../Components/OpenNote";
-import WriteNote from "../Components/WriteNote";
+import Header from "../../Components/Header";
+import Note from "../../Components/Note";
+import OpenNote from "../../Components/OpenNote";
+import WriteNote from "../../Components/WriteNote";
 
 function NotesView () {
     return (

@@ -1,5 +1,5 @@
-import Header from '../Components/Header'
-import NewNote from '../Components/Newnote';
+import Header from '../../Components/Header'
+import NewNote from '../../Components/Newnote';
 function CreateNote () {
     return (
         <div>

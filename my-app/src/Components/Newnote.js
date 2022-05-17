@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 function NewNote (){
     const navigate = useNavigate();
@@ -8,7 +8,7 @@ function NewNote (){
     return ( 
     <div>
         <input></input>
-        <button onClick={loginClick}>Guardar</button>
+        <button onClick={loginClick} placeholder = {'Escribe tu nota'} >Guardar</button>
 
     </div>
     )

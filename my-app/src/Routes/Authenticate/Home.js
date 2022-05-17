@@ -1,5 +1,5 @@
-import Header from "../Components/Header";
-import WriteNote from "../Components/WriteNote";
+import Header from "../../Components/Header";
+import WriteNote from "../../Components/WriteNote";
 
 function Home () {
     return (

@@ -1,6 +1,6 @@
-import Header from "../Components/Header";
-import NoteToEdit from "../Components/NoteToEdit";
-import SaveNote from "../Components/SaveNote";
+import Header from "../../Components/Header";
+import NoteToEdit from "../../Components/NoteToEdit";
+import SaveNote from "../../Components/SaveNote";
 
 function EditNote () {
     return (
