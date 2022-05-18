@@ -1,24 +1,17 @@
-import { auth } from './Firebase';
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { loginGoogle } from './Lib/Auth.js'; 
+import '../StyleSheets/Login.css';
+import google from './Images/google.png';
 
 function Login () {
-
-    const loginGoogle = () =>{
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider)
-        .then((re)=>{
-            console.log(re);
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
-    }
     return (
-        <div>
+        <div className="notesContainer">
             <h1>MyNotes</h1>
-            <button className="loginButton" onClick={loginGoogle}>Empezar con Google
+            <button className="loginButton" onClick={loginGoogle}>
+            <img src={google} alt="iconGoogle" className="googleImg" />
+                Log in with Google
             </button> 
         </div>
-    )}
+    );
+}
 
     export default Login;

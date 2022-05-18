@@ -1,8 +1,23 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@600&display=swap');
+
+/* * {
+margin: 0;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Hepta Slab', serif;
+  background-color: #A32A22;
 }
 
-.App-logo {
+.app {
+  height: 100vh;
+}
+ 
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -15,11 +30,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,3 +47,4 @@
     transform: rotate(360deg);
   }
 }
+*/

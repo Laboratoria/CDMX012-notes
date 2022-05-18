@@ -1,0 +1,51 @@
+.notesContainer {
+    position: absolute;
+    justify-content: center;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;*/
+  }
+
+h1 {
+    grid-column-start: 2;
+  }
+
+img {
+    grid-column-end: 4;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+}
+
+.material-icons {
+  position: absolute;
+  pointer-events: none;
+}
+
+#new-note {
+  border-radius: 50%;
+  background-color: #E94726;
+  font-size: 80px;
+  right: 10%;
+  top: 70%;
+}
+
+#exit {
+  font-size: 80px;
+  right: 10%;
+  top: 10%;
+}
+
+.all-notes {
+  display: grid;
+  border: 5px;
+}
+
+.note-title{
+  font-weight: bold;
+}
+
+.note-description {
+  font-weight: lighter;
+}
+

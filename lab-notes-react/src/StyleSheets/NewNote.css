@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Hepta Slab', serif;
+}
+
+.title{
+  height: 150px;
+  padding: 20px;
+  color: black; 
+  font-size: larger;
+}
+
+.note {
+  height: 300px;
+  font-size: larger;
+
+}
+
+.btnSave {
+  color: #F9E8C6;
+  background-color: #E94726;
+  font-family: 'Hepta Slab', serif;
+  font-weight: lighter;
+  width: 204px;
+  height: 53px;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
+  align-items: center;
+  justify-content: center;
+  border: none;   
+}
