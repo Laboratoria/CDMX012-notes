@@ -1,14 +1,37 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
+/* Styles */
 import "../styles/Notes.css";
 import "../styles/Button.css";
+/* Icons */
 import { FiLogOut } from "react-icons/fi";
-import NotesList from "../NotesList"
+import { BsFillTrashFill } from "react-icons/bs";
+import { TiEdit } from "react-icons/ti";
+import { BiPlus } from "react-icons/bi";
+/* Firebase, firestore */
+import { db } from "../../lib/firebaseConfig";
+import { collection,  getDocs } from "firebase/firestore";
 
-
+// Main container
 function Notes({ logOut }) {
+
+/* Configuración de hook useState */
+  const[theNotes, setTheNotes] = useState([]);
+  /* Referencia a la colección db de Firestore: notesCreated */
+  const notesCollectionReference = collection(db, "notesCreated")
+  useEffect(()=>{
+    const getNotes =async () => {
+      const notesDataFireBase = await getDocs(notesCollectionReference);
+    console.log(notesDataFireBase);
+    };
+    getNotes();
+  }, []);
+
   return (
+ 
+ 
+
     <>
-    <div className="mainContainerNotes">
+      <div className="mainContainerNotes">
         <section>
           <img
             className="backgroundImage"
@@ -32,117 +55,62 @@ function Notes({ logOut }) {
             <FiLogOut /> Salir
           </button>
         </nav>
+{/* Two sections */}
 
         <section className="twoSectionsContainer">
-        <button>+</button>
+          <button className="btnAddNote" ><BiPlus /></button>
 
-{/* Left side */}
-          <section className="leftSide">
-          <section><h1><u>My Notes</u></h1></section>
-{/* Use state es un array que devuelve 2 propiedades:
-1. El estado en si 
-2. la función que hace modificastatusr ese estado */}
-          {/*const [allNotes, setAllNotes] = useState([
-          {{id:1, note: "My first note", completed: false }},
-          ]);
-           <NotesList allNotes={allNotes}></NotesList>; */}
-          </section>
-
-{/* Right side */}
-          <section className="rightSide">
-          <section><h1><u>My Notes</u></h1></section>
-          <button>Edit</button>
-          <button>Delete</button>
-          
-          <input className="newNoteText" type="text" placeholder="Write your note here"></input>
+          {/* Left side */}
 
 
-          </section>
-        </section>
-        </div>
-    </>
-  );
-}
+  
+    <div>NotesList</div>
 
-/* function Notes(logOut) {
-  return (
-    <>
-      <div className="mainContainerNotes">
-        <nav className="navBar">
-          <img
-            className="smallRosettaLogo"
-            src="https://i.imgur.com/pS4YttT.png"
-            alt="rosetta Logo"
-          ></img>
-          <button
-            className="btnLogout"
-            onClick={() => {
-              logOut();
-            }}
-          >
-            <FiLogOut /> Salir
-          </button>
-        </nav>
 
-        <section className="twoSectionsContainer">
-        
+  
 
           <section className="leftSide">
-          <section><h1><u>My Notes</u></h1></section>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              cursus faucibus mauris, ac tempus massa imperdiet nec. Vestibulum
-              congue tincidunt lectus a porttitor. Maecenas sed orci commodo,
-              ultrices lectus vulputate, ultrices lorem. Morbi eleifend
-              porttitor tempus. Sed id lectus mattis, aliquam ligula rutrum,
-              ullamcorper risus. Nam luctus fringilla eros, tempus rhoncus lorem
-              aliquam vitae. Nullam finibus ante eget fringilla elementum.
-              Integer vitae mauris ac erat mattis pretium. Nullam porta elit
-              ipsum, sed volutpat dui porta in. Ut vitae ultrices lacus, ut
-              finibus dui. Ut nec fringilla dui. In dictum hendrerit quam, id
-              rutrum nisi elementum sed. In sed elementum tortor. Fusce aliquam
-              at orci efficitur pretium. Pellentesque fermentum dictum nibh, vel
-              imperdiet enim vestibulum non. Morbi viverra egestas aliquam. In
-              feugiat mi at suscipit elementum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              cursus faucibus mauris, ac tempus massa imperdiet nec. Vestibulum
-              congue tincidunt lectus a porttitor. Maecenas sed orci commodo,
-              ultrices lectus vulputate, ultrices lorem. Morbi eleifend
-              porttitor tempus. Sed id lectus mattis, aliquam ligula rutrum,
-              ullamcorper risus. Nam luctus fringilla eros, tempus rhoncus lorem
-              aliquam vitae. Nullam finibus ante eget fringilla elementum.
-              Integer vitae mauris ac erat mattis pretium. Nullam porta elit
-              ipsum, sed volutpat dui porta in. Ut vitae ultrices lacus, ut
-              finibus dui. Ut nec fringilla dui. In dictum hendrerit quam, id
-              rutrum nisi elementum sed. In sed elementum tortor. Fusce aliquam
-              at orci efficitur pretium. Pellentesque fermentum dictum nibh, vel
-              imperdiet enim vestibulum non. Morbi viverra egestas aliquam. In
-              feugiat mi at suscipit elementum.
-            </p>
+            <section>
+              <h1>
+                <u>My Notes</u>
+                
+              </h1>
+            </section>
+
           </section>
+
+          {/* Right side */}
           <section className="rightSide">
-          <section><h1><u>My Notes</u></h1></section>
-             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              cursus faucibus mauris, ac tempus massa imperdiet nec. Vestibulum
-              congue tincidunt lectus a porttitor. Maecenas sed orci commodo,
-              ultrices lectus vulputate, ultrices lorem. Morbi eleifend
-              porttitor tempus. Sed id lectus mattis, aliquam ligula rutrum,
-              ullamcorper risus. Nam luctus fringilla eros, tempus rhoncus lorem
-              aliquam vitae. Nullam finibus ante eget fringilla elementum.
-              Integer vitae mauris ac erat mattis pretium. Nullam porta elit
-              ipsum, sed volutpat dui porta in. Ut vitae ultrices lacus, ut
-              finibus dui. Ut nec fringilla dui. In dictum hendrerit quam, id
-              rutrum nisi elementum sed. In sed elementum tortor. Fusce aliquam
-              at orci efficitur pretium. Pellentesque fermentum dictum nibh, vel
-              imperdiet enim vestibulum non. Morbi viverra egestas aliquam. In
-              feugiat mi at suscipit elementum.
-            </p></section>
+            <section>
+              <h1>
+                <u>My Notes</u>
+              </h1>
+            </section>
+            
+            <form>
+            <button className="BtnTrash" ><BsFillTrashFill /></button>
+            <button className="BtnEdit" ><TiEdit /></button>
+
+            <input
+              className="newNoteTitle"
+              type="text"
+              placeholder="Write a title "
+            ></input>
+            <input
+              className="newNoteText"
+              type="text"
+              placeholder="Write your note here"
+            ></input>
+            </form>
+
+          </section>
         </section>
       </div>
     </>
   );
-} */
+}
+
+export default Notes;
 
 //BOTÓN DE LOGOUT QUE FUNCIONA
 
@@ -180,7 +148,6 @@ function Notes({ logOut }) {
   );
 } */
 
-
 /* function Notes({ logOut }) {
   return (
     <>
@@ -217,4 +184,5 @@ function Notes({ logOut }) {
   );
 }  */
 
-export default Notes;
+
+
