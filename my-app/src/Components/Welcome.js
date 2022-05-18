@@ -1,7 +1,12 @@
+import React from "react";
+import { Div, H1 } from "./WelcomeStyles";
 
 
 const Welcome = ()=> (
-    <h1>Crea Notas Fácil y Rápido</h1>
+    <Div>
+
+    <H1>Crea Notas Fácil y Rápido</H1>
+    </Div>
 )
 
 export default Welcome;

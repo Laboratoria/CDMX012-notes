@@ -1,25 +1,6 @@
 body{
   background-color: rgba(0, 0, 0, 0.893);
 }
-h1{
-  color: antiquewhite;
-  padding-left: 200px;
-}
 
-h2{
-  background-color: aqua;
-  font-size: 50px;
-  background-size: 50px;
-  color:black;
-  padding-left: 150px;
-}
-
-button{
-  border-radius: 9px;
-  size: 30px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  margin-left: 250px;
-}
 
   

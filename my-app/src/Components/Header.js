@@ -1,8 +1,11 @@
 import { signOut } from "firebase/auth";
 import React from "react";
+import { BiArrowToRight } from "react-icons/bi";
+
 // import { useNavigate } from "react-router-dom";
 // import { signOut } from "firebase/auth";
  import { authentication } from "../lib/firebaseConfig"
+import { Button, Div, H2 } from "./HeaderStayles";
 
 function Header() {
     // const navigate = useNavigate();
@@ -18,10 +21,10 @@ const logOut = ()=>{
     });
 }
     return (
-        <div className='registro'>
-            <h2>Bienvenida a tus notas </h2>
-            <button onClick={logOut} className='logOut' >Cerrar sesión</button>
-        </div>
+        <Div>
+            <H2>Bienvenida a tus notas </H2>
+            <Button onClick={logOut} ><BiArrowToRight/></Button>
+        </Div>
     )
 }
 

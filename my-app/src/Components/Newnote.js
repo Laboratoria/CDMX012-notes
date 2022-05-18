@@ -1,5 +1,7 @@
+import React from "react";
 
 import { useNavigate } from "react-router-dom";
+import { Button, Form, Input, Textarea } from "./styles";
 function NewNote (){
     const navigate = useNavigate();
     const loginClick = ()=>{
@@ -7,9 +9,16 @@ function NewNote (){
     }
     return ( 
     <div>
-        <input></input>
-        <button onClick={loginClick} placeholder = {'Escribe tu nota'} >Guardar</button>
+        <Form>
+        <Input 
+        type='text'
+        placeholder="Nombre de tú nota"></Input>
+        <Textarea
+        placeholder="Escribe tú nota"></Textarea>
 
+        <Button onClick={loginClick} placeholder = {'Escribe tu nota'} >Guardar</Button>
+
+        </Form>
     </div>
     )
 }

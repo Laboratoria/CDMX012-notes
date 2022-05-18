@@ -1,3 +1,4 @@
+import React from "react";
 
 /* este componente va dentro de nota */
 const OpenNote = ()=> (

@@ -1,5 +1,7 @@
+import React from "react";
 
 import { useNavigate } from "react-router-dom";
+import { Button } from "./WriteNoteStyles";
 
 function WriteNote (){
 
@@ -9,7 +11,7 @@ function WriteNote (){
     }
     return(
 
-        <button onClick={loginClick}>Crear nota</button>
+        <Button onClick={loginClick}>Crear nota</Button>
     )
 }
 
