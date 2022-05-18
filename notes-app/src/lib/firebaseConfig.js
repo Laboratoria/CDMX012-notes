@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "@firebase/firestore";
 
 //import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.10/firestore";
 //import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
@@ -27,7 +28,7 @@ export const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 // We’ll import db anytime we need to access the database.
-//export const db = getFirestore(app);
+export const db = getFirestore(app);
 // We’ll import database anytime we need to access it.
 //export const database = getDatabase(app);
 // We’ll import auth anytime we need to authenticate with Firebase.

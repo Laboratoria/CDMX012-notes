@@ -19,118 +19,191 @@ Mulish:ital,wght@0,400;0,800;0,900;1,700=
 Taviraj:wght@400;500;600;700;800&
  */
 
+.mainContainerNotes {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  z-index: 2;
+}
+.navBar {
+  background-color: #894c3a;
+  width: 100%;
+  height: 90px;
+  z-index: 16;
+  padding: 16px;
+  margin-top: 0px;
+  display: flex;
+  align-items:baseline
+}
 
- .mainContainerLogin {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.smallRosettaLogo {
+  height: 100%;
+  z-index: 4;
+}
+
+.btnLogout {
+  position: absolute;
+  margin-left: 50%;
 }
 
 .backgroundImage {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0.6;
-    background-repeat: repeat;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.6;
+  background-repeat: repeat;
+  z-index: 0;
 }
 
-.brownRectangle {
-    background-color: #894C3A;
-    width: 50%;
-    height: 60%;
-    border-radius: 20px;
-    text-align: center;
-    z-index: 1;
+.mainContainerNotes {
+ height: 100vh;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: stretch;
 }
 
-.bigRosettaLogo {
-    width: 65%;
-    margin-top: 17.6%;
-    margin-bottom: 4.8%;
+
+
+.twoSectionsContainer {
+  /* background-color: darkorchid; */
+height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*  */
+  padding: 8px;
 }
+
+.BtnTrash, .BtnEdit {
+background-color: transparent;
+color: #9E6C63;
+font-size: 32px;
+outline: none;
+
+/* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.526);
+ */}
+
+.leftSide {
+height: 96%;
+  /* background-color: crimson; */
+  z-index: 10;
+  margin: 16px 8px 16px 16px;
+  flex-basis: 50%;
+  overflow-y: scroll;
+}
+
+.newNoteTitle{
+  height: 70%;
+  width: 75%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  color: #F9F8FC;
+  background-color: #9E6C63;
+}
+.newNoteTitle:focus{
+  outline:none;
+}
+
+.rightSide {
+height: 96%;
+
+  /* background-color: cadetblue; */
+  z-index: 10;
+  
+  margin: 16px 16px 16px 8px;
+  flex-basis: 50%;
+
+}
+
+.newNoteText{
+  height: 70%;
+  width: 75%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  color: #894c3a;
+  background-color: #F9F8FC;
+  }
+
+.newNoteText:focus{
+    outline:none;
+  }
+
 
 h1 {
-    font-family: 'Taviraj', serif;
-    font-size: 24px;
-    color: #F9F8FC;
-    text-align: center;
+  font-family: "Taviraj", serif;
+  font-size: 24px;
+  color: #f9f8fc;
+  text-align: center;
 }
-
-
-
-footer {
-    font-family: 'Mulish', sans-serif;
-    color: #894C3A;
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
-    font-weight: bolder;
-
+h2 {
+  font-family: "Mulish", sans-serif;
+  color: #f9f8fc;
+  font-size: 24px;
 }
 
 /* VERSION PARA CELULAR */
 /* On screens that are 428px or less */
-@media only screen and (max-width: 428px) {
-    
-    .brownRectangle {
-        
-        width: 80%;
-        height: 80%;
-        padding: 16px;
-    }
-    
-    .bigRosettaLogo {
-        width: 80%;
-    margin-top: 35.2%;
-        margin-bottom: 17.6%;
-    }
-    
-    h1 {
-        font-size: 20px;
-    }
-    
-       
-    footer {
-        font-size: 12px;
-        font-weight: 900;
-    
-    }
+@media only screen and (max-width: 428px){
+.twoSectionsContainer {
+    height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      background-color: darkorchid;
 }
-
-/* VERSION PARA ESCRITORIO */
-/* On screens that are 1195px or more */
-@media only screen and (min-width: 1195px) {
-
-   
-
-    
-    .bigRosettaLogo {
-        width: 65%;
-        margin-top: 8.8%;
-        margin-bottom: 4.8%;
-    }
-    
-    h1 {
-        font-family: 'Taviraj', serif;
-        font-size: 24px;
+.smallRosettaLogo {
+    width: 40%;
+    z-index: 4;
+  }
   
+  .btnLogout {
+    position: absolute;
+    margin-left: 30%;
+  }
+
+  .mainContainerNotes {
+    height: 100vh;
+    
+     background-color: darkgreen;
+     z-index: 7;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     align-content: stretch;
+   }
+
+  .leftSide {
+    width: 100%;
+      background-color: crimson;
+      z-index: 10;
+      margin: 8px;
+      flex-basis: 50%;
+      overflow-y: scroll;
     }
+    .rightSide {
+        width: 100%;
+
     
+      background-color: cadetblue;
+      z-index: 10;
+      
+      margin: 8px;
+
+      flex-basis: 50%;
     
-    
-    footer {
-        font-family: 'Mulish', sans-serif;
-        color: #894C3A;
-        position: absolute;
-        right: 24px;
-        bottom: 24px;
-        font-weight: bolder;
     
     }
 }

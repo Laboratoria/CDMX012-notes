@@ -38,6 +38,8 @@ Taviraj:wght@400;500;600;700;800&
     top: 0px;
     opacity: 0.6;
     background-repeat: repeat;
+    z-index: 0;
+
 }
 
 .brownRectangle {
@@ -46,13 +48,16 @@ Taviraj:wght@400;500;600;700;800&
     height: 60%;
     border-radius: 20px;
     text-align: center;
-    z-index: 1;
+    padding: 8px;
+    z-index: 3;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.526);
 }
 
 .bigRosettaLogo {
     width: 65%;
     margin-top: 17.6%;
     margin-bottom: 4.8%;
+    
 }
 
 h1 {
@@ -62,7 +67,9 @@ h1 {
     text-align: center;
 }
 
-
+.GoogleBtn{
+margin-top: 16px;
+}
 
 footer {
     font-family: 'Mulish', sans-serif;
