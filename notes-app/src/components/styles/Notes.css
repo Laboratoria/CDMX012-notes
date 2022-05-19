@@ -103,17 +103,7 @@ height: 96%;
   overflow-y: scroll;
 }
 
-.newNoteTitle{
-  height: 70%;
-  width: 75%;
-  font-family: 'Mulish', sans-serif;
-  font-size: 24px;
-  color: #F9F8FC;
-  background-color: #9E6C63;
-}
-.newNoteTitle:focus{
-  outline:none;
-}
+
 
 .rightSide {
 height: 96%;
@@ -123,16 +113,38 @@ height: 96%;
   
   margin: 16px 16px 16px 8px;
   flex-basis: 50%;
+  display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 
 }
 
-.newNoteText{
-  height: 70%;
+.buttonsContainer{
+  padding-left: 50%;
   width: 75%;
+  display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+}
+
+::placeholder{
+  display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.newNoteText{
+  height: 500px;
+  width: 100%;
   font-family: 'Mulish', sans-serif;
   font-size: 24px;
   color: #894c3a;
   background-color: #F9F8FC;
+  display: flex;
+	justify-content: center;
+	align-items: flex-start;
   }
 
 .newNoteText:focus{
