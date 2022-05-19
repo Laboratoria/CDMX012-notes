@@ -9,27 +9,27 @@ import { TiEdit } from "react-icons/ti";
 import { BiPlus } from "react-icons/bi";
 /* Firebase, firestore */
 import { db } from "../../lib/firebaseConfig";
-import { collection,  getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 // Main container
 function Notes({ logOut }) {
-
-/* Configuración de hook useState */
-  const[theNotes, setTheNotes] = useState([]);
+  /* Configuración de hook useState */
+  const [theNotes, setNotes] = useState([]);
   /* Referencia a la colección db de Firestore: notesCreated */
-  const notesCollectionReference = collection(db, "notesCreated")
-  useEffect(()=>{
-    const getNotes =async () => {
-      const notesDataFireBase = await getDocs(notesCollectionReference);
-    console.log(notesDataFireBase);
+  const notesCollectionReference = collection(db, "notesCreated");
+
+  useEffect(() => {
+    const getNotes = async () => {
+      const data = await getDocs(notesCollectionReference);
+      setNotes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      console.log(data.docs);
+      console.log(theNotes);
     };
+
     getNotes();
   }, []);
 
   return (
- 
- 
-
     <>
       <div className="mainContainerNotes">
         <section>
@@ -55,54 +55,47 @@ function Notes({ logOut }) {
             <FiLogOut /> Salir
           </button>
         </nav>
-{/* Two sections */}
+        {/* Two sections */}
 
         <section className="twoSectionsContainer">
-          <button className="btnAddNote" ><BiPlus /></button>
+          <button className="btnAddNote">
+            <BiPlus />
+          </button>
 
           {/* Left side */}
 
-
-  
-    <div>NotesList</div>
-
-
-  
 
           <section className="leftSide">
             <section>
               <h1>
                 <u>My Notes</u>
-                
               </h1>
-            </section>
+         
+              <section className="notesList">
 
+              </section>
+            </section>
           </section>
 
           {/* Right side */}
           <section className="rightSide">
-            <section>
-              <h1>
-                <u>My Notes</u>
-              </h1>
-            </section>
-            
             <form>
-            <button className="BtnTrash" ><BsFillTrashFill /></button>
-            <button className="BtnEdit" ><TiEdit /></button>
+              <section className="buttonsContainer" >
+                <button className="BtnTrash">
+                  <BsFillTrashFill />
+                </button>
+                <button className="BtnEdit">
+                  <TiEdit />
+                </button>
+              </section>
 
-            <input
-              className="newNoteTitle"
-              type="text"
-              placeholder="Write a title "
-            ></input>
-            <input
-              className="newNoteText"
-              type="text"
-              placeholder="Write your note here"
-            ></input>
+
+              <input
+                className="newNoteText"
+                type="text"
+                placeholder="Write your note here"
+              ></input>
             </form>
-
           </section>
         </section>
       </div>
@@ -183,6 +176,3 @@ export default Notes;
     </>
   );
 }  */
-
-
-
