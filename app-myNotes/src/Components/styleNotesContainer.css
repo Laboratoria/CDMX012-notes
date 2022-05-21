@@ -58,7 +58,7 @@
   flex-direction: row;
 }
 .colection_saved {
-  width: 50%;
+  width: 20%;
   height: 4rem;
   margin: 1rem 0;
   padding-right: 2.5rem;
@@ -70,7 +70,7 @@
 }
 
 .note_tittle {
-  width: 50%;
+  width: 80%;
   height: 4rem;
   margin: 1rem 0;
   padding: 0 3rem;
@@ -86,7 +86,7 @@
   padding: 0 3rem;
   font-family: 'Inter';
   font-weight: 200;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   text-transform: capitalize;
   margin: 0;
   word-wrap: break-word;

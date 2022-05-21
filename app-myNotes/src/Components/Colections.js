@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ListColection from "../Components/ListColection";
-
 import "../Components/styleColections.css";
 import iconApunte from "../Assets/icons/apunte.png";
 import iconWork from "../Assets/icons/trabajo.png";
@@ -15,10 +14,10 @@ function Colections({setFlagFalse, flag}) {
 
    ///// hace renderizado condicional en main 
   const handleSetColection = () => {
-      return <ListColection selectedColection = {handleColection}/>
+      return <ListColection selectedColection = {handleColection} />
   };
 
-  // hace set de la coleccion seleccionada y entra la funcion de comunicacion con el padre
+  // hace set de la coleccion seleccionada y entra la funcion de comunicacion con el padre nav
   const setColection = (currentColection) => {
     setFlagFalse();
     setHandleColection(currentColection);
@@ -60,9 +59,10 @@ function Colections({setFlagFalse, flag}) {
         </div>
 
         <section className="deleted_notes_content">
+
           <div className="colection_style" id="btn_shade">
-            <img src={iconArchived} alt="" className="colection_icon" />
-            <button className="btn_colection" id="shade">
+            <img src={iconArchived} alt="" className="colection_icon"/>
+            <button className="btn_colection" id="shade" onClick={() => setColection("Archivado")}>
               {" "}
               Notas archivadas{" "}
             </button>
@@ -70,7 +70,7 @@ function Colections({setFlagFalse, flag}) {
 
           <div className="colection_style" id="btn_shade">
             <img src={iconTrash} alt="" className="colection_icon" />
-            <button className="btn_colection" id="shade">
+            <button className="btn_colection" id="shade" onClick={() => setColection("Papelera")}>
               {" "}
               Papelera{" "}
             </button>

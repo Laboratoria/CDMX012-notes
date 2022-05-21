@@ -8,10 +8,10 @@ import "./styleActionNotes.css";
 import { BtnBack } from "../Components/Buttons";
 import { Icons } from "../Components/icons";
 import iconSave from "../Assets/icons/guardar.png";
-import iconAdd from "../Assets/icons/image.png";
 import iconColection from "../Assets/icons/nota-adhesiva.png";
 import iconDeleteGray from "../Assets/icons/eliminarGray.png";
 import iconDelete from "../Assets/icons/eliminar.png";
+import iconArchive from "../Assets/icons/archivar.png";
 
 const InputNotes = (props) => {
   let Id = localStorage.getItem("noteId");
@@ -36,7 +36,7 @@ const InputNotes = (props) => {
 
   /////setea los valores de coleccion a guardar
   const [colection, setColection] = useState("Apunte");
-
+  
   /////set del color de la nota
   const [themeColor, setThemeColor] = useState();
 
@@ -52,6 +52,14 @@ const InputNotes = (props) => {
     props.saveNote(note);
     navigate("/Home");
   };
+
+    // boton guardar en coleccion archivo con funcion saveArchive
+    const handleArchive = (e) => {
+      e.preventDefault();
+      props.saveArchive(note);
+      navigate("/Home");
+    };
+
 
   // boton editar con funcion editNote
   const handleEditSubmit = (e) => {
@@ -84,7 +92,6 @@ const InputNotes = (props) => {
     setToCreateNewNote(true);
 
     if (Id){
-
     const snap = await getDoc(doc(db, "notes", Id));
     let data = snap.data();
     setNote(data);
@@ -95,7 +102,7 @@ const InputNotes = (props) => {
   /////observa el cambio en la funcion get note
   useEffect(() => {
     getNoteToEdit();
-  }, []);
+  },[]);
   
   //Renderizado condicional si se va a crear o editar una nota
   return (
@@ -116,7 +123,7 @@ const InputNotes = (props) => {
         </div>
 
         <div className="text_note">
-        {toCreateNewNote == true ?( <textarea type="text" name="note" placeholder="Nota" onChange={handleInputChange} />)
+        {toCreateNewNote === true ?( <textarea type="text" name="note" placeholder="Nota" onChange={handleInputChange} />)
         : (  <textarea type="text" name="note" value={note.note} onChange={handleInputChange} />
         )}
         </div>
@@ -161,8 +168,7 @@ const InputNotes = (props) => {
           <div className="btn_actions">
             <img src={iconSave} alt="" className="note_icon" />
 
-            
-            { toCreateNewNote == true ? (
+            { toCreateNewNote === true ? (
               <button className="btn_action" onClick={handleNewSubmit}>
                 {" "}
                 Guardar{" "}
@@ -184,7 +190,7 @@ const InputNotes = (props) => {
               onChange={ChangeColections}
             >
               <option value="Apunte">Agregar a lista</option>
-              <option>Apunte</option>
+              <option>Apuntes</option>
               <option>Trabajo</option>
               <option>Recordatorios</option>
               <option>Ideas</option>
@@ -192,11 +198,11 @@ const InputNotes = (props) => {
           </div>
 
           <div className="btn_actions">
-            <img src={iconAdd} alt="" className="note_icon" />
-            <button className="btn_action"> Agregar imágen </button>
+            <img src={iconArchive} alt="" className="note_icon" />
+            <button className="btn_action" onClick={handleArchive}> Archivar </button>
           </div>
 
-          {toCreateNewNote == true ? (
+          {toCreateNewNote === true ? (
             <div className="btn_action_delete">
               <img src={iconDeleteGray} alt="" className="note_icon" />
               <button className="btn_actionDelete"> Eliminar </button>

@@ -97,20 +97,7 @@ textarea {
 }
 
 
-/* .input_icon {
-  width: 1.7rem;
-  height: 1.7rem;
-  margin: .5rem;
-} */
-
-.tenor-gif-embed {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.select_colections {
+.select_colections  {
   width: 90%;
   background-color: #23262F;
   color: white;
@@ -121,9 +108,9 @@ textarea {
   text-align: center;
   margin-left: 5%;
 }
-
-.select_colections .option {
+/* 
+.select_colections {
   width: 90%;
   text-align: center;
   background-color: #00f7ff;
-}
+} */

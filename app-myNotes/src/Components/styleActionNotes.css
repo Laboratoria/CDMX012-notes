@@ -36,11 +36,11 @@
 
 .gray {
   background-color: #343846;
+  border: #00f7ff;
 }
 
 .Maldives {
-  text-shadow: 4px 4px 9px #424242;
-  background: linear-gradient(to right, #72e4de, #0ed2f7);
+  background: linear-gradient(to right, #51d3e4, #08b6d9);
 }
 
 .Purpink {

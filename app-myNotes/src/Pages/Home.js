@@ -71,12 +71,13 @@ function HomePage() {
         {handleColection ===  "allNotes" ? <NotesContainer /> : < Colections setFlagFalse={setFlagFalse}  flag={flag}/>}
       </main>
 
-      <div className="footer_menu">
+      <div className="footer_menu"> 
         <BackToTop />
-        <BtnAddNote />
-        <BtnLogOut />
+        <BtnAddNote /> 
+        <BtnLogOut /> 
       </div>
-    </>
+    </> 
   );
 }
 export default HomePage;
+       

@@ -31,6 +31,7 @@ export const LogInGoogle = signInWithPopup;
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 export const colRef = collection(db, "notes");
+export const archiveRef = collection(db, "archive");
 
 export function useAuth() {
   const [currentUser, setCurrentUser] = useState();
@@ -57,11 +58,6 @@ export const saveNote = async (newNotes) => {
 export const toEditNote = async (note, Id) => {
   const noteToEdit = doc(db, 'notes', Id)
 
-
-  console.log(note);
-  console.log(Id);
-  console.log(noteToEdit);
-
   await updateDoc(noteToEdit, {
     title: note.title,
     note: note.note,
@@ -69,9 +65,20 @@ export const toEditNote = async (note, Id) => {
     modif: "Modificacion: " + DateHour,
     color: note.color,
     colection: note.colection,
-    
+
   })
 }
+
+export const saveArchive = async (newNotes) => {
+  const user = auth.currentUser;
+  newNotes.userId = user.email;
+
+  await addDoc(archiveRef, newNotes);
+  localStorage.clear();
+};
+
+
+
 
 export const deletedNote = async(Id) => {
   await deleteDoc(doc( colRef, Id));

@@ -9,15 +9,13 @@ const NotesContainer = () => {
   const [notes, setNotes] = useState([]);
 
   const getNotes = (newNotes) => {
-    try {
+    try { 
       const q = query(colRef, orderBy("date", "desc"));
-
       onSnapshot(q, (querySnapshot) => {
         const docs = [];
         querySnapshot.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
         });
-
         setNotes(docs);
       });
     } catch (error) {}
@@ -28,7 +26,10 @@ const NotesContainer = () => {
 
   return (
     <div className="getNote_container">
-      <NoteModal onClose={() => setCurrentNote("")} currentNote={currentNote} />
+      <NoteModal 
+        onClose={() => setCurrentNote("")} 
+        currentNote={currentNote} 
+      />
       {notes.map((note) => (
         <div
           className={`printNote_container  ${note.color} `}
