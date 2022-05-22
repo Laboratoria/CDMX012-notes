@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "../components/noauthenticate/Login";
 import Notes from "./authenticate/Notes";
-import {LoginWithGoogle, logOut} from "../lib/firebaseAuth.js";
+import {LoginWithGoogle} from "../lib/firebaseAuth.js";
 
 
 
@@ -12,7 +12,7 @@ function Paths({ isAuthenticate }) {
         <Routes>
           <Route
             path="/"
-            element={<Notes logOut={logOut} />}
+            element={<Notes /* logOut={logOut} */ />}
           ></Route>
         </Routes>
       ) : (

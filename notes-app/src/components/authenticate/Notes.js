@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+/* Components */
+import NavBar from "../NavBar";
 /* Styles */
 import "../styles/Notes.css";
 import "../styles/Button.css";
 /* Icons */
-import { FiLogOut } from "react-icons/fi";
 import { BsFillTrashFill } from "react-icons/bs";
 import { TiEdit } from "react-icons/ti";
 import { BiPlus } from "react-icons/bi";
@@ -11,8 +12,9 @@ import { BiPlus } from "react-icons/bi";
 import { db } from "../../lib/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 
+
 // Main container
-function Notes({ logOut }) {
+function Notes() {
   /* Configuración de hook useState */
   const [theNotes, setNotes] = useState([]);
   /* Referencia a la colección db de Firestore: notesCreated */
@@ -39,8 +41,7 @@ function Notes({ logOut }) {
             alt="bokeh background"
           ></img>
         </section>
-
-        <nav className="navBar">
+        <NavBar />        {/* <nav className="navBar">
           <img
             className="smallRosettaLogo"
             src="https://i.imgur.com/pS4YttT.png"
@@ -54,7 +55,7 @@ function Notes({ logOut }) {
           >
             <FiLogOut /> Salir
           </button>
-        </nav>
+        </nav> */}
         {/* Two sections */}
 
         <section className="twoSectionsContainer">

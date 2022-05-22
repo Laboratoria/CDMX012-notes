@@ -23,60 +23,28 @@ Taviraj:wght@400;500;600;700;800&
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
-  align-content: flex-start;
+  align-items: flex-start;
   z-index: 2;
 }
-.navBar {
-  background-color: #894c3a;
-  width: 100%;
-  height: 90px;
-  z-index: 16;
-  padding: 16px;
-  margin-top: 0px;
-  display: flex;
-  align-items:baseline
-}
 
-.smallRosettaLogo {
-  height: 100%;
-  z-index: 4;
-}
-
-.btnLogout {
-  position: absolute;
-  margin-left: 50%;
-}
 
 .backgroundImage {
   width: 50%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
   opacity: 0.6;
   background-repeat: repeat;
   z-index: 0;
 }
 
-.mainContainerNotes {
- height: 100vh;
-  z-index: 7;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  align-content: stretch;
-}
-
-
-
 .twoSectionsContainer {
-  /* background-color: darkorchid; */
+  background-color: darkorchid;
 height: 100vh;
   width: 100%;
   display: flex;
@@ -96,7 +64,7 @@ outline: none;
 
 .leftSide {
 height: 96%;
-  /* background-color: crimson; */
+  background-color: crimson;
   z-index: 10;
   margin: 16px 8px 16px 16px;
   flex-basis: 50%;
@@ -108,7 +76,7 @@ height: 96%;
 .rightSide {
 height: 96%;
 
-  /* background-color: cadetblue; */
+  background-color: cadetblue;
   z-index: 10;
   
   margin: 16px 16px 16px 8px;
