@@ -9,9 +9,16 @@ import { colRef, archiveRef } from "../firebase-config";
 function validateColection(typeOfColection) {
   let q = "";
   if (typeOfColection === "Archivado" || typeOfColection === "Papelera") {
-    q = query( archiveRef, where("colection", "==", typeOfColection, orderBy("date", "desc")));
-  } else { q = query(colRef, where("colection", "==", typeOfColection, orderBy("date", "desc")));
-    }
+    q = query(
+      archiveRef,
+      where("colection", "==", typeOfColection, orderBy("date", "desc"))
+    );
+  } else {
+    q = query(
+      colRef,
+      where("colection", "==", typeOfColection, orderBy("date", "desc"))
+    );
+  }
   return q;
 }
 
@@ -48,33 +55,35 @@ const ListColection = ({ selectedColection }) => {
         <div className="note_colection_select"> {selectedColection} </div>
       </div>
 
-      <div className="getNote_colection_container">
-        <NoteModal
-          onClose={() => setCurrentNote("")}
-          currentNote={currentNote}
-        />
-        {notes.map((note) => (
-          <div
-            className={`printNote_container  ${note.color} `}
-            key={note.id}
-            onClick={() => setCurrentNote(note)}
-          >
-            <section className="header_note_container">
-              <div className="note_tittle">{note.title}</div>
-              <div className="colection_saved">{note.colection} </div>
-            </section>
+      <div className="margin">
+        <div className="getNote_container" id="margin">
+          <NoteModal
+            onClose={() => setCurrentNote("")}
+            currentNote={currentNote}
+          />
+          {notes.map((note) => (
+            <div
+              className={`printNote_container  ${note.color} `}
+              key={note.id}
+              onClick={() => setCurrentNote(note)}
+            >
+              <section className="header_note_container">
+                <div className="note_tittle">{note.title}</div>
+                <div className="colection_saved">{note.colection} </div>
+              </section>
 
-            <div className="note_text"> {note.note} </div>
-            <div className="line"></div>
-            <section className="date_container">
-              <p className="note_mofifDate" id="modification_date">
-                {" "}
-                {note.modif}{" "}
-              </p>
-              <p className="note_Date"> {note.create}</p>
-            </section>
-          </div>
-        ))}
+              <div className="note_text"> {note.note} </div>
+              <div className="line"></div>
+              <section className="date_container">
+                <p className="note_mofifDate" id="modification_date">
+                  {" "}
+                  {note.modif}{" "}
+                </p>
+                <p className="note_Date"> {note.create}</p>
+              </section>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

@@ -6,16 +6,12 @@
   z-index: -1;
 }
 
-.getNote_colection_container {
+.margin{
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  z-index: -1;
   position: absolute;
   top: 6%;
 }
-
 .header_colection_container{
   width: 90%;
   height: 8%;
