@@ -8,13 +8,14 @@ import { useState } from "react";
 
      const NewNote=  () =>{
          const[notas, setNotas]= useState('');
+         const [cuerpo, setCuerpo]= useState ("");
+
          
          const collectionNotas= collection(db, "notas")
-        
+        console.log(collectionNotas)
          const yanose = async (e)=>{
              e.preventDefault()
-             await addDoc (collectionNotas, { notas: notas , cuerpo: notas  })
-
+             await addDoc (collectionNotas, { titulo: notas , descripcion: cuerpo  })
          }
 
 
@@ -30,10 +31,11 @@ import { useState } from "react";
         onChange= {(e)=>setNotas(e.target.value)}
         ></Input>
         <Textarea
-        placeholder="Escribe tú nota"></Textarea>
+        placeholder="Escribe tú nota" onChange={(e)=>{setCuerpo(e.target.value);
+        }}></Textarea>
         </div>
 
-        <Button placeholder = {'Escribe tu nota'} >Guardar</Button>
+        <Button onClick={yanose} placeholder = {'Escribe tu nota'} >Guardar</Button>
 
         </Form>
     </div>
