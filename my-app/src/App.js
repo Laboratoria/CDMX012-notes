@@ -10,6 +10,8 @@ import EditNote from "./Routes/Authenticate/EditNote";
 import Error from "./Routes/noAuthenticate/Error";
 import { onAuthStateChanged } from "firebase/auth";
 import { authentication } from "./lib/firebaseConfig";
+import Cierre from "./Routes/noAuthenticate/Cierre";
+
 
 function App() {
   const [isAutenticate, setAutheticate] = useState(null);
@@ -28,9 +30,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      {isAutenticate ? (
+      {isAutenticate? (
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path='/home' element={<Home/>} />
           <Route path="/createNote" element={<CreateNote />} />
           <Route path="/notesView" element={<NotesView />} />
@@ -39,6 +41,7 @@ function App() {
         </Routes>
       ) : (
         <Routes>
+          <Route path="/cierre" element={<Cierre />} />
           <Route path="/" element={<Register />} />
           <Route path="/*" element={<Error />} />
         </Routes>

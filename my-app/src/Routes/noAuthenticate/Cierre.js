@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom';
-import { Button, H2 } from './ErrorStyles';
-function Error () {
+import { H2, Button } from './Cierrestyles';
+function Cierre () {
 
     const navigate = useNavigate();
     const loginClick = ()=>{
@@ -8,9 +8,9 @@ function Error () {
     }
     return (
         <div>
-         <H2>Error la página no existe</H2>
+         <H2>Cerraste sesión</H2>
          <Button onClick={loginClick}>Ir a inicio</Button>
         </div>
     )
 }
-export default Error;
+export default Cierre;
