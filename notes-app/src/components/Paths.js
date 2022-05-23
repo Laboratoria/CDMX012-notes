@@ -12,7 +12,7 @@ function Paths({ isAuthenticate }) {
         <Routes>
           <Route
             path="/"
-            element={<Notes /* logOut={logOut} */ />}
+            element={<Notes />}
           ></Route>
         </Routes>
       ) : (

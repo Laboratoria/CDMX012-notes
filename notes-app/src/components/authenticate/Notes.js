@@ -1,36 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 /* Components */
 import NavBar from "../NavBar";
+import NotesList from "../NotesList";
+import BtnAddNote from "../BtnAddNote";
+import ANewNote from "../ANewNote";
+
 /* Styles */
 import "../styles/Notes.css";
 import "../styles/Button.css";
 /* Icons */
 import { BsFillTrashFill } from "react-icons/bs";
 import { TiEdit } from "react-icons/ti";
-import { BiPlus } from "react-icons/bi";
-/* Firebase, firestore */
-import { db } from "../../lib/firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
 
-
-// Main container
 function Notes() {
-  /* Configuración de hook useState */
-  const [theNotes, setNotes] = useState([]);
-  /* Referencia a la colección db de Firestore: notesCreated */
-  const notesCollectionReference = collection(db, "notesCreated");
-
-  useEffect(() => {
-    const getNotes = async () => {
-      const data = await getDocs(notesCollectionReference);
-      setNotes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      console.log(data.docs);
-      console.log(theNotes);
-    };
-
-    getNotes();
-  }, []);
-
   return (
     <>
       <div className="mainContainerNotes">
@@ -41,47 +23,24 @@ function Notes() {
             alt="bokeh background"
           ></img>
         </section>
-        <NavBar />        {/* <nav className="navBar">
-          <img
-            className="smallRosettaLogo"
-            src="https://i.imgur.com/pS4YttT.png"
-            alt="rosetta Logo"
-          ></img>
-          <button
-            className="btnLogout"
-            onClick={() => {
-              logOut();
-            }}
-          >
-            <FiLogOut /> Salir
-          </button>
-        </nav> */}
+        <NavBar />
         {/* Two sections */}
 
         <section className="twoSectionsContainer">
-          <button className="btnAddNote">
-            <BiPlus />
-          </button>
+          <BtnAddNote />
 
           {/* Left side */}
 
-
           <section className="leftSide">
-            <section>
-              <h1>
-                <u>My Notes</u>
-              </h1>
-         
-              <section className="notesList">
-
-              </section>
-            </section>
+            <NotesList />
           </section>
 
           {/* Right side */}
           <section className="rightSide">
-            <form>
-              <section className="buttonsContainer" >
+          <ANewNote />
+
+{/*             <form>
+              <section className="buttonsContainer">
                 <button className="BtnTrash">
                   <BsFillTrashFill />
                 </button>
@@ -91,12 +50,7 @@ function Notes() {
               </section>
 
 
-              <input
-                className="newNoteText"
-                type="text"
-                placeholder="Write your note here"
-              ></input>
-            </form>
+            </form> */}
           </section>
         </section>
       </div>
@@ -105,75 +59,3 @@ function Notes() {
 }
 
 export default Notes;
-
-//BOTÓN DE LOGOUT QUE FUNCIONA
-
-/* function Notes({ logOut }) {
-  return (
-    <>
-        <section>
-          <img
-            className="backgroundImage"
-            src="https://i.imgur.com/N9pCgiX.jpg?1"
-            alt="bokeh background"
-          ></img>
-        </section>
-        <nav className="navBar">
-          <img
-            className="smallRosettaLogo"
-            src="https://i.imgur.com/pS4YttT.png"
-            alt="rosetta Logo"
-          ></img>
-          <button
-            className="btnLogout"
-            onClick={() => {
-              logOut();
-            }}
-          >
-            <FiLogOut /> Salir
-          </button>
-        </nav>
-
-        <section className="mainContainerNotes">
-          <section className="leftSide"></section>
-          <section className="rightSide"></section>
-        </section>
-    </>
-  );
-} */
-
-/* function Notes({ logOut }) {
-  return (
-    <>
-      <div className="mainContainerNotes">
-        <section>
-          <img
-            className="backgroundImage"
-            src="https://i.imgur.com/N9pCgiX.jpg?1"
-            alt="bokeh background"
-          ></img>
-        </section>
-        <nav className="navBar">
-          <img
-            className="smallRosettaLogo"
-            src="https://i.imgur.com/pS4YttT.png"
-            alt="rosetta Logo"
-          ></img>
-          <button
-            className="btnLogout"
-            onClick={() => {
-              logOut();
-            }}
-          >
-            <FiLogOut /> Salir
-          </button>
-        </nav>
-
-        <section className="mainContainerNotes">
-          <section className="leftSide"></section>
-          <section className="rightSide"></section>
-        </section>
-      </div>
-    </>
-  );
-}  */

@@ -1,0 +1,47 @@
+.titleAndText {
+    width: 100%;
+    height: auto;
+    font-family: "Mulish", sans-serif;
+    font-size: 24px;
+    z-index: 60;
+}
+
+::placeholder {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #B59395;
+    background-color: transparent;
+    border: hidden;
+  }
+
+.noteBackground{
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: .6;
+    z-index: 1;
+}
+
+.noteTitle{
+    width: 100%;
+    background-color: #F9F8FC;
+  outline: none;
+  z-index: 60;
+
+
+}
+.noteTitle:focus {
+    outline: none
+}
+
+
+.noteText{
+    width: 100%;
+    background-color: #F9F8FC;
+    z-index: 60;
+
+
+
+}

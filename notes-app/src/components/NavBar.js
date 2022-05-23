@@ -3,11 +3,10 @@ import React from "react";
 import { FiLogOut } from "react-icons/fi";
 /* STYLES */
 import "./styles/Button.css";
-import "./styles/NavBar.css"
+import "./styles/NavBar.css";
 
 import { logOut } from "../lib/firebaseAuth.js";
-
-
+/* import Greeting from "./Greeting"; */
 
 function NavBar() {
   return (
@@ -20,7 +19,9 @@ function NavBar() {
           alt="Rosetta Logo"
         ></img>
 
-       git {/* BUTTON LOGOUT */}
+        {/* Saludo y foto de usuario */}
+
+        {/* BUTTON LOGOUT */}
         <button
           className="btnLogout"
           onClick={() => {
@@ -29,7 +30,6 @@ function NavBar() {
         >
           <FiLogOut /> Salir
         </button>
-
       </nav>
     </>
   );

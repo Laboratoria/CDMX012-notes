@@ -1,0 +1,24 @@
+
+.titleNotesList {
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    color: #f9f8fc;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.526);
+    outline: 1.5px solid #f9f8fc
+}
+
+
+  h4 {
+    font-family: "Mulish", sans-serif;
+    color: #894C3A;
+    font-size: 16px;
+  }
+
+.listElement{
+    outline: 1px solid #F9F8FC;
+    margin: 8px;
+    padding: 8px;
+    background-color: #F9F8FC;
+    border-radius: 0px 10px 10px 0px;
+}

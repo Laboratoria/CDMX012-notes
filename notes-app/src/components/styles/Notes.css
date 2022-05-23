@@ -23,13 +23,12 @@ Taviraj:wght@400;500;600;700;800&
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 2;
 }
-
 
 .backgroundImage {
   width: 50%;
@@ -45,7 +44,7 @@ Taviraj:wght@400;500;600;700;800&
 
 .twoSectionsContainer {
   background-color: darkorchid;
-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -53,17 +52,19 @@ height: 100vh;
   padding: 8px;
 }
 
-.BtnTrash, .BtnEdit {
-background-color: transparent;
-color: #9E6C63;
-font-size: 32px;
-outline: none;
+.BtnTrash,
+.BtnEdit {
+  background-color: transparent;
+  color: #9e6c63;
+  font-size: 32px;
+  outline: none;
 
-/* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.526);
- */}
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.526);
+ */
+}
 
 .leftSide {
-height: 96%;
+  height: 96%;
   background-color: crimson;
   z-index: 10;
   margin: 16px 8px 16px 16px;
@@ -71,53 +72,41 @@ height: 96%;
   overflow-y: scroll;
 }
 
-
-
 .rightSide {
-height: 96%;
+  height: 96%;
 
   background-color: cadetblue;
   z-index: 10;
-  
   margin: 16px 16px 16px 8px;
   flex-basis: 50%;
   display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.buttonsContainer{
+.buttonsContainer {
   padding-left: 50%;
   width: 75%;
   display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-::placeholder{
-  display: flex;
-	justify-content: center;
-	align-items: flex-start;
-}
 
-.newNoteText{
+
+.newNoteText {
   height: 500px;
   width: 100%;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 24px;
   color: #894c3a;
-  background-color: #F9F8FC;
+  background-color: #f9f8fc;
   display: flex;
-	justify-content: center;
-	align-items: flex-start;
-  }
+  justify-content: center;
+  align-items: flex-start;
+}
 
-.newNoteText:focus{
-    outline:none;
-  }
 
 
 h1 {
@@ -134,20 +123,19 @@ h2 {
 
 /* VERSION PARA CELULAR */
 /* On screens that are 428px or less */
-@media only screen and (max-width: 428px){
-.twoSectionsContainer {
+@media only screen and (max-width: 428px) {
+  .twoSectionsContainer {
     height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      flex-direction: column-reverse;
-      background-color: darkorchid;
-}
-.smallRosettaLogo {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .smallRosettaLogo {
     width: 40%;
     z-index: 4;
   }
-  
+
   .btnLogout {
     position: absolute;
     margin-left: 30%;
@@ -155,35 +143,29 @@ h2 {
 
   .mainContainerNotes {
     height: 100vh;
-    
-     background-color: darkgreen;
-     z-index: 7;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     align-items: center;
-     align-content: stretch;
-   }
+
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+  }
 
   .leftSide {
     width: 100%;
-      background-color: crimson;
-      z-index: 10;
-      margin: 8px;
-      flex-basis: 50%;
-      overflow-y: scroll;
-    }
-    .rightSide {
-        width: 100%;
+    z-index: 10;
+    margin: 8px;
+    flex-basis: 50%;
+    overflow-y: scroll;
+  }
+  .rightSide {
+    width: 100%;
 
-    
-      background-color: cadetblue;
-      z-index: 10;
-      
-      margin: 8px;
+    z-index: 10;
 
-      flex-basis: 50%;
-    
-    
-    }
+    margin: 8px;
+
+    flex-basis: 50%;
+  }
 }
