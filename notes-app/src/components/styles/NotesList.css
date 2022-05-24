@@ -4,8 +4,8 @@
     font-size: 24px;
     color: #f9f8fc;
     text-align: center;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.526);
-    outline: 2px solid #f9f8fc
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.901);
+    border-bottom: 2px solid #f9f8fc
 }
 
 
@@ -16,11 +16,15 @@
   }
 
 .listElement{
+    width: 26%;
     outline: 1px solid #F9F8FC;
     margin: 8px;
     padding: 8px;
     background-color: #F9F8FC;
     border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.526);
+
+    
 }
 
 .titleOfNote{
@@ -28,8 +32,24 @@
   color: #f9f8fc;
   padding: 8px;
 
+
 }
 
 .textOfNote{
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: #894C3A;
+  padding: 16px 8px;
 
+
+
+}
+
+.listOfNotes{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
 }

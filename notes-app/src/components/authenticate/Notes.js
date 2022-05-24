@@ -2,7 +2,6 @@ import React from "react";
 /* Components */
 import NavBar from "../NavBar";
 import NotesList from "../NotesList";
-import BtnAddNote from "../BtnAddNote";
 import ANewNote from "../ANewNote";
 
 /* Styles */
@@ -27,7 +26,6 @@ function Notes() {
         {/* Two sections */}
 
         <section className="twoSectionsContainer">
-          <BtnAddNote />
 
           {/* Left side */}
 

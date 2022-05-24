@@ -3,7 +3,7 @@
 /* CSS */
 .GoogleBtn,
 .btnLogout,
-.btnAddNote
+.btnAddNote,
 .btnCreateNote {
   background: #f9f8fc;
   border-radius: 999px;
@@ -40,6 +40,9 @@
 	align-items: center;
   outline: .5px solid #9E6C63;
 }
+
+
+
 
 /* VERSION PARA CELULAR
  On screens that are 428px or less 

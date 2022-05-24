@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/ANewNote.css";
+import "./styles/Button.css"
 import { useState } from "react";
 import { db } from "../lib/firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
@@ -37,8 +38,9 @@ function ANewNote() {
             setNewText(event.target.value);
           }}
         ></input>
-      </section>
-      <button className="createNote" onClick={createNewNote}>
+      </section >
+      
+      <button onClick={createNewNote}>
         Create
       </button>
     </>
