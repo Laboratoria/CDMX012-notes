@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles/ANewNote.css";
-import "./styles/Button.css"
+import "./styles/Button.css";
 import { useState } from "react";
 import { db } from "../lib/firebaseConfig";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 function ANewNote() {
   const [newTitle, setNewTitle] = useState("");
@@ -16,8 +16,12 @@ function ANewNote() {
 
   return (
     <>
+      <section className="titleCreateANote">
+        <h3>Create a note</h3>
+      </section>
+
       <section className="titleAndText">
-{/*       <img
+        {/*       <img
             className="noteBackground"
             src="https://i.imgur.com/hrDyHDA.png"
             alt="note background"
@@ -38,11 +42,12 @@ function ANewNote() {
             setNewText(event.target.value);
           }}
         ></input>
-      </section >
-      
-      <button onClick={createNewNote}>
-        Create
-      </button>
+
+        <button className="btnCreate" onClick={createNewNote}>
+          Create
+        </button>
+        
+      </section>
     </>
   );
 }

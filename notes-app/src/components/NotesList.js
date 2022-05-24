@@ -1,9 +1,10 @@
 import React from "react";
 import "./styles/NotesList.css";
 import { AiFillPushpin } from "react-icons/ai";
+import { BsFillTrashFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { db } from "../lib/firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 
 function NotesList() {
   /* ESTADO LLAMADO theNotes LISTA DE USUARIOS QUE CONTENDRÁ
@@ -33,6 +34,14 @@ RENDERICE*/
     getNotes();
   }, []);
 
+  /* Borrar nota */
+  const deleteNote = async (id) => {
+    const noteDoc = doc(db, "notesCreated", id);
+    await deleteDoc(noteDoc);
+          console.log(`Que es noteDoc=${noteDoc}`);
+
+  };
+
   return (
     <div>
       <section className="titleNotesList">
@@ -41,16 +50,25 @@ RENDERICE*/
 
       <section className="listOfNotes">
         {theNotes.map((note) => {
-        /* console.log(`Título=${theNotes.map}`); */
+          /* console.log(`Título=${theNotes.map}`); */
 
           return (
-          <section className="listElement">
+            <section className="listElement">
               {" "}
-              <h4 className="titleOfNote"><AiFillPushpin /> {note.Title} </h4>
+              <h4 className="titleOfNote">
+                <AiFillPushpin /> {note.Title}{" "}
+                <button
+                  onClick={() => {
+                    deleteNote(note.id);
+                  }}
+                  className="btnDelete"
+                >
+                  <BsFillTrashFill />
+                </button>{" "}
+              </h4>
               <h4 className="textOfNote"> {note.Text} </h4>
-              
-
-          </section>);
+            </section>
+          );
         })}
       </section>
     </div>

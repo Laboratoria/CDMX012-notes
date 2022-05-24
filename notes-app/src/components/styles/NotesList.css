@@ -1,28 +1,37 @@
-
+/* font-family: 'Taviraj', serif; */
 .titleNotesList {
-    font-family: "Taviraj", serif;
-    font-size: 24px;
+  background-color: #894c3a5e;
+  border-radius: 10px 10px 0px 0px;
+  font-family: 'Mulish', sans-serif;
+    font-size: 20px;
     color: #f9f8fc;
     text-align: center;
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.901);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
     border-bottom: 2px solid #f9f8fc
 }
+
+
 
 
   h4 {
     font-family: "Mulish", sans-serif;
     color: #894C3A;
-    font-size: 16px;
+    font-size: 12px;
   }
 
 .listElement{
-    width: 26%;
-    outline: 1px solid #F9F8FC;
-    margin: 8px;
-    padding: 8px;
+    width: 30%;
+    height: 140px;
+    margin: 4px;
+    padding: 4px;
+    padding-bottom: 16px;
     background-color: #F9F8FC;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.526);
+    overflow:hidden;
+   
 
     
 }
@@ -30,7 +39,10 @@
 .titleOfNote{
   background-color: #894C3A;
   color: #f9f8fc;
-  padding: 8px;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
 
 }
@@ -39,7 +51,7 @@
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   color: #894C3A;
-  padding: 16px 8px;
+  padding: 4px;
 
 
 
@@ -52,4 +64,6 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	align-content: flex-start;
+  gap: 2%;
 }
+

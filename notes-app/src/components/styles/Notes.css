@@ -46,30 +46,21 @@ Taviraj:wght@400;500;600;700;800&
 }
 
 .twoSectionsContainer {
-  /* background-color: darkorchid; */
+  
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
-  /*  */
+	justify-content:  space-around;
+	align-items: baseline;
   padding: 8px;
-}
-
-.BtnTrash,
-.BtnEdit {
-  background-color: transparent;
-  color: #9e6c63;
-  font-size: 32px;
-  outline: none;
-
-  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.526);
- */
+  /* background-color: darkorchid; */
 }
 
 .leftSide {
   height: 96%;
   z-index: 10;
-  margin: 16px 8px 16px 8px;
+  margin: 16px 8px;
   flex-basis: 50%;
   overflow-y: scroll;
   /* background-color: crimson; */
@@ -85,21 +76,19 @@ Taviraj:wght@400;500;600;700;800&
 }
 
 ::-webkit-scrollbar-thumb{
-  background-image: linear-gradient(#894C3A, #F9F8FC );
+  background-image: linear-gradient(#D59F66, #F9F8FC );
   border-radius: 25px;
 
 }
 ::-webkit-scrollbar-thumb:hover{
-  background-image: linear-gradient(#F9F8FC, #894C3A );
+  background-image: linear-gradient(#F9F8FC, #D59F66 );
 }
-
-
 
 
 .rightSide {
   height: 96%;
   z-index: 10;
-  margin: 50px 16px 16px 8px;
+  margin: 16px 8px;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -108,7 +97,7 @@ Taviraj:wght@400;500;600;700;800&
   align-content: space-around;
   text-align: center;
   padding-bottom: 20%;
-  background-color: cadetblue;
+ /*  background-color: cadetblue; */
 
 
 }

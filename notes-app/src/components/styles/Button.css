@@ -3,8 +3,8 @@
 /* CSS */
 .GoogleBtn,
 .btnLogout,
-.btnAddNote,
-.btnCreateNote {
+.btnCreate,
+.btnCreateNote{
   background: #f9f8fc;
   border-radius: 999px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 10px 20px -10px;
@@ -26,21 +26,23 @@
   border: 0;
 }
 
-.btnAddNote {
-  height: 50px;
-  width: 50px;
-  z-index: 20;
-  position: absolute;
-  bottom: 40px;
-  margin-left: 47%;
-  font-size: 60px;
-  font-weight: bold;
-  display: flex;
-	justify-content: center;
-	align-items: center;
-  outline: .5px solid #9E6C63;
+.btnDelete{
+  background: none;
+  color: #B59395;
+  cursor: pointer;
+  font-size: 16px;
+  outline: 0 solid transparent;
+  border-style: none;
+}
+.btnDelete :hover{
+  color: #F9F8FC;
+
 }
 
+.btnCreate{
+
+  margin: 16px;
+}
 
 
 

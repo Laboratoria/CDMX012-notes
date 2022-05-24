@@ -1,9 +1,24 @@
+.titleCreateANote {
+  width: 100%;
+  background-color: #894c3a5e;
+  border-radius: 10px 10px 0px 0px;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  color: #f9f8fc;
+  text-align: center;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid #f9f8fc;
+}
+
 .titleAndText {
   width: 100%;
   height: 90%;
   font-family: "Mulish", sans-serif;
   font-size: 24px;
   z-index: 60;
+  
 }
 
 .noteBackground {
@@ -19,56 +34,35 @@
 .noteTitle,
 .noteText {
   width: 90%;
-  background-color: #f9f8fcce;
+  background-color: #f9f8fc;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
-  color: #894C3A;
+  color: #894c3a;
   border-radius: 10px;
   padding: 16px 8px;
   margin-top: 8px;
   border-style: none;
   z-index: 60;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.526);
+
 }
 
 ::-webkit-input-placeholder {
-    position: absolute;
-    top: 0px;
+  position: absolute;
+  top: 0px;
   padding: 16px 8px;
 
-    font-family: "Mulish", sans-serif;
-    font-size: 16px;
-    color: #9E6C63;
-    background-color: transparent;
-    border: hidden;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: #9e6c63;
+  background-color: transparent;
+  border: hidden;
+}
 
-  }
-
-  input:focus{ 
-      outline:none 
-    }
+input:focus {
+  outline: none;
+}
 
 .noteText {
   height: 60%;
-}
-
-button {
-  background: #f9f8fc;
-  border-radius: 999px;
-  box-shadow: rgba(0, 0, 0, 0.7) 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #894c3a;
-  cursor: pointer;
-  font-family: "Mulish", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
 }

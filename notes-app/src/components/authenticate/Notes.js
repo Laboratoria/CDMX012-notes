@@ -4,12 +4,11 @@ import NavBar from "../NavBar";
 import NotesList from "../NotesList";
 import ANewNote from "../ANewNote";
 
+
+
 /* Styles */
 import "../styles/Notes.css";
-import "../styles/Button.css";
 /* Icons */
-import { BsFillTrashFill } from "react-icons/bs";
-import { TiEdit } from "react-icons/ti";
 
 function Notes() {
   return (
@@ -37,18 +36,7 @@ function Notes() {
           <section className="rightSide">
           <ANewNote />
 
-{/*             <form>
-              <section className="buttonsContainer">
-                <button className="BtnTrash">
-                  <BsFillTrashFill />
-                </button>
-                <button className="BtnEdit">
-                  <TiEdit />
-                </button>
-              </section>
 
-
-            </form> */}
           </section>
         </section>
       </div>
