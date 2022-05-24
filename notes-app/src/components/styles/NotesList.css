@@ -5,7 +5,7 @@
     color: #f9f8fc;
     text-align: center;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.526);
-    outline: 1.5px solid #f9f8fc
+    outline: 2px solid #f9f8fc
 }
 
 
@@ -21,4 +21,15 @@
     padding: 8px;
     background-color: #F9F8FC;
     border-radius: 0px 10px 10px 0px;
+}
+
+.titleOfNote{
+  background-color: #894C3A;
+  color: #f9f8fc;
+  padding: 8px;
+
+}
+
+.textOfNote{
+
 }

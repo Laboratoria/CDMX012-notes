@@ -3,7 +3,8 @@
 /* CSS */
 .GoogleBtn,
 .btnLogout,
-.btnAddNote {
+.btnAddNote
+.btnCreateNote {
   background: #f9f8fc;
   border-radius: 999px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 10px 20px -10px;

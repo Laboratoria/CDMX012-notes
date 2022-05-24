@@ -46,7 +46,9 @@ RENDERICE*/
           return (
           <section className="listElement">
               {" "}
-              <h4><AiFillPushpin /> Title: {note.title} </h4>
+              <h4 className="titleOfNote"><AiFillPushpin /> {note.Title} </h4>
+              <h4 className="textOfNote"> {note.Text} </h4>
+              
 
           </section>);
         })}
