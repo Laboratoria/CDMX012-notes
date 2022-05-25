@@ -3,6 +3,10 @@ import React from "react";
 import NavBar from "../NavBar";
 import NotesList from "../NotesList";
 import ANewNote from "../ANewNote";
+import { useState, useEffect } from "react";
+import { db } from "../../lib/firebaseConfig";
+import { collection, deleteDoc, doc, getDocs, getDoc, orderBy, query } from "firebase/firestore";
+
 
 
 
@@ -11,6 +15,25 @@ import "../styles/Notes.css";
 /* Icons */
 
 function Notes() {
+
+  const [theNotes, setNotes] = useState([]);
+  const notesCollectionReference = collection(db, "notesCreated");
+
+  const getNotes = async () => {
+    const q = query(notesCollectionReference, orderBy("date", "desc"));
+  
+    const data = await getDocs(q, {includeMetadataChanges:true});
+
+    setNotes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+ 
+
+  useEffect(() => {
+    getNotes();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div className="mainContainerNotes">
@@ -29,12 +52,12 @@ function Notes() {
           {/* Left side */}
 
           <section className="leftSide">
-            <NotesList />
+            <NotesList theNotes= {theNotes} />
           </section>
 
           {/* Right side */}
           <section className="rightSide">
-          <ANewNote />
+          <ANewNote getNotes= {getNotes} />
 
 
           </section>

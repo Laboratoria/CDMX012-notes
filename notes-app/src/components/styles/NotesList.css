@@ -49,9 +49,13 @@
 
 .textOfNote{
   font-family: "Mulish", sans-serif;
-  font-size: 16px;
+  width: 100%;
+  font-size: 14px;
   color: #894C3A;
   padding: 4px;
+  display: flex;
+  direction: column;
+
 
 
 

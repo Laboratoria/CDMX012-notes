@@ -2,16 +2,25 @@ import React from "react";
 import "./styles/ANewNote.css";
 import "./styles/Button.css";
 import { useState } from "react";
-import { db } from "../lib/firebaseConfig";
+import { db, auth } from "../lib/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 
-function ANewNote() {
+function ANewNote({getNotes}) {
   const [newTitle, setNewTitle] = useState("");
   const [newText, setNewText] = useState("");
   const notesCollectionReference = collection(db, "notesCreated");
+  const user = auth.currentUser;
+  const date = new Date();
 
   const createNewNote = async () => {
-    await addDoc(notesCollectionReference, { Title: newTitle, Text: newText });
+    await addDoc(notesCollectionReference, { 
+      uid: user.uid,
+      Title: newTitle, 
+      Text: newText,
+      date, 
+
+    });
+    getNotes();
   };
 
   return (
@@ -21,11 +30,7 @@ function ANewNote() {
       </section>
 
       <section className="titleAndText">
-        {/*       <img
-            className="noteBackground"
-            src="https://i.imgur.com/hrDyHDA.png"
-            alt="note background"
-          ></img> */}
+
         <input
           className="noteTitle"
           type="text"

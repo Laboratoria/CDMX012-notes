@@ -1,44 +1,65 @@
 import React from "react";
+import { useParams } from 'react-router-dom'; 
+
 import "./styles/NotesList.css";
 import { AiFillPushpin } from "react-icons/ai";
 import { BsFillTrashFill } from "react-icons/bs";
+import { TiPencil } from "react-icons/ti";
 import { useState, useEffect } from "react";
 import { db } from "../lib/firebaseConfig";
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs, getDoc, orderBy, query } from "firebase/firestore";
 
-function NotesList() {
-  /* ESTADO LLAMADO theNotes LISTA DE USUARIOS QUE CONTENDRÁ
-    LA LISTA DE NOTAS 
-    Configuración de hook useState */
-  const [theNotes, setNotes] = useState([]);
-  /* Referencia a la colección db de Firestore: notesCreated */
+
+function NotesList({theNotes}) {
+
+/*   const [theNotes, setNotes] = useState([]);
   const notesCollectionReference = collection(db, "notesCreated");
-  /* CARGAR LA LISTA DE NOTAS CREADAS.
-USE EFFECT ES UNA FUNCIÓN QUE SE LLAMARÁ CUANDO LA PAG SE 
-RENDERICE*/
+
   useEffect(() => {
-    /* CREAR FUNCIÓN ASINCRONA, AL HACER UNA CONSULTA SIEMPRE
-    REGRESA UNA PROMESA. USE EFFECT NO SE HACE ASINCRONA, SOLO LA 
-    FUNCIÓN QUE ESTÁ DENTRO.   */
+
     const getNotes = async () => {
-      /* TRAER DOCUMENTOS DE LA COLECCION  */
-      const data = await getDocs(notesCollectionReference);
-      /* console.log(`Docs de notesCreated=${data}`); */
-      /* MANEJAR DATA
-        ESTABLECER el estado de setNotes para igualarlo al array de
-        notas de la coleccion.
-        ...doc.data son los datos contenidos en el doc pero sin ID.
-        ... es spreading operator en JS */
+      const q = query(notesCollectionReference, orderBy("date", "desc"));
+    
+      const data = await getDocs(q, {includeMetadataChanges:true});
+
       setNotes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getNotes();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); */
+
+  /* Editar nota */
+  const thisNote = {
+    title: '',
+    text: '',
+  }
+
+
+  const [noteID, setNoteID] = useState(thisNote);
+  const {id} = useParams();
+
+  const getNoteIdHandler = async (id) => {
+    /* console.log(`I want ID of document to be edited: =${id}`); */
+
+    try {
+      console.log(id);
+      const docRef = doc(db, "notesCreated", id);
+const docSnap = await getDoc(docRef);
+console.log(docSnap.data());
+  
+    } catch (e) {
+      console.log(e);
+    }
+       
+    setNoteID(id);}
 
   /* Borrar nota */
+
   const deleteNote = async (id) => {
     const noteDoc = doc(db, "notesCreated", id);
     await deleteDoc(noteDoc);
           console.log(`Que es noteDoc=${noteDoc}`);
+    
 
   };
 
@@ -66,7 +87,10 @@ RENDERICE*/
                   <BsFillTrashFill />
                 </button>{" "}
               </h4>
-              <h4 className="textOfNote"> {note.Text} </h4>
+              <h4 className="textOfNote"> {note.Text}</h4>
+              <button className="btnEdit" onClick= {() => {getNoteIdHandler(note.id)} } >
+                <TiPencil />
+              </button>
             </section>
           );
         })}
@@ -76,3 +100,6 @@ RENDERICE*/
 }
 
 export default NotesList;
+
+
+
