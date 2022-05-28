@@ -5,7 +5,7 @@ import google from './Images/google.png';
 function Login () {
     return (
         <div className="notesContainer">
-            <h1>MyNotes</h1>
+            <header>MyNotes</header>
             <button className="loginButton" onClick={loginGoogle}>
             <img src={google} alt="iconGoogle" className="googleImg" />
                 Log in with Google

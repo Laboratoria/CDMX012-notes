@@ -5,7 +5,6 @@ const provider = new GoogleAuthProvider();
 export const loginGoogle = () => signInWithPopup(auth, provider)
     .then((re) => {
         const credential = GoogleAuthProvider.credentialFromResult(re);
-        console.log(credential);
     })
     .catch((err) => {
         console.log(err)

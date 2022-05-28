@@ -1,8 +1,13 @@
 .notesContainer {
-    display: absolute;
-  }
+    display: grid; 
+    /*align-items: center;
+    justify-content: center;*/
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+}
 
-h1 {
+header {
     color: #F9E8C6;
     font-family: 'Hepta Slab', serif;
     max-width: 940px;
@@ -10,7 +15,7 @@ h1 {
     font-weight: 700;
     text-align: center;
     padding: 1em;
-    margin: 20px;
+    grid-column: 1 / -1;
   }
 
   .loginButton {
@@ -21,10 +26,6 @@ h1 {
     height: 5em;
     border: none;
     box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
-    display: flex;
-    justify-content: space-between;
-    align-self: end;
-    position: absolute;
     top: 250px;
     left: 550px;
   }

@@ -6,18 +6,24 @@ import Login from './Login';
 import { Notes } from './AllNotes';
 import { loginGoogle, logOut} from './Lib/Auth';
 import { NewNote } from "./NewNote";
+import { NotFound } from "./NotFound";
+import { EditNote } from './EditNote';
 
 export const Paths = ({isAutenticate}) => { 
     return ( 
     <div>
         {isAutenticate ?
         <Routes>
-            <Route path="/" element={<Notes logOut={logOut} />} />
-            <Route path="/NewNote" element={<NewNote/>} />
+            <Route path="/" element={<Notes logOut= {logOut} />} />
+            <Route path="/NewNote" element= {<NewNote/>} />
+            <Route path="/EditNote" element= {<EditNote/>} />
         </Routes>:
         <Routes>
             <Route path="/" element={<Login loginGoogle = {loginGoogle} />} />
         </Routes>}
+        {/*<Routes>
+            <Route path="*" element={<NotFound />} />
+        </Routes>*/}
     </div>
 );
 }
