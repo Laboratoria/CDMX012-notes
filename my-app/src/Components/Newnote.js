@@ -2,43 +2,50 @@ import React from "react";
 
 // import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, Textarea } from "./styles";
-import { addDoc, collection } from "firebase/firestore";
-import { db} from "../lib/firebaseConfig";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { authentication, db} from "../lib/firebaseConfig";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
 
      const NewNote=  () =>{
-         const[notas, setNotas]= useState('');
-         const [cuerpo, setCuerpo]= useState ("");
+         const[notes, setNotes]= useState('');
+         const [descripcion, setDescription]= useState ("");
 
          
-         const collectionNotas= collection(db, "notas")
-        console.log(collectionNotas)
-         const yanose = async (e)=>{
+         const collectionNotes= collection(db, "notes")
+         const notesData = async (e)=>{
              e.preventDefault()
-             await addDoc (collectionNotas, { titulo: notas , descripcion: cuerpo  })
+             await addDoc (collectionNotes, { titulo: notes , descripcion: descripcion, date: serverTimestamp(), email: authentication.currentUser.email })
          }
-
+         const navigate = useNavigate();
+          const loginClick = () => {
+   navigate("/home");
+   }
+         
+      
 
     return ( 
     <div>
         <Form
-        onSubmit={yanose}>
+        onSubmit={notesData}>
             <div>
         <Input 
         type='text'
         placeholder="Nombre de tú nota"
-        value={notas}
-        onChange= {(e)=>setNotas(e.target.value)}
+        value={notes}
+        onChange= {(e)=>setNotes(e.target.value)}
         ></Input>
         <Textarea
-        placeholder="Escribe tú nota" onChange={(e)=>{setCuerpo(e.target.value);
+        placeholder="Escribe tú nota" onChange={(e)=>{setDescription(e.target.value);
         }}></Textarea>
         </div>
 
-        <Button onClick={yanose} placeholder = {'Escribe tu nota'} >Guardar</Button>
+        <Button onClick={loginClick} placeholder = {'Escribe tu nota'} >Guardar</Button>
 
         </Form>
     </div>
-    );
-}
+    )};
+
 export default NewNote;

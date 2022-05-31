@@ -1,4 +1,5 @@
 import Header from "../../Components/Header";
+import Note from "../../Components/Note";
 import WriteNote from "../../Components/WriteNote";
 
 function Home () {
@@ -6,7 +7,7 @@ function Home () {
         <div>
             <Header/>
             <WriteNote/>
-            {/* Aqui faltaria comprobar si el usuario ya tiene notas entonces que se muestren y si no sera en blanco con con un nuevo usuario  */}
+            <Note/>
             
         </div>
     )

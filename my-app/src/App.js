@@ -15,7 +15,7 @@ import Cierre from "./Routes/noAuthenticate/Cierre";
 
 function App() {
   const [isAutenticate, setAutheticate] = useState(null);
-
+//se autentica si el usuario tiene permisos para acceder 
   useEffect(() => {
     onAuthStateChanged(authentication, (user) => {
       if (user) {
