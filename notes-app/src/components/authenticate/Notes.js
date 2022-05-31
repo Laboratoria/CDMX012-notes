@@ -5,14 +5,10 @@ import NotesList from "../NotesList";
 import ANewNote from "../ANewNote";
 import { useState, useEffect } from "react";
 import { db } from "../../lib/firebaseConfig";
-import { collection, deleteDoc, doc, getDocs, getDoc, orderBy, query } from "firebase/firestore";
-
-
-
-
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 /* Styles */
 import "../styles/Notes.css";
-/* Icons */
+
 
 function Notes() {
 
@@ -26,13 +22,20 @@ function Notes() {
 
     setNotes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
- 
+
 
   useEffect(() => {
     getNotes();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const [currentNote, setCurrentNote] = useState({})
+  
+
+  const edit =(note)=>{
+    setCurrentNote(note)
+  }
 
   return (
     <>
@@ -52,12 +55,12 @@ function Notes() {
           {/* Left side */}
 
           <section className="leftSide">
-            <NotesList theNotes= {theNotes} />
+            <NotesList theNotes= {theNotes} edit={edit}/>
           </section>
 
           {/* Right side */}
           <section className="rightSide">
-          <ANewNote getNotes= {getNotes} />
+          <ANewNote getNotes={getNotes} currentNote={currentNote} />
 
 
           </section>
