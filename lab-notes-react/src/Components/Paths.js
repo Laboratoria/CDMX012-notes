@@ -7,6 +7,7 @@ import { Notes } from './AllNotes';
 import { loginGoogle, logOut} from './Lib/Auth';
 import { NewNote } from "./NewNote";
 import { EditNote } from './EditNote';
+import { NotFound } from "./NotFound";
 
 export const Paths = ({isAutenticate}) => { 
     return ( 
@@ -14,8 +15,9 @@ export const Paths = ({isAutenticate}) => {
         {isAutenticate ?
         <Routes>
             <Route path="/" element={<Notes logOut= {logOut} />} />
+            <Route path="*" element={<NotFound />} />
             <Route path="/NewNote" element= {<NewNote/>} />
-            <Route path="/EditNote" element= {<EditNote/>} />
+            <Route path="/EditNote/:id" element= {<EditNote/>} />
         </Routes>:
         <Routes>
             <Route path="/" element={<Login loginGoogle = {loginGoogle} />} />

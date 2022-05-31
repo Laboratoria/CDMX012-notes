@@ -17,15 +17,14 @@ export const EditNote = () => {
             title: originalTitle,
             description: originalDescription}
         await updateDoc(noteDoc, data);
-         navigate('/')
         } 
     
     const handleEdit = async (id) => {
-        const noteEdit = await getDoc(doc(db, 'myNotes', id));
-        if(noteEdit.exists()) {
+        const noteRef = await getDoc(doc(db, 'myNotes', id));
+        if(noteRef.exists()) {
             // console.log('la nota se puede editar')
-            setOriginalTitle(noteEdit.data().title);
-            setOriginalDescription(noteEdit.data().description);
+            setOriginalTitle(noteRef.data().title);
+            setOriginalDescription(noteRef.data().description);
         } else {
             console.log('la nota no existe')
         }
@@ -41,7 +40,7 @@ export const EditNote = () => {
             <i class="material-icons" id="cancel" onClick={() =>{navigate(-1)}}>cancel</i>
             <input className="title" type="text" value={originalTitle} onChange={(e) => setOriginalTitle(e.target.value)} /> 
             <input className="note" type="text" name="description" value={originalDescription} onChange={(e) => setOriginalDescription(e.target.value)} /> 
-            <button className="btnSave" type="submit">Save</button>
+            <button className="btnSave" type="submit" onClick={() =>{navigate(-1)}}> Save</button>
         </form>
         </div>
     )

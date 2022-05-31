@@ -32,7 +32,7 @@ export const Notes = () =>
                         <i class="material-icons" id="delete" onClick={() =>{deleteNote(notes.id)}}>delete</i>
                         <h3 className="note-title">{notes.title}</h3>
                         <p className="note-description">{notes.description}</p>
-                        <i class="material-icons" id="edit" onClick={() =>{navigate('/EditNote')}}>edit</i>
+                        <i class="material-icons" id="edit" onClick={() =>{navigate(`/EditNote/${notes.id}`)}}>edit</i>
                         </div>
                     })}
             </div>
