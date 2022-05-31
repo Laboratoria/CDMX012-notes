@@ -22,7 +22,12 @@ function Login() {
   };
   return (
     <Div>
-      <Button onClick={signInWitGoogle}><Section><FcGoogle/></Section>Iniciar sesión con Google</Button>
+      <Button onClick={signInWitGoogle}>
+        <Section>
+          <FcGoogle />
+        </Section>
+        Iniciar sesión con Google
+      </Button>
     </Div>
   );
 }

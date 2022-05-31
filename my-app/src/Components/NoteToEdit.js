@@ -1,10 +1,11 @@
 import React from "react";
+import { RiEdit2Fill } from "react-icons/ri";
 
 function NoteToEdit () {
     return (
-    <div>
-        <input></input>
-    </div>
+        <button>
+        <RiEdit2Fill />
+      </button>
         
     )
 }
