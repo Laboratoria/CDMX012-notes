@@ -7,7 +7,7 @@ function Home () {
         <div>
             <Header/>
             <WriteNote/>
-            <Note/>
+        <Note/>
             
         </div>
     )

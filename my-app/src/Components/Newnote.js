@@ -5,8 +5,6 @@ import { Button, Form, Input, Textarea } from "./styles";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { authentication, db} from "../lib/firebaseConfig";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 
 
      const NewNote=  () =>{
@@ -18,13 +16,10 @@ import { useNavigate } from "react-router-dom";
          const notesData = async (e)=>{
              e.preventDefault()
              await addDoc (collectionNotes, { titulo: notes , descripcion: descripcion, date: serverTimestamp(), email: authentication.currentUser.email })
-         }
-         const navigate = useNavigate();
-          const loginClick = () => {
-   navigate("/home");
-   }
          
-      
+         
+         
+            }  
 
     return ( 
     <div>
@@ -42,7 +37,7 @@ import { useNavigate } from "react-router-dom";
         }}></Textarea>
         </div>
 
-        <Button onClick={loginClick} placeholder = {'Escribe tu nota'} >Guardar</Button>
+        <Button onClick={notesData} placeholder = {'Escribe tu nota'} >Guardar</Button>
 
         </Form>
     </div>
