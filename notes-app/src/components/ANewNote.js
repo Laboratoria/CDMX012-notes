@@ -5,26 +5,25 @@ import { useState, useEffect } from "react";
 import { db, auth } from "../lib/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 
-function ANewNote({getNotes, currentNote={}}) {
-  const [newTitle, setNewTitle] = useState(currentNote.title);
-  const [newText, setNewText] = useState(currentNote.text);
+function ANewNote({ getNotes, currentNote = {} }) {
+  const [newTitle, setNewTitle] = useState(currentNote.Title);
+  const [newText, setNewText] = useState(currentNote.Text);
   const notesCollectionReference = collection(db, "notesCreated");
   const user = auth.currentUser;
   const date = new Date();
 
-  useEffect( ()=>{
-    console.log("HOLA", currentNote)
-    setNewTitle(currentNote.title);
-    setNewText(currentNote.text);
-  },[currentNote]);
+  useEffect(() => {
+    console.log("HOLA", currentNote);
+    setNewTitle(currentNote.Title);
+    setNewText(currentNote.Text);
+  }, [currentNote]);
 
   const createNewNote = async () => {
-    await addDoc(notesCollectionReference, { 
+    await addDoc(notesCollectionReference, {
       uid: user.uid,
-      Title: newTitle, 
+      Title: newTitle,
       Text: newText,
-      date, 
-
+      date,
     });
     getNotes();
   };
@@ -36,11 +35,11 @@ function ANewNote({getNotes, currentNote={}}) {
       </section>
 
       <section className="titleAndText">
-      {newTitle}
+        {newTitle}
         <input
           className="noteTitle"
           type="text"
-          placeholder="Write a title" 
+          placeholder="Write a title"
           value={newTitle}
           onChange={(event) => {
             setNewTitle(event.target.value);
@@ -59,7 +58,6 @@ function ANewNote({getNotes, currentNote={}}) {
         <button className="btnCreate" onClick={createNewNote}>
           Create
         </button>
-        
       </section>
     </>
   );
