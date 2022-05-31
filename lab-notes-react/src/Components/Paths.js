@@ -6,7 +6,6 @@ import Login from './Login';
 import { Notes } from './AllNotes';
 import { loginGoogle, logOut} from './Lib/Auth';
 import { NewNote } from "./NewNote";
-import { NotFound } from "./NotFound";
 import { EditNote } from './EditNote';
 
 export const Paths = ({isAutenticate}) => { 
@@ -21,9 +20,7 @@ export const Paths = ({isAutenticate}) => {
         <Routes>
             <Route path="/" element={<Login loginGoogle = {loginGoogle} />} />
         </Routes>}
-        {/*<Routes>
-            <Route path="*" element={<NotFound />} />
-        </Routes>*/}
+        
     </div>
 );
 }

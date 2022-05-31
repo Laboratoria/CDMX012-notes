@@ -1,10 +1,9 @@
 .notesContainer {
-    display: grid; 
+    display: flex; 
     /*align-items: center;
     justify-content: center;*/
     flex-direction: column;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 50% 50%;
+    align-items: center;
 }
 
 header {
@@ -13,9 +12,7 @@ header {
     max-width: 940px;
     font-size: 4em;
     font-weight: 700;
-    text-align: center;
     padding: 1em;
-    grid-column: 1 / -1;
   }
 
   .loginButton {
@@ -26,17 +23,12 @@ header {
     height: 5em;
     border: none;
     box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
-    top: 250px;
-    left: 550px;
   }
 
   .googleImg {
-      padding: 2%;
-      height: 4em;
-      width: 4em;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      align-self: start;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
