@@ -31,9 +31,11 @@
     border-radius: 0px 10px 10px 0px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.526);
     overflow:hidden;
-   
-
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-evenly;
 }
 
 .titleOfNote{
@@ -48,8 +50,9 @@
 }
 
 .textOfNote{
+
   font-family: "Mulish", sans-serif;
-  width: 100%;
+  width: 99%;
   font-size: 14px;
   color: #894C3A;
   padding: 4px;
@@ -70,4 +73,7 @@
 	align-content: flex-start;
   gap: 2%;
 }
+
+
+
 

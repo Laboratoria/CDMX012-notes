@@ -9,6 +9,7 @@ import { useState } from "react";
 import { db } from "../lib/firebaseConfig";
 import { deleteDoc, doc, getDoc } from "firebase/firestore";
 
+
 function NotesList({ theNotes, edit }) {
   /* Editar nota */
   const thisNote = {
@@ -19,7 +20,6 @@ function NotesList({ theNotes, edit }) {
   const { id } = useParams();
 
   const getNoteIdHandler = async (note) => {
-    /* console.log(`I want ID of document to be edited: =${id}`); */
 
     try {
       edit(note);
@@ -37,8 +37,9 @@ function NotesList({ theNotes, edit }) {
 
   const deleteNote = async (id) => {
     const noteDoc = doc(db, "notesCreated", id);
+    if (window.confirm ("Confirm if you want to delete the note")) {
     await deleteDoc(noteDoc);
-    console.log(`Que es noteDoc=${noteDoc}`);
+    }
   };
 
   return (
@@ -49,10 +50,9 @@ function NotesList({ theNotes, edit }) {
 
       <section className="listOfNotes">
         {theNotes.map((note) => {
-          /* console.log(`Título=${theNotes.map}`); */
 
           return (
-            <section className="listElement">
+            <section className="listElement" key={note.id}>
               {" "}
               <h4 className="titleOfNote">
                 <AiFillPushpin /> {note.Title}{" "}
@@ -66,6 +66,8 @@ function NotesList({ theNotes, edit }) {
                 </button>{" "}
               </h4>
               <h4 className="textOfNote"> {note.Text}</h4>
+              
+              <section className="editBtnSection">
               <button
                 className="btnEdit"
                 onClick={() => {
@@ -74,6 +76,9 @@ function NotesList({ theNotes, edit }) {
               >
                 <TiPencil />
               </button>
+              </section>
+
+
             </section>
           );
         })}

@@ -55,7 +55,7 @@ function Notes() {
 
           {/* Right side */}
           <section className="rightSide">
-            <ANewNote getNotes={getNotes} currentNote={currentNote} />
+            <ANewNote getNotes={getNotes} currentNote={currentNote} setCurrentNote={setCurrentNote}/>
           </section>
         </section>
       </div>

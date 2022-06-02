@@ -4,7 +4,8 @@
 .GoogleBtn,
 .btnLogout,
 .btnCreate,
-.btnCreateNote{
+.btnCreateNote, 
+.btnSaveEditedNote {
   background: #f9f8fc;
   border-radius: 999px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 10px 20px -10px;
@@ -45,6 +46,7 @@
 
 
 .btnEdit{
+
   width: 25px;
   height: 25px;
   color: #F9F8FC;

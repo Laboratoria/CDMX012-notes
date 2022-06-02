@@ -3,7 +3,7 @@ import "./styles/ANewNote.css";
 import "./styles/Button.css";
 import { useState, useEffect } from "react";
 import { db, auth } from "../lib/firebaseConfig";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
 
 function ANewNote({ getNotes, currentNote = {} }) {
   const [newTitle, setNewTitle] = useState(currentNote.Title);
@@ -19,23 +19,35 @@ function ANewNote({ getNotes, currentNote = {} }) {
   }, [currentNote]);
 
   const createNewNote = async () => {
-    await addDoc(notesCollectionReference, {
-      uid: user.uid,
-      Title: newTitle,
-      Text: newText,
-      date,
-    });
+    if (currentNote.id) {
+      const noteRef = doc(db, "notesCreated", currentNote.id);
+      await updateDoc(noteRef, {
+        uid: user.uid,
+        Title: newTitle,
+        Text: newText,
+        date,
+      });
+    } else {
+      await addDoc(notesCollectionReference, {
+        uid: user.uid,
+        Title: newTitle,
+        Text: newText,
+        date,
+      });
+    } 
     getNotes();
+    setNewText("")
+    setNewTitle("")
+    
   };
 
   return (
     <>
       <section className="titleCreateANote">
-        <h3>Create a note</h3>
+        <h3>Current Note</h3>
       </section>
 
       <section className="titleAndText">
-        {newTitle}
         <input
           className="noteTitle"
           type="text"
@@ -56,8 +68,12 @@ function ANewNote({ getNotes, currentNote = {} }) {
         ></input>
 
         <button className="btnCreate" onClick={createNewNote}>
-          Create
+          Save
         </button>
+
+        {/*         <button className="btnSaveEditedNote" onClick={createNewNote}>
+          Save
+        </button> */}
       </section>
     </>
   );
