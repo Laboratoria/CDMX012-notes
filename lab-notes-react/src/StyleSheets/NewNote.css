@@ -1,0 +1,47 @@
+.notesContainer {
+  margin: 3%;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Hepta Slab', serif;
+  margin: 80px;
+  height: 70vh;
+}
+
+.title {
+  height: 100px;
+  padding: 20px;
+  color: black; 
+  font-size: larger;
+}
+
+.note {
+  height: 300px;
+  font-size: larger;
+  padding: 20px;
+}
+
+.btnSave {
+  position: absolute;
+  color: #F9E8C6;
+  background-color: #E94726;
+  font-family: 'Hepta Slab', serif;
+  width: 40vh;
+  height: 10vh;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
+  border: none;   
+  margin: 20px;
+  bottom: 2%;
+  left: 40%;
+}
+
+#cancel {
+  position: absolute;
+  font-size: 60px;
+  right: 5%;
+  top: 7%;
+}
