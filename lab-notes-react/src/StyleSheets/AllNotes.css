@@ -1,11 +1,11 @@
-.container {
+header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
   #new-note {
+    position: absolute;
     border-radius: 50%;
     background-color: #E94726;
     font-size: 80px;
@@ -14,34 +14,41 @@
   }
   
   #exit {
+    position: absolute;
     font-size: 80px;
     right: 10%;
     top: 9%;
   }
 
   .all-notes-contain {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-template-rows: minmax(200px, auto);
-    grid-gap: 100px;
-    justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: minmax(200px, auto);
+  grid-gap: 100px;
+  width: 80%;
+  margin: 3%;
   }
   
 .individual-notes { 
+  flex-direction: column;
   border: solid 2px;
   background-color: #F9E8C6;
   }
   
 .material-icons {
-  position: absolute;
-  /*pointer-events: none;*/
+  cursor: pointer;
+}
+
+.delete-box, .edit-box{
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 #delete {
   margin: 3px;
-  justify-items: flex-end;
-  align-items: end;
 }
+
 
 #edit {
   padding: 3px;

@@ -23,7 +23,7 @@ export const NewNote = () =>
 
 const navigate = useNavigate();
     return (
-        <div className="notesContainer">
+        <div>
         <form className="container" onSubmit={saveNote}>
             <i class="material-icons" id="cancel" onClick={() =>{navigate(-1)}}>cancel</i>
             <input className="title" type="text" placeholder="Title" name="title" />

@@ -1,7 +1,5 @@
 .notesContainer {
     display: flex; 
-    /*align-items: center;
-    justify-content: center;*/
     flex-direction: column;
     align-items: center;
 }
@@ -16,6 +14,8 @@ header {
   }
 
   .loginButton {
+    flex-direction: row;
+    display: flex;
     color: #F9E8C6;
     background-color: #E94726;
     font-family: 'Hepta Slab', serif;
@@ -23,6 +23,8 @@ header {
     height: 5em;
     border: none;
     box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
+    align-items: center;
+    justify-content: space-around;
   }
 
   .googleImg {

@@ -23,21 +23,25 @@ export const Notes = () =>
 
     const navigate = useNavigate()
     return (
-        <div className="container">
+        <>
             <header> MyNotes </header>
             <i class="material-icons" id="exit" onClick={() =>{logOut()}}>exit_to_app</i> 
             <div className="all-notes-contain">
                     {notes.map((notes, index) => {
                         return  <div className="individual-notes" key={index}>
+                        <section className="delete-box">
                         <i class="material-icons" id="delete" onClick={() =>{deleteNote(notes.id)}}>delete</i>
+                        </section>
                         <h3 className="note-title">{notes.title}</h3>
-                        <p className="note-description">{notes.description}</p>
+                        <p className="note-description"> {notes.description} </p>
+                        <section className="edit-box">
                         <i class="material-icons" id="edit" onClick={() =>{navigate(`/EditNote/${notes.id}`)}}>edit</i>
+                        </section>
                         </div>
                     })}
             </div>
             <i class="material-icons" id="new-note" type="button" onClick={() =>{navigate('/NewNote')}}>add_circle</i>
-        </div>
+        </>
     );
 }
 

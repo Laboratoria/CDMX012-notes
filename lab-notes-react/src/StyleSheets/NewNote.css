@@ -11,7 +11,7 @@
   height: 70vh;
 }
 
-.title{
+.title {
   height: 100px;
   padding: 20px;
   color: black; 
@@ -25,6 +25,7 @@
 }
 
 .btnSave {
+  position: absolute;
   color: #F9E8C6;
   background-color: #E94726;
   font-family: 'Hepta Slab', serif;
@@ -32,13 +33,14 @@
   height: 10vh;
   border: none;
   box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.856);
-  align-items: center;
-  justify-content: center;
   border: none;   
   margin: 20px;
+  bottom: 2%;
+  left: 40%;
 }
 
 #cancel {
+  position: absolute;
   font-size: 60px;
   right: 5%;
   top: 7%;
