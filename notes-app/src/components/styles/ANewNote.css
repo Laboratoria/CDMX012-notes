@@ -47,6 +47,13 @@
 
 }
 
+.noteText {
+  height: 60%;
+  margin-top: 8px;
+
+  
+}
+
 ::-webkit-input-placeholder {
   position: absolute;
   top: 0px;
@@ -63,6 +70,4 @@ input:focus {
   outline: none;
 }
 
-.noteText {
-  height: 60%;
-}
+
