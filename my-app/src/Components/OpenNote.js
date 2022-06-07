@@ -1,8 +1,22 @@
 import React from "react";
+import { FaExpandAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-/* este componente va dentro de nota */
-const OpenNote = ()=> (
-    <button>Abrir Nota</button>
+const OpenNote = ()=> {
+
+
+    const navigate = useNavigate();
+//     const openEditNote= ()=>{
+// console.log("abriendo navegacion de notas")
+        navigate('/notesView');
+    
+return (
+
+    <button>
+        <FaExpandAlt/>
+    </button>
 )
+    
+}
 
 export default OpenNote;

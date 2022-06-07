@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import { onSnapshot } from "firebase/firestore";
 import { q } from "../lib/database";
 import { Div, Div2, Form, Input, Input2 } from "./NoteStyles";
-import NoteToEdit from "./NoteToEdit";
-import NoteDelete from "./NoteDelete";
+import OpenNote from "./OpenNote";
+
 
 const Note = () => {
   useEffect(() => {
     onSnapshot(q, (querySnapshot) => {
       const data = [];
       querySnapshot.forEach((doc) => {
+        console.log({id:doc.id, ...doc.data()})
+        // tengo que hacer un if para identificar el usuario
         data.push(doc.data());
       });
       setDatalist(data);
@@ -27,8 +29,7 @@ const Note = () => {
               <Div2>
                 <Input value={allData.titulo}></Input>
                 <Input2 value={allData.descripcion}></Input2>
-                <NoteToEdit />
-                <NoteDelete />
+                <OpenNote />
               </Div2>
             </Form>
           ))}

@@ -1,14 +1,16 @@
 import React from "react";
-
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, Textarea } from "./styles";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { authentication, db } from "../lib/firebaseConfig";
 import { useState } from "react";
+import { getNoteState } from "../services/stateNote.js";
 
 const NewNote = () => {
   const [notes, setNotes] = useState("");
   const [descripcion, setDescription] = useState("");
+  const navigate = useNavigate();
+  console.log(getNoteState())
 
   const collectionNotes = collection(db, "notes");
   const notesData = async (e) => {
@@ -19,6 +21,7 @@ const NewNote = () => {
       date: serverTimestamp(),
       email: authentication.currentUser.email,
     });
+    navigate("/home");
   };
 
   return (
@@ -39,7 +42,7 @@ const NewNote = () => {
           ></Textarea>
         </div>
 
-        <Button onClick={notesData} placeholder={"Escribe tu nota"}>
+        <Button type="submit" placeholder={"Escribe tu nota"}>
           Guardar
         </Button>
       </Form>
