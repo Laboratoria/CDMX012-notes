@@ -1,0 +1,179 @@
+/* 
+font-family: 'Taviraj', serif;
+font-family: 'Mulish', sans-serif;
+
+F9F8FC     WHITE
+C4C4C4     LILAC
+B59395     PINK
+D59F66     YELLOW
+9E6C63     PINK (TOAST)
+894C3A     IRONSTONE (BROWN)
+75AA57     GREEN
+F44336     RED
+F29A1F     YELLOW
+
+894C3A     TEXTO BROWN
+D59F66     TEXTO PINK
+
+Mulish:ital,wght@0,400;0,800;0,900;1,700=
+Taviraj:wght@400;500;600;700;800&
+ */
+
+.mainContainerNotes {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y:hidden;
+  z-index: 2;
+
+
+}
+
+.backgroundImage {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  margin-left: 0px;
+  margin-top: 0px;
+  opacity: 0.35;
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+.twoSectionsContainer {
+  
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+	justify-content:  space-around;
+	align-items: baseline;
+  padding: 8px;
+  /* background-color: darkorchid; */
+}
+
+.leftSide {
+  height: 96%;
+  z-index: 10;
+  margin: 16px 8px;
+  flex-basis: 50%;
+  overflow-y: scroll;
+  /* background-color: crimson; */
+}
+
+::-webkit-scrollbar{
+  width: 8px
+  
+}
+::-webkit-scrollbar-track{
+  background: #9e6c6396;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(#D59F66, #F9F8FC );
+  border-radius: 25px;
+
+}
+::-webkit-scrollbar-thumb:hover{
+  background-image: linear-gradient(#F9F8FC, #D59F66 );
+}
+
+
+.rightSide {
+  height: 96%;
+  z-index: 10;
+  margin: 16px 8px;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+  text-align: center;
+  padding-bottom: 20%;
+ /*  background-color: cadetblue; */
+
+
+}
+
+
+.newNoteText {
+  height: 500px;
+  width: 100%;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  color: #894c3a;
+  background-color: #f9f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+h1 {
+  font-family: "Taviraj", serif;
+  font-size: 24px;
+  color: #f9f8fc;
+  text-align: center;
+}
+h2 {
+  font-family: "Mulish", sans-serif;
+  color: #f9f8fc;
+  font-size: 24px;
+}
+
+/* VERSION PARA CELULAR */
+/* On screens that are 428px or less */
+@media only screen and (max-width: 428px) {
+  .twoSectionsContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .smallRosettaLogo {
+    width: 40%;
+    z-index: 4;
+  }
+
+  .btnLogout {
+    position: absolute;
+    margin-left: 30%;
+  }
+
+  .mainContainerNotes {
+    height: 100vh;
+
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .leftSide {
+    width: 100%;
+    z-index: 10;
+    margin: 8px;
+    flex-basis: 50%;
+    overflow-y: scroll;
+  }
+  .rightSide {
+    width: 100%;
+
+    z-index: 10;
+
+    margin: 8px;
+
+    flex-basis: 50%;
+  }
+}

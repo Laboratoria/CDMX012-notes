@@ -1,0 +1,101 @@
+/* font-family: 'Taviraj', serif; */
+.titleNotesList {
+  background-color: #894c3a5e;
+  border-radius: 10px 10px 0px 0px;
+  font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    color: #f9f8fc;
+    text-align: center;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #f9f8fc
+}
+
+
+
+
+  h4 {
+    font-family: "Mulish", sans-serif;
+    color: #894C3A;
+    font-size: 12px;
+  }
+
+.listElement{
+    width: 30%;
+    height: 140px;
+    margin: 4px;
+    padding: 4px;
+    padding-bottom: 16px;
+    background-color: #F9F8FC;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.526);
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+    overflow-y: scroll;
+}
+
+
+::-webkit-scrollbar{
+  width: 4px;
+  height:80%;
+  
+}
+::-webkit-scrollbar-track{
+  background: #9e6c6359;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(#D59F66, #F9F8FC );
+  border-radius: 25px;
+
+}
+::-webkit-scrollbar-thumb:hover{
+  background-image: linear-gradient(#F9F8FC, #D59F66 );
+}
+
+
+.titleOfNote{
+  background-color: #894C3A;
+  color: #f9f8fc;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+
+}
+
+.textOfNote{
+
+  font-family: "Mulish", sans-serif;
+  width: 99%;
+  font-size: 14px;
+  color: #894C3A;
+  padding: 4px;
+  display: flex;
+  direction: column;
+
+
+
+
+}
+
+.listOfNotes{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+  gap: 2%;
+}
+
+
+
+

@@ -1,0 +1,70 @@
+/* button-34 */
+
+/* CSS */
+.GoogleBtn,
+.btnLogout,
+.btnCreate,
+.btnCreateNote, 
+.btnSaveEditedNote {
+  background: #f9f8fc;
+  border-radius: 999px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #894c3a;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.btnDelete, .btnEdit{
+  background: none;
+  color: #B59395;
+  cursor: pointer;
+  font-size: 16px;
+  outline: 0 solid transparent;
+  border-style: none;
+}
+.btnDelete :hover{
+  color: #F9F8FC;
+
+}
+
+.btnCreate{
+  margin: 16px;
+}
+
+
+.btnEdit{
+
+  width: 25px;
+  height: 25px;
+  color: #F9F8FC;
+  text-align: center;
+  background-color: #9E6C63 ;
+  border-radius: 999px;
+  }
+  .btnEdit :hover{
+  color: #894C3A;
+
+  }
+
+
+/* VERSION PARA CELULAR
+ On screens that are 428px or less 
+@media only screen and (max-width: 428px)
+
+VERSION PARA ESCRITORIO 
+On screens that are 1195px or more 
+@media only screen and (min-width: 1195px) */
+
