@@ -3,8 +3,7 @@ import { auth, signOut } from "../firebase-config";
 import iconHome from "../Assets/icons/casa.png";
 import iconLogOut from "../Assets/icons/logout.png";
 import iconBack from "../Assets/icons/flecha-izquierda.png";
-import iconAdd from "../Assets/icons/addBtn.png";
-
+import iconAdd from "../Assets/icons/add.svg";
 
 export function BackToTop() {
   window.scrollTo({
@@ -23,7 +22,16 @@ export function BtnAddNote() {
     navigate("/CreateNote");
   }
   return (
-    <img src={iconAdd} alt="" className="icon_add" onClick={BtnAddNewNote} />
+    <div className="btn_add_container">
+      <div className="btn_add">
+        <img
+          src={iconAdd}
+          alt=""
+          className="icon_add"
+          onClick={BtnAddNewNote}
+        />
+      </div>
+    </div>
   );
 }
 

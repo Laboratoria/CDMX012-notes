@@ -82,6 +82,19 @@
   margin: 0.3rem 0;
 }
 
+
+.select_colections{
+  width: 100%;
+  height: 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  border: 3px solid #00f7ff;
+  border-radius: 11px;
+  margin: 0.3rem 0;
+  
+}
 .btn_action_delete {
   width: 100%;
   height: 3rem;

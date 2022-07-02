@@ -54,9 +54,8 @@ const ListColection = ({ selectedColection }) => {
         <Icons colection={selectedColection} />
         <div className="note_colection_select"> {selectedColection} </div>
       </div>
-
       <div className="margin">
-        <div className="getNote_container" id="margin">
+        <div className="getNote_container">
           <NoteModal
             onClose={() => setCurrentNote("")}
             currentNote={currentNote}
@@ -68,7 +67,7 @@ const ListColection = ({ selectedColection }) => {
               onClick={() => setCurrentNote(note)}
             >
               <section className="header_note_container">
-                <div className="note_tittle">{note.title}</div>
+                <div className="note_title">{note.title}</div>
                 <div className="colection_saved">{note.colection} </div>
               </section>
 

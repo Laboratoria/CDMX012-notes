@@ -32,6 +32,7 @@
   z-index: 10000;
 }
 
+
 .modal_tittle {
   position: absolute;
   top: 0;
@@ -42,6 +43,9 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 

@@ -26,10 +26,7 @@ const NotesContainer = () => {
 
   return (
     <div className="getNote_container">
-      <NoteModal 
-        onClose={() => setCurrentNote("")} 
-        currentNote={currentNote} 
-      />
+      <NoteModal onClose={() => setCurrentNote("")} currentNote={currentNote}/>
       {notes.map((note) => (
         <div
           className={`printNote_container  ${note.color} `}
@@ -37,17 +34,18 @@ const NotesContainer = () => {
           onClick={() => setCurrentNote(note)}
         >
           <section className="header_note_container">
-            <div className="note_tittle">{note.title}</div>
+            <div className="note_title">{note.title}
+            <p></p>
+            </div>
             <div className="colection_saved">{note.colection} </div>
           </section>
 
           <div className="note_text"> {note.note} </div>
+
           <div className="line"></div>
+
           <section className="date_container">
-            <p className="note_mofifDate" id="modification_date">
-              {" "}
-              {note.modif}{" "}
-            </p>
+            <p className="note_mofifDate" id="modification_date">{note.modif}</p>
             <p className="note_Date"> {note.create}</p>
           </section>
         </div>

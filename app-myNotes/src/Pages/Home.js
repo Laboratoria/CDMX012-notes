@@ -18,7 +18,7 @@ function HomePage() {
 
   // crea una flag para saber si esta en menu o lista de colecciones
   const [flag, setFlag] = useState(true);
-// hace set a false para comunicar el componente con el padre
+  // hace set a false para comunicar el componente con el padre
   const setFlagFalse = () => {
     setFlag(false);
   };
@@ -26,58 +26,70 @@ function HomePage() {
   const setFlagTrue = () => {
     setFlag(true);
   };
-// hace la redireccion en el boton colecciones
+  // hace la redireccion en el boton colecciones
   const redirectNav = () => {
     setFlagTrue();
-    setHandleColection("menuColections")
+    setHandleColection("menuColections");
   };
 
   return (
     <>
       <header className="header">
+
         <section className="header_content">
+
           <img src={logoN} alt="Logo" className="logo_n" />
+
           <div className="info_container">
             <div className="user_name"> ¡Hola {name}! </div>
             <div className="current_date"> {DateDay} </div>
           </div>
+
           <img src={UserImage} alt="" className="user_img" />
+
         </section>
+
         <div className="input_search">
           <input type="text" search="text" placeholder="Buscar nota" />
           <img src={iconSearch} alt="" className="search_icon" />
         </div>
+
       </header>
 
       <nav className="nav_menu">
         <div
+
           className="all_notes_cont"
           onClick={() => setHandleColection("allNotes")}
         >
+
           <img src={iconNote} alt="" className="icon_notes" />
-          <div className="all_notes">Todas las notas </div>
+          { handleColection === "allNotes" ?
+            <div className="all_notes">Todas las notas </div>
+            :<div className="all_notes_inactive">Todas las notas </div>
+          }
         </div>
 
-        <div
-          className="colections_cont"
-          onClick={() => redirectNav() }
-        >
+        <div className="colections_cont" onClick={() => redirectNav()}>
           <img src={iconColections} alt="" className="icon_notes" />
-          <div className="colections">Colecciones</div>
+          { handleColection === "menuColections" ?
+            <div className="colections">Colecciones</div>
+            :<div className="colections_inactive">Colecciones </div>
+          }
+
         </div>
       </nav>
 
       <main className="notes_section">
-        {handleColection ===  "allNotes" ? <NotesContainer /> : < Colections setFlagFalse={setFlagFalse}  flag={flag}/>}
+        {handleColection ===  "allNotes" ? <NotesContainer /> : < Colections setFlagFalse={setFlagFalse} flag={flag}/>}
       </main>
 
-      <div className="footer_menu"> 
+      <div className="footer_menu">
         <BackToTop />
-        <BtnAddNote /> 
-        <BtnLogOut /> 
+        <BtnAddNote />
+        <BtnLogOut />
       </div>
-    </> 
+    </>
   );
 }
 export default HomePage;
-       

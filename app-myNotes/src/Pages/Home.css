@@ -1,64 +1,86 @@
+.header_content,
+.nav_menu,
+.colections_cont,
+.all_notes_cont,
+.footer_menu,
+.input_search {
+  display: flex;
+  flex-direction: row;
+}
+
 .header {
   background: linear-gradient(to right, #b2fefa, #0ed2f7);
-  width: 100%;
-  height: 22%;
+  width: 100vw;
+  height: 20vh;
   position: fixed;
   z-index: 1;
 }
 
-.logo_n {
-  position: absolute;
-  width: 6rem;
-  height: auto;
-  top: 2rem;
-  left: 7%;
+.header_content {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header_content {
+  width: 90vw;
+  height: 40%;
+  position: relative;
+  top: 10%;
+  left: 5%;
+}
+
+.logo_n,
+.user_img {
+  width: auto;
+  height: 100%;
 }
 
 .info_container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 2rem;
-  left: 25%;
+  width: 60vw;
+  height: 100%;
 }
 
+.user_name,
+.current_date
+{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .user_name {
+  height: 75%;
+  color: #23262F;
   font-family: 'Inter';
   font-style: bold;
   font-weight: 700;
-  font-size: 3rem;
-  color: #23262F;
-  margin: .5rem 0;
+  font-size: 4.5vh;
 }
 
 .current_date {
+  height: 25%;
+  color: #646464;
   font-family: 'Inter';
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 2vh;
   letter-spacing: -0.02em;
-  color: #646464;
 }
 
 .user_img {
-  width: 6rem;
-  height: 6rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 360px;
-  position: absolute;
-  top: 2.5rem;
-  right: 8%;
 }
 
 .input_search {
-  position: absolute;
-  width: 85%;
-  height: 3.5rem;
-  left: 7%;
-  top: 70%;
+  width: 60.1vw;
+  height: 25%;
   background: rgb(255 255 255 / 59%);
   border-radius: 21px;
+  position: relative;
+  top: 20%;
+  left: 19.5%;
+  justify-content: center;
+  align-items: center;
 }
-
 
 input[type=text] {
   width: 80%;
@@ -68,72 +90,65 @@ input[type=text] {
   outline: none;
   border: none;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 2vh;
   color: #23262F;
 }
 
 .search_icon {
-  width: 2rem;
-  height: 2rem;
-  right: 5%;
-  top: 20%;
-  position: absolute;
+  width: auto;
+  height: 80%;
 }
+
+/* 
+/////////// nav  */
 
 .nav_menu {
-  display: flex;
-  flex-direction: row;
   position: fixed;
-  width: 100%;
-  height: 10%;
-  top: 22%;
-  z-index: 1;
+  width: 100vw;
+  height: 10vh;
+  top: 20%;
+  z-index: 100;
   background-color: #23262F;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.all_notes_cont {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-}
-
+.all_notes_cont,
 .colections_cont {
-  display: flex;
-  flex-direction: row;
   width: 50%;
   height: auto;
   align-items: center;
   justify-content: center;
 }
 
-.icon_notes {
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem;
-}
-
-.all_notes {
+.all_notes,
+.colections,
+.all_notes_inactive,
+.colections_inactive{
   font-family: 'Inter';
   font-style: bold;
   font-weight: 700;
   font-size: 2rem;
+  margin-left: 1.5rem;
+}
+
+.all_notes,
+.colections{
   color: #00FFFF;
 }
 
-.colections {
-  font-family: 'Inter';
-  font-style: bold;
-  font-weight: 700;
-  font-size: 2rem;
+.all_notes_inactivw,
+.colections_inactive{
   color: #646464;
 }
 
+.icon_notes {
+  width: auto;
+  height: 5vh;
+}
+
 main {
-  width: 85%;
-  height: 65%;
+  width: 85vw;
+  height: 60vh;
   position: absolute;
   top: 33%;
   left: 7%;
@@ -141,19 +156,33 @@ main {
 
 .footer_menu {
   background-color: #343846;
-  width: 100%;
-  height: 7%;
+  width: 100vw;
+  height: 7vh;
   position: fixed;
-  bottom: 0px;
-  display: flex;
-  flex-direction: row;
+  bottom: 0vh;
   justify-content: space-around;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn_add_container{
+width: 6rem;
+height: 6rem;
+
+}
+.btn_add {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  position: relative;
+  bottom: 3vh;
+  background-color: aqua;
+  border: 6px solid #373737;
+  border-radius: 50%;
 }
 
 .icon_add {
-  position: absolute;
-  top: -90%;
-  width: 9rem;
+  width: 70%;
   height: auto;
 }

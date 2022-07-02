@@ -25,10 +25,6 @@
 .input_tittle {
   width: 96%;
   height: 80%;
-  font-size: 3rem;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
   border: none;
   border-bottom: 3px solid #ffffff;
 }
@@ -41,25 +37,23 @@ input {
   font-family: 'Inter';
   text-align: left;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 4vh;
   text-transform: capitalize;
   outline: none;
   border: none;
   background-color: rgb(255 255 255 / 0%);
 }
 
-.input_tittle::placeholder {
-  color: #dcdcdc;
-}
-
+.input_tittle::placeholder,
 textarea::placeholder {
   color: #dcdcdc;
 }
 
+
 .text_note {
   width: 100%;
   height: 75%;
-  border-radius: 3%;
+  border-radius: 30px;
   border-color: #ffffff;
   border-width: 3px;
   border-style: solid;
@@ -77,7 +71,7 @@ textarea {
   font-family: 'Inter';
   text-align: left;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3vh;
   text-transform: capitalize;
   outline: none;
   border: none;
@@ -91,26 +85,8 @@ textarea {
   position: absolute;
   top: 59%;
   font-family: 'Inter';
-  font-size: 2rem;
+  font-size: 2vh;
   display: flex;
   justify-content: center;
 }
 
-
-.select_colections  {
-  width: 90%;
-  background-color: #23262F;
-  color: white;
-  font-family: 'Inter';
-  font-size: 1.7rem;
-  outline: none;
-  border: none;
-  text-align: center;
-  margin-left: 5%;
-}
-/* 
-.select_colections {
-  width: 90%;
-  text-align: center;
-  background-color: #00f7ff;
-} */

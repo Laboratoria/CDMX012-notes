@@ -1,78 +1,44 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 .providers_content{
-  position: absolute;
-  width: 40%;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 50%;
-  left: 30%;
+  width: 100%;
+  height: 25%;
 }
 
 .btn_provider{
-  width: 100%;
-  height: 0.8rem;
   display: flex;
   align-items: center;
-  border: 0.5px solid #00f7ff;
-  margin: 0.2rem 0;
+  justify-content: center;
+  width: 98%;
+  height: 40%;
+  border: 3px solid #00f7ff;
+  margin: .5rem 0;
+  border-radius: 12px;
 }
 
 .provider_icon {
-  position: absolute;
-  width: .5rem;
-  height: .5rem;
-  margin: 0.1rem 0.5rem ;
+  position: relative;
+  width: auto;
+  height: 5vh;
+  margin-right: 1rem ;
 }
 
 .btn_send_prov{
-  width: 100%;
-  height: 0.8rem;
-  background-color: #23262F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 5vh;
   color: white;
   font-family: 'Inter';
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-style: normal;
   font-weight: 400;
-  font-size: .3rem;
+  font-size: 3vw;
   outline: none;
   border: none;
-}
-
-
- @media only screen and (min-width: 620px) { 
-
-  .providers_content{
-  width: 70%;
-  height: 14rem;
-  top: 40%;
-  left: 15%;
-}
-
-.btn_provider{
-  height: 10rem;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 1rem;
-  border: 3px solid #00f7ff;
-  border-radius: 11px;
-}
-
-.provider_icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 1.5rem 2rem;
-}
-
-.btn_send_prov{
-  width:100%;
-  height: 5rem;
-  justify-content: center;
-  font-size: 1.7rem;
-}
-
+  background-color: #23262F;
 } 
+

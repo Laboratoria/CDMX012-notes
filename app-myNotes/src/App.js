@@ -25,3 +25,5 @@ export default App;
 /* <Route path="/registro" element={<RegisterPage/>}/>
 <Route path="/notas" element={<NotesPage/>}/>
 <Route path="*" element={<NotFoundPage/>}/> */
+
+

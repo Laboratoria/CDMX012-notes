@@ -1,32 +1,30 @@
 /* /////// menu colecciones */
 
+.colection_icon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 3rem;
+  z-index: 999;
+}
 
 .colection_style {
   width: 100%;
-  height: 10%;
+  height: 6vh;
   display: flex;
   align-items: center;
   text-align: left;
   border: 3px solid #00FFFF;
   border-radius: 10px;
-  margin: .5rem 0;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-
-.colection_icon {
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem;
-  z-index: 999;
-}
-
 .btn_colection {
   position: absolute;
   width: 98%;
-  height: 4rem;
+  height: 6vh;
   left: 1%;
   background-color: #23262F;
   color: #00FFFF;
@@ -35,8 +33,7 @@
   outline: none;
   border: none;
   text-align: left;
-  padding-left: 7rem;
-  margin: 2rem 0;
+  padding-left: 10rem;
 }
 
 .deleted_notes_content {

@@ -35,7 +35,7 @@ const InputNotes = (props) => {
   const [note, setNote] = useState(initialValues);
 
   /////setea los valores de coleccion a guardar
-  const [colection, setColection] = useState("Apunte");
+  const [colection, setColection] = useState("Apuntes");
   
   /////set del color de la nota
   const [themeColor, setThemeColor] = useState();
@@ -189,7 +189,7 @@ const InputNotes = (props) => {
               value={colection}
               onChange={ChangeColections}
             >
-              <option value="Apunte">Agregar a lista</option>
+              <option value="Apuntes">Agregar a lista</option>
               <option>Apuntes</option>
               <option>Trabajo</option>
               <option>Recordatorios</option>

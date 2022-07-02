@@ -16,10 +16,10 @@
 }
 
 .icon_back{
-  width: 3rem;
-  height: 3rem;
+  width: 6vw;
+  height: auto;
   margin: .5rem;
-  position:absolute;
+  position: absolute;
   right: 5%;
 }
 
@@ -27,7 +27,7 @@
   font-family: 'Inter';
   font-style: bold;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 4vh;
   text-align: right;
   margin: 1rem;
   text-transform: capitalize;

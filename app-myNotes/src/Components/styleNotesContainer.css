@@ -1,39 +1,16 @@
+.header_colection_container,
+.header_note_container,
+.date_container {
+  display: flex;
+  flex-direction: row;
+}
+
 .getNote_container {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   z-index: -1;
-}
-
-.margin{
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 6%;
-}
-.header_colection_container{
-  width: 90%;
-  height: 8%;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content:center;
-  align-items: center;
-  position: fixed;
-  top: 29%;
-  left: 5%;
-  background-color: #23262F;
-  z-index: 99;
-}
-.note_colection_select{
-  font-family: 'Inter';
-  font-style: bold;
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-align: right;
-  margin: 1rem;
-  text-transform: capitalize;
 }
 
 .printNote_container {
@@ -48,44 +25,64 @@
   margin-bottom: 20%;
 }
 
-.header_note_container{
+.header_note_container {
   width: 100%;
-  display: flex;
-  flex-direction: row;
 }
+
+.note_title,
+.colection_saved {
+  height: 4rem;
+  margin: 1.5rem 0 0 0;
+
+}
+
+.note_title,
+.colection_saved,
+.note_text,
+.note_mofifDate,
+.note_Date,
+.note_colection_select {
+  font-family: 'Inter';
+  text-transform: capitalize;
+}
+
+
+.note_title,
+.note_text,
+.note_mofifDate,
+.note_Date
+{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note_title {
+  width: 80%;
+  height: 3rem;
+  margin: 1.5rem 0 0 0;
+  padding: 0 3rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
 .colection_saved {
   width: 20%;
   height: 4rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0 0 0;
   padding-right: 2.5rem;
-  font-family: 'Inter';
   font-weight: 200;
   font-size: 1.5rem;
-  text-transform: capitalize;
   text-align: right;
 }
 
-.note_tittle {
-  width: 80%;
-  height: 4rem;
-  margin: 1rem 0;
-  padding: 0 3rem;
-  font-family: 'Inter';
-  font-weight: 500;
-  font-size: 2rem;
-  text-transform: capitalize;
-  word-wrap: break-word;
-}
-
 .note_text {
-  height: 5rem;
+  height: 6rem;
   padding: 0 3rem;
-  font-family: 'Inter';
   font-weight: 200;
   font-size: 1.6rem;
-  text-transform: capitalize;
-  margin: 0;
   word-wrap: break-word;
+  white-space: normal; 
 }
 
 .line {
@@ -100,12 +97,9 @@
 .date_container {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
   position: relative;
   margin-top: 1rem;
 }
-
 
 .note_mofifDate {
   width: 50%;
@@ -113,7 +107,6 @@
   display: flex;
   padding-left: 2.5rem;
   justify-content: flex-start;
-
 }
 
 .note_Date {
@@ -122,4 +115,33 @@
   padding-right: 2.5rem;
   display: flex;
   justify-content: flex-end;
+}
+
+/* /////// header notas x tipo */
+.margin {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 8%;
+}
+
+.header_colection_container {
+  width: 90%;
+  height: 8%;
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background-color: #23262F;
+}
+
+.note_colection_select {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: right;
+  margin: 1rem;
 }
