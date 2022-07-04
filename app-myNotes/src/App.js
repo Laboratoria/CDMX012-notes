@@ -10,13 +10,13 @@ function App() {
   useAuth();
 
   return (
-    <div>
+    <>
     <Routes>
       <Route exact path='/' element={<LogInPage />} />
       <Route exact path='/Home' element={<HomePage />} />
       <Route exact path='/CreateNote' element={<CreateNote/>} />
     </Routes>
-  </div>
+  </>
 );
 }
 

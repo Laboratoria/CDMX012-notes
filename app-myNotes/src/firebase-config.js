@@ -72,8 +72,17 @@ export const toEditNote = async (note, Id) => {
 export const saveArchive = async (newNotes) => {
   const user = auth.currentUser;
   newNotes.userId = user.email;
+  const Values = {
+    title: newNotes.title,
+    note: newNotes.note,
+    date: getDates,
+    create: newNotes.create,
+    color: newNotes.color,
+    colection: "Archivado"
+  };
 
-  await addDoc(archiveRef, newNotes);
+
+  await addDoc(archiveRef, Values);
   localStorage.clear();
 };
 

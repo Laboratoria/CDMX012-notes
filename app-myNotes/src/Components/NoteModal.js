@@ -7,7 +7,6 @@ import iconEdit from "../Assets/icons/editar.png";
 
 export default function ModalNote({ currentNote, onClose }) {
   const navigate = useNavigate();
-
   /////envia el id de la nota a editar a la vista de editado mediante localStorage y redirige
   if (currentNote) {
     function BtnEdit() {
