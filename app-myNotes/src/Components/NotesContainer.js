@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import NoteModal from "../Components/NoteModal";
-import "../Components/styleNotesContainer.css";
+import NoteModal from "../Components/Helpers.js/NoteModal";
+import "../Components/styles/styleNotesContainer.css";
 import { query, orderBy, onSnapshot } from "firebase/firestore";
 import { colRef } from "../firebase-config";
 

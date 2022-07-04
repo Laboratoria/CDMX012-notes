@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import "../StyleModalTypeColection.css";
-
+import "../styles/StyleHelpersModals.css";
 import iconApunte from "../../Assets/icons/apunte.png";
 import iconWork from "../../Assets/icons/trabajo.png";
 import iconReminder from "../../Assets/icons/recordatorios.png";
@@ -14,17 +13,17 @@ export default function ModalTypeColection({
   note,
   setNote,
 }) {
-  if (openModal === true) {
+  if (openModal === "colections") {
     const ChangeColections = (selectColection) => {
       setColection(selectColection);
       setNote({ ...note, colection: selectColection });
-      setOpenModal(false);
+      setOpenModal(null);
     };
 
     return ReactDOM.createPortal(
       <>
         <div className="modal_Overlay" />
-        <section className="modalSelect_container">
+        <section className="modal_container">
           <div
             className="option"
             onClick={() => {

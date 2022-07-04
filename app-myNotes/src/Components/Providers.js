@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import iconGoogle from "../Assets/icons/logo-google.png";
 import iconApple from "../Assets/icons/logo-apple.png";
-import "./styleProviders.css";
+import "../Components/styles/styleProviders.css";
 import { auth, provider, LogInGoogle } from "../firebase-config";
 
 function Providers() {

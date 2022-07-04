@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { auth } from "../firebase-config";
-import { DateDay } from "../Components/Date";
+import { DateDay } from "../Components/Helpers.js/Date";
 import "./Home.css";
 import NotesContainer from "../Components/NotesContainer";
 import Colections from "../Components/Colections";
-import { BtnLogOut, BtnAddNote, BackToTop } from "../Components/Buttons";
+import { BtnLogOut, BtnAddNote, BackToTop } from "../Components/Helpers.js/Buttons";
 import logoN from "../Assets/logo/LogoN.png";
 import iconSearch from "../Assets/icons/lupa.png";
 import iconNote from "../Assets/icons/nota-adhesiva.png";

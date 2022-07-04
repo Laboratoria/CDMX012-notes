@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ReactDOM from "react-dom";
-import "../Components/styleModalNote.css";
-import iconBack from "../Assets/icons/flecha-izquierda.png";
-import iconEdit from "../Assets/icons/editar.png";
+import "../styles/styleModalNote.css";
+import iconBack from "../../Assets/icons/flecha-izquierda.png"
+import iconEdit from "../../Assets/icons/editar.png";
 
 export default function ModalNote({ currentNote, onClose }) {
   const navigate = useNavigate();

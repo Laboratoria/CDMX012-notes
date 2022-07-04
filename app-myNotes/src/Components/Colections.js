@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ListColection from "../Components/ListColection";
-import "../Components/styleColections.css";
+import "../Components/styles/styleColections.css";
 import iconApunte from "../Assets/icons/apunte.png";
 import iconWork from "../Assets/icons/trabajo.png";
 import iconReminder from "../Assets/icons/recordatorios.png";

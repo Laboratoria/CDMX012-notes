@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalTypeColection from "../Components/Helpers.js/ModalTypeColection";
+import ModalDelete from "../Components/Helpers.js/ModalDelete";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase-config";
-import { getDates, DateHour, DateDay } from "./Date";
-import "./styleImput.css";
-import "./styleActionNotes.css";
-import { BtnBack } from "../Components/Buttons";
-import { Icons } from "../Components/icons";
+import { getDates, DateHour, DateDay } from "./Helpers.js/Date";
+import "../Components/styles/styleImput.css";
+import "../Components/styles/styleActionNotes.css";
+import { BtnBack } from "../Components/Helpers.js/Buttons";
+import { Icons } from "./Helpers.js/icons";
 import iconSave from "../Assets/icons/guardar.png";
 import iconColection from "../Assets/icons/nota-adhesiva.png";
 import iconDeleteGray from "../Assets/icons/eliminarGray.png";
@@ -20,18 +21,18 @@ const InputNotes = (props) => {
   const navigate = useNavigate();
   ///// valores iniciales de la nota en blanco
   const initialValues = {
-    title: "",
+    title: "Titulo",
     note: "Nota",
     date: getDates,
     create: "Creación: " + DateHour,
     color: "gray",
-    colection: "Apuntes"
+    colection: "Apuntes",
   };
 
   /////setea el primer renderizado// ve si es nota nueva o a editar
   const [toCreateNewNote, setToCreateNewNote] = useState(true);
-  /////setea el primer renderizado// ve si es nota nueva o a editar
-  const [openModal, setOpenModal] = useState(false);
+  /////flag para abrir modal de select colection
+  const [openModal, setOpenModal] = useState(null);
   /////setea los valores a guardar
   const [note, setNote] = useState(initialValues);
   /////setea los valores de coleccion a guardar
@@ -65,12 +66,11 @@ const InputNotes = (props) => {
     props.saveArchive(note);
     navigate("/Home");
   };
-  
 
-  // boton borrar con funcion deletedNote
-  const handleDelete = (e) => {
-    console.log(Id);
-    props.deletedNote(Id);
+  // boton guardar en coleccion archivo con funcion saveArchive
+  const handleEditArchive = (e) => {
+    e.preventDefault();
+    props.editArchive(note, Id);
     navigate("/Home");
   };
 
@@ -96,10 +96,11 @@ const InputNotes = (props) => {
   useEffect(() => {
     getNoteToEdit();
   }, []);
+
   //Renderizado condicional si se va a crear o editar una nota
   return (
     <div className="input_container ">
-      {openModal === true && (
+      {openModal === "colections" && (
         <ModalTypeColection
           openModal={openModal}
           setOpenModal={setOpenModal}
@@ -108,6 +109,17 @@ const InputNotes = (props) => {
           setNote={setNote}
         />
       )}
+
+      {openModal === "delete" && (
+        <ModalDelete
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+          deletedNote={props.deletedNote}
+          moveToTrash={props.moveToTrash}
+          note={note}
+        />
+      )}
+
       <div className={`background_notes ${themeColor}`} />
 
       <div className="header_container">
@@ -117,15 +129,25 @@ const InputNotes = (props) => {
         <BtnBack />
       </div>
 
+      {note && (
       <form className="input_section">
         <div className="tittle">
-          <input
-            className="input_tittle"
-            name="title"
-            value={note.title}
-            placeholder="Título"
-            onChange={handleInputChange}
-          />
+          {toCreateNewNote === true ? (
+            <input
+              className="input_tittle"
+              name="title"
+              placeholder="Título"
+              onChange={handleInputChange}
+            />
+          ) : (
+            <input
+              className="input_tittle"
+              name="title"
+              value={note.title}
+              placeholder="Título"
+              onChange={handleInputChange}
+            />
+          )}
         </div>
 
         <div className="text_note">
@@ -146,7 +168,8 @@ const InputNotes = (props) => {
           )}
         </div>
       </form>
-
+    )}
+    
       <div className="current_note_date"> {DateDay} </div>
 
       <section className="action_content">
@@ -201,15 +224,27 @@ const InputNotes = (props) => {
 
           <div className="btn_actions">
             <img src={iconColection} alt="" className="note_icon" />
-            <button className="btn_action" onClick={() => setOpenModal(true)}>
+            <button
+              className="btn_action"
+              onClick={() => setOpenModal("colections")}
+            >
               {" "}
               Agregar a colección{" "}
             </button>
           </div>
 
-          <div className="btn_actions" >
+          <div className="btn_actions">
             <img src={iconArchive} alt="" className="note_icon" />
-            <button className="btn_action" onClick={handleArchive}> Archivar </button>
+
+            {toCreateNewNote === true ? (
+              <button className="btn_action" onClick={handleArchive}>
+                Archivar
+              </button>
+            ) : (
+              <button className="btn_action" onClick={handleEditArchive}>
+                Archivar
+              </button>
+            )}
           </div>
 
           {toCreateNewNote === true ? (
@@ -220,9 +255,12 @@ const InputNotes = (props) => {
           ) : (
             <div className="btn_actions">
               <img src={iconDelete} alt="" className="note_icon" />
-              <button className="btn_action" onClick={handleDelete}>
+              <button
+                className="btn_action"
+                onClick={() => setOpenModal("delete")}
+              >
                 {" "}
-                Eliminar{" "}
+                Eliminar
               </button>
             </div>
           )}

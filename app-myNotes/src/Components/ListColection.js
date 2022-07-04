@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NoteModal from "./NoteModal";
-import { Icons } from "../Components/icons";
-import "../Components/styleNotesContainer.css";
+import NoteModal from "../Components/Helpers.js/NoteModal";
+import { Icons } from "./Helpers.js/icons";
+import "../Components/styles/styleNotesContainer.css";
 import { query, orderBy, where, onSnapshot } from "firebase/firestore";
 import { colRef, archiveRef } from "../firebase-config";
 

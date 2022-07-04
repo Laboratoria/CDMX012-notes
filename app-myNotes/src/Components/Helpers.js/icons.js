@@ -1,8 +1,8 @@
-import iconApunte from "../Assets/icons/apunte.png";
-import iconWork from "../Assets/icons/trabajo.png";
-import iconReminder from "../Assets/icons/recordatorios.png";
-import iconIdeas from "../Assets/icons/idea.png";
-import iconArchive from "../Assets/icons/archivar.png";
+import iconApunte from "../../Assets/icons/apunte.png";
+import iconWork from "../../Assets/icons/trabajo.png";
+import iconReminder from "../../Assets/icons/recordatorios.png";
+import iconIdeas from "../../Assets/icons/idea.png";
+import iconArchive from "../../Assets/icons/archivar.png";
 
 export function Icons({colection}) {
 if(colection === "Apuntes")

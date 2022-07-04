@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { getFirestore, collection, addDoc, deleteDoc, doc, updateDoc} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-import { getDates, DateHour} from "./Components/Date";
+import { getDates, DateHour} from "./Components/Helpers.js/Date";
 export { signOut } from "firebase/auth";
 
 
@@ -80,16 +80,39 @@ export const saveArchive = async (newNotes) => {
     color: newNotes.color,
     colection: "Archivado"
   };
-
-
   await addDoc(archiveRef, Values);
   localStorage.clear();
 };
 
+export const editArchive = async (note, Id) => {
+  const noteToEdit = doc(db, 'archive', Id)
 
-
+  await updateDoc(noteToEdit, {
+    title: note.title,
+    note: note.note,
+    date: getDates,
+    modif: "Modificacion: " + DateHour,
+    color: note.color,
+    colection: note.colection,
+  })
+}
 
 export const deletedNote = async(Id) => {
   await deleteDoc(doc( colRef, Id));
   localStorage.clear();
 };
+
+
+export const moveToTrash = async (note, Id) => {
+  const noteToEdit = doc(db, 'archive', Id)
+
+  await updateDoc(noteToEdit, {
+    title: note.title,
+    note: note.note,
+    date: getDates,
+    modif: "Modificacion: " + DateHour,
+    color: note.color,
+    colection:  "Papelera",
+  })
+}
+
