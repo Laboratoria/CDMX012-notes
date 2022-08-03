@@ -22,13 +22,12 @@ export function BtnAddNote() {
     navigate("/CreateNote");
   }
   return (
-    <div className="btn_add_container">
+    <div className="btn_add_container" onClick={BtnAddNewNote}>
       <div className="btn_add">
         <img
           src={iconAdd}
           alt=""
           className="icon_add"
-          onClick={BtnAddNewNote}
         />
       </div>
     </div>

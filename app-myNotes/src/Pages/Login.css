@@ -8,11 +8,11 @@
 
 .login_container {
   flex-direction: column;
-  width: 60vw;
+  width: 70vw;
   height: 100vh;
   position: absolute;
   top: 5%;
-  left: 20vw;
+  left: 15vw;
 }
 
 .logo_mynotes {
@@ -60,7 +60,7 @@
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .login_container,
   .footer{
     display: flex;
@@ -119,4 +119,4 @@
     height: 3vh;
     margin-left: .5rem;
   }
-}
+} */

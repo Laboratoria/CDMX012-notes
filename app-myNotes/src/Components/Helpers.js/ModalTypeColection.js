@@ -23,7 +23,7 @@ export default function ModalTypeColection({
     return ReactDOM.createPortal(
       <>
         <div className="modal_Overlay" />
-        <section className="modal_container">
+        <section className="modal_helper_container">
           <div
             className="option"
             onClick={() => {

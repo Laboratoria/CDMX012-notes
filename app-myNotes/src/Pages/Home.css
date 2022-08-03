@@ -127,7 +127,7 @@ input[type=text] {
   font-family: 'Inter';
   font-style: bold;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-left: 1.5rem;
 }
 
@@ -166,19 +166,21 @@ main {
 }
 
 .btn_add_container{
-width: 6rem;
-height: 6rem;
-
+width: 20rem;
+height: 20rem;
+display: flex;
+justify-content: center;
 }
+
 .btn_add {
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 90%;
-  height: 90%;
-  position: relative;
-  bottom: 3vh;
+  width: 40%;
+  height: 40%;
+  margin-top: 2rem;
   background-color: aqua;
-  border: 6px solid #373737;
+  border: 10px solid #373737;
   border-radius: 50%;
 }
 
