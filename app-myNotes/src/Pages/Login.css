@@ -1,0 +1,122 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+.login_container,
+.footer{
+  display: flex;
+  align-items: center;
+}
+
+.login_container {
+  flex-direction: column;
+  width: 70vw;
+  height: 100vh;
+  position: absolute;
+  top: 5%;
+  left: 15vw;
+}
+
+.logo_mynotes {
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+}
+
+.slogan {
+  color: #6f6e6e;
+  font-family: 'Work Sans';
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.5vw;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+
+.welcome,
+.footer {
+  color: #00FFFF;
+  font-family: 'Inter';
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.welcome {
+  height:15% ;
+  font-size: 4vw;
+  padding-top: 2rem;
+}
+
+.footer {
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2.5vw;
+  position: absolute;
+  bottom: 10%;
+}
+
+.icon_log_react { 
+  width: auto;
+  height: 3vh;
+  margin-left: .5rem;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  .login_container,
+  .footer{
+    display: flex;
+    align-items: center;
+  }
+  
+  .login_container {
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 5%;
+    left: 25vw;
+  }
+  
+  .logo_mynotes {
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  .slogan {
+    color: #6f6e6e;
+    font-family: 'Work Sans';
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5vw;
+    letter-spacing: -0.02em;
+    margin-top: 1rem;
+  }
+  
+  .welcome,
+  .footer {
+    color: #00FFFF;
+    font-family: 'Inter';
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+  
+  .welcome {
+    height:15% ;
+    font-size: 4vw;
+    padding-top: 2rem;
+  }
+  
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2.5vw;
+    position: absolute;
+    bottom: 10%;
+  }
+  
+  .icon_log_react { 
+    width: auto;
+    height: 3vh;
+    margin-left: .5rem;
+  }
+} */

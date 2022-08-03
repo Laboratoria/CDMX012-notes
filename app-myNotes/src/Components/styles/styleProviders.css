@@ -1,0 +1,44 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+.providers_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+.btn_provider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  height: 30%;
+  border: 3px solid #00f7ff;
+  margin: .5rem 0;
+  border-radius: 12px;
+}
+
+.provider_icon {
+  position: relative;
+  width: auto;
+  height: 5vh;
+  margin-right: 1rem ;
+}
+
+.btn_send_prov{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 5vh;
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  outline: none;
+  border: none;
+  background-color: #23262F;
+} 
+

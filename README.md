@@ -1,584 +1,374 @@
-# Lab Notes
+- [Español](#-LabNotes-MyNotes)
+- [English](#-Lab-Notes-MyNotes)
+
+# <h1 align="center">LabNotes MyNotes </h1>
+
+![Show Mockups](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20CV/Projects/LabNotes.jpg)
+
+<p align="center">Despliegue del proyecto:</p>
+<p align="center">En proceso...</p>
+
+---
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del Proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Consideraciones técnicas](#6-consideraciones-técnicas)
-* [7. Hacker Edition](#7-hacker-edition)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+- [1. Resumen del proyecto](#1.-Resumen-del-proyecto)
+- [2. Tech Skills del Proyecto](#2.-Tech-Skills-del-Proyecto)
+- [3. Planeación](#3-Planeación)
+- [4. Investigación UX](#4.-Investigación-UX)
+- [5. Bocetaje + Prototipo + Feedback ](5.-Bocetaje-+-Prototipo-+-Feedback-de-iteración)
 
-***
+---
 
-## 1. Preámbulo
+<br></br>
 
-Hoy en día no es práctico imaginar el desarrollo web sin HTML, CSS y JavaScript,
-esta última es el alma del desarrollo de aplicaciones web.
-[React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
+## 1. Resumen del proyecto
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusar (lo cual es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc.
+- DESCRIPCIÓN
 
-Como desarrolladora front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
+En este proyecto se realizó una aplicación web para tomar notas, que nos permita crear, editar, eliminar y consultarlas en cualquier momento.
+No existe día que no tomemos notas, siempre necesitamos apuntar alguna dirección, número telefónico, notas de alguna reunión o guardar nuestras URLs favoritas para poder consultarlas más tarde. Muchas veces para esta actividad utilizamos libretas o agendas que terminan siendo olvidadas, o anotamos de manera dispersa de tal manera que perdemos de vista la prioridad y el propósito de la nota lo cual da como resultado una nota perdida.
 
-## 2. Resumen del Proyecto
+- RESUMEN TÉCNICO
 
-En este proyecto construiremos una aplicación para tomar notas, que nos permita
-crear, editar, eliminar y consultarlas en cualquier momento.
+Desarrollo de aplicación web, diseñada principalmente para tablet. Esta es una aplicación creada para la toma notas mediante CRUD, en la cual se pueden guardar, editar y eliminar. Ademas cuenta con la opcion de dar color a la nota , archivar, guardar en colección y mandar a papelera. Las notas se renderizan según el usuario que las crea.
 
-No existe día que no tomemos notas, siempre necesitamos apuntar alguna
-dirección, número telefónico, notas de alguna reunión o guardar nuestras URLs
-favoritas para poder consultarlas más tarde. Muchas veces para esta actividad
-utilizamos libretas o agendas que terminan siendo olvidadas, o anotamos de
-manera dispersa de tal manera que perdemos de vista la prioridad y el propósito
-de la nota lo cual da como resultado una nota perdida.
+El entorno de la aplicación se creó en base a patrones de diseño a manera de que sus componentes sean reutilizables y escalables, esto mediante renderizado condicional y una simulación de context llevado a cabo con singleton, En este proyecto realizamos pruebas de usabilidad mediante Maze para sus iteraciones y pruebas unitarias con react testing library así como pruebas manuales y uso de eslint para asegurar la calidad de desarrollo y control de versiones mediante Git.
 
-![Shows CRUD functionalities](https://raw.githubusercontent.com/florenciasilva/lab-notes/master/demo-crud.gif?token=AGJBHNTVAQRWOVF2IGMP6FK5NVFAS)
+<br></br>
 
-El objetivo principal de este proyecto es aprender a construir una _interfaz
-web_ usando el _framework_ elegido. Todos estos frameworks de Frontend atacan el
-mismo problema: **cómo mantener la interfaz y el estado sincronizados**. Así que
-esta experiencia espera familiarizarte con el concepto de _estado de pantalla_,
-y cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por
-ejemplo, cada vez que agregamos una _nota_, la interfaz debe actualizar la lista
-de notas).
+---
 
-## 3. Objetivos de Aprendizaje
+<br></br>
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+## 2. Tech Skills del Proyecto
 
-### HTML
+### HTML 5
 
-- [ ] **Uso de HTML semántico**
+- Semántico
 
-  <details><summary>Links</summary><p>
+### CSS 3
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+- Selectores de CSS
+- Box Model
+- Flexbox
+- Grid Layout
+- Media queries
 
-### CSS
+### Web APIs
 
-- [ ] **Uso de selectores de CSS**
+- Uso de selectores del DOM
+- Manejo de eventos del DOM
+- Manipulación dinámica del DOM
+- Ruteado
 
-  <details><summary>Links</summary><p>
+### JavaScript ES6 Vanilla
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
-
-- [ ] **Modelo de caja (box model): borde, margen, padding**
-
-  <details><summary>Links</summary><p>
-
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
-
-- [ ] **Uso de flexbox en CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
-
-- [ ] **Uso de CSS Grid Layout**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
-</p></details>
-
-- [ ] **Uso de media queries**
-
-  <details><summary>Links</summary><p>
-
-  * [CSS media queries - MDN](https://developer.mozilla.org/es/docs/CSS/Media_queries)
-</p></details>
-
-### JavaScript
-
-- [ ] **Arrays (arreglos)**
-
-  <details><summary>Links</summary><p>
-
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
-
-- [ ] **Objetos (key, value)**
-
-  <details><summary>Links</summary><p>
-
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
-
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Pruebas asíncronas**
-
-  <details><summary>Links</summary><p>
-
-  * [Tests de código asincrónico con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/asynchronous)
-</p></details>
-
-- [ ] **Uso de mocks y espías**
-
-  <details><summary>Links</summary><p>
-
-  * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-### user-centricity
-
-- [ ] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
-
-### product-design
-
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-- [ ] **Seguir los principios básicos de diseño visual**
-
-### Firebase
-
-- [ ] **Firebase Auth**
-
-  <details><summary>Links</summary><p>
-
-  * [Primeros pasos con Firebase Authentication en sitios web - Documentación oficial](https://firebase.google.com/docs/auth/web/start?hl=es)
-  * [Administra usuarios en Firebase (onAuthStateChanged)](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
-</p></details>
-
-- [ ] **Firestore**
-
-  <details><summary>Links</summary><p>
-
-  * [Firestore - Documentación oficial](https://firebase.google.com/docs/firestore?hl=es)
-  * [Reglas de seguridad de Firestore - Documentación oficial](https://firebase.google.com/docs/rules?hl=es)
-  * [Obtén actualizaciones en tiempo real con Cloud Firestore - Documentación oficial](https://firebase.google.com/docs/firestore/query-data/listen?hl=es)
-</p></details>
-
-### Angular
-
-- [ ] **Components & templates**
-
-  <details><summary>Links</summary><p>
-
-  * [Angular Components Overview - Documentación oficial (en inglés)](https://angular.io/guide/component-overview)
-  * [Introduction to components and templates - Documentación oficial (en inglés)](https://angular.io/guide/architecture-components#introduction-to-components)
-</p></details>
-
-- [ ] **Directivas estructurales (ngIf / ngFor)**
-
-  <details><summary>Links</summary><p>
-
-  * [Writing structural directives - Documentación oficial (en inglés)](https://angular.io/guide/structural-directives)
-</p></details>
-
-- [ ] **@Input | @Ouput**
-
-  <details><summary>Links</summary><p>
-
-  * [Component interaction - Documentación oficial (en inglés)](https://angular.io/guide/component-interaction#component-interaction)
-</p></details>
-
-- [ ] **Creación y uso de servicios**
-
-  <details><summary>Links</summary><p>
-
-  * [Providing services - Documentación oficial (en inglés)](https://angular.io/guide/architecture-services#providing-services)
-</p></details>
-
-- [ ] **Manejo de rutas**
-
-  <details><summary>Links</summary><p>
-
-  * [In-app navigation: routing to views - Documentación oficial (en inglés)](https://angular.io/guide/router)
-</p></details>
-
-- [ ] **Creación y uso Observables.**
-
-  <details><summary>Links</summary><p>
-
-  * [Observables in Angular - Documentación oficial (en inglés)](https://angular.io/guide/observables-in-angular)
-</p></details>
-
-- [ ] **Uso de HttpClient**
-
-  <details><summary>Links</summary><p>
-
-  * [Communicating with backend services using HTTP - Documentación oficial (en inglés)](https://angular.io/guide/http)
-</p></details>
-
-- [ ] **Estilos de componentes (ngStyle / ngClass)**
-
-  <details><summary>Links</summary><p>
-
-  * [Template syntax - Documentación oficial (en inglés)](https://angular.io/guide/template-syntax#built-in-directives)
-</p></details>
+- Datos primitivos
+- Strings
+- Variables
+- Funciones
+- Condicionales
+- Bucles/ciclos
+- Arrays
+- Objetos
+- Callbacks
+- Promesas
+- Módulos de ECMAScript.
+- Uso de linter (ESLINT)
 
 ### React
 
-- [ ] **JSX**
+- JSX
+- Componentes y propiedades (props)
+- Manejo de eventos
+- Listas y keys
+- Renderizado condicional
+- Elevación de estado
+- Hooks
+- React Router
 
-  <details><summary>Links</summary><p>
+### Firebase
 
-  * [Presentando JSX - Documentación oficial](https://es.reactjs.org/docs/introducing-jsx.html)
-</p></details>
+- Firebase Auth
+- Firestore
 
-- [ ] **Componentes y propiedades (props)**
+### Control de versiones Git- Github
 
-  <details><summary>Links</summary><p>
+- Git: Init, clone, add, commit, status, push, pull, remote, checkout
+- GitHub: Despliegue con Netlify.
 
-  * [Componentes y propiedades - Documentación oficial](https://es.reactjs.org/docs/components-and-props.html)
-</p></details>
+### User-centricity
 
-- [ ] **Manejo de eventos**
+- Diseñar un producto o servicio poniendo a la usuaria en el centro
 
-  <details><summary>Links</summary><p>
+### Product-design
 
-  * [Manejando eventos - Documentación oficial](https://es.reactjs.org/docs/handling-events.html)
-</p></details>
+- Crear prototipos de alta fidelidad que incluyan interacciones
+- Seguir los principios básicos de diseño visual
 
-- [ ] **Listas y keys**
+### Research
 
-  <details><summary>Links</summary><p>
+- Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad (Maze)
 
-  * [Listas y keys - Documentación oficial](https://es.reactjs.org/docs/lists-and-keys.html)
-</p></details>
+<br></br>
 
-- [ ] **Renderizado condicional**
+---
 
-  <details><summary>Links</summary><p>
+<br></br>
 
-  * [Renderizado condicional - Documentación oficial](https://es.reactjs.org/docs/conditional-rendering.html)
-</p></details>
+## 3. Planeación
 
-- [ ] **Elevación de estado**
+Este proyecto se realizó con metodologías agiles SCRUM en 4 sprints de 1 semana en la cual se trabajaron historias de usuario.
 
-  <details><summary>Links</summary><p>
+Puedes ver la planeación [aquí](https://github.com/users/AnnaLizarraga/projects/1/views/2)
 
-  * [Levantando el estado - Documentación oficial](https://es.reactjs.org/docs/lifting-state-up.html)
-</p></details>
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/HU-1.png)
 
-- [ ] **Hooks**
+<p align="center"> Fig 1. Historia de usuario 1 </p>
 
-  <details><summary>Links</summary><p>
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/HU-2.png)
 
-  * [Presentando Hooks - Documentación oficial](https://es.reactjs.org/docs/hooks-intro.html)
-</p></details>
+<p align="center"> Fig 2. Historia de usuario 2 </p>
 
-- [ ] **CSS modules**
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/HU-3.png)
 
-  <details><summary>Links</summary><p>
+<p align="center"> Fig 3. Historia de usuario 3 </p>
 
-  * [Adding a CSS Modules Stylesheet - Documentación de Create React App (en inglés)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
-</p></details>
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/HU-4.png)
 
-- [ ] **React Router**
+<p align="center"> Fig 4. Historia de usuario 4 </p>
 
-  <details><summary>Links</summary><p>
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/HU-5.png)
 
-  * [Quick Start - Documentación oficial (en inglés)](https://reactrouter.com/web/guides/quick-start)
-</p></details>
+<p align="center"> Fig 5. Historia de usuario 5 </p>
 
-### Vue
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/4425c5292b88b8255bdcc206dc4d04c9a4c05c4b/Assets%20%20myNotes/HU6.png)
 
-- [ ] **Instancia de Vue.js**
+<p align="center"> Fig 6. Historia de usuario 6 </p>
 
-  <details><summary>Links</summary><p>
+---
 
-  * [La instancia Vue - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html)
-</p></details>
+<br></br>
 
-- [ ] **Datos y métodos**
+## 4. Investigación UX
 
-  <details><summary>Links</summary><p>
+- ¿Quiénes son los usuarios de este producto?
 
-  * [Datos y Métodos - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-</p></details>
+Los usuarios de esta herramienta son principalmente jóvenes – adultos que tienen cierta predilección a olvidar cosas, por ello requieren de herramientas para tomar apuntes o hacer recordatorios de sus ideas, actividades, etc.
 
-- [ ] **Uso y creación de componentes**
+- ¿Cómo soluciona los problemas de los usuarios este producto?
 
-  <details><summary>Links</summary><p>
+MyNotes es una herramienta que cubre estas necesidades de crear recordatorios o un espacio para plasmar sus ideas, además de ser intuitiva y te da la opción de crear colecciones según el tipo de nota que se va a crear para tener dichas notas mas organizadas.
 
-  * [Conceptos Básicos de Componentes - Documentación oficial](https://es.vuejs.org/v2/guide/components.html)
-</p></details>
+<br></br>
 
-- [ ] **Props**
+---
 
-  <details><summary>Links</summary><p>
+<br></br>
 
-  * [Pasando datos a componentes secundarios con Props - Documentación oficial](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-</p></details>
+## 5. Prototipos + Feedback de iteración
 
-- [ ] **Directivas (v-bind | v-model)**
+- Resumen del feedback
 
-  <details><summary>Links</summary><p>
+Se realizaron diferentes pruebas de usabilidad a través de la plataforma de maze para poder corroborar que la aplicación estaba siendo intuitiva y amigable con los usuarios. Se observaron puntos de mejora en la adaptabilidad al usuario con cada una de ellas.
 
-  * [v-bind - Documentación oficial](https://es.vuejs.org/v2/api/#v-bind)
-  * [Binding en Formularios - Documentación oficial](https://es.vuejs.org/v2/guide/forms.html)
-</p></details>
+<br></br>
 
-- [ ] **Iteración (v-for)**
+![Shows VIiews](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/prototipo%20baja%20fidelidad.png)
 
-  <details><summary>Links</summary><p>
+<p align="center"> Fig 1. Prototipo baja fidelidad </p>
 
-  * [Mapeando una matriz a elementos con v-for - Documentación oficial](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for)
-</p></details>
+![Shows VIiews](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/prototipo%20alta%20fidelidad.png)
 
-- [ ] **Eventos (v-on)**
+<p align="center"> Fig 1. Prototipo alta fidelidad </p>
 
-  <details><summary>Links</summary><p>
+## <br></br>
 
-  * [Manejo de eventos - Documentación oficial](https://es.vuejs.org/v2/guide/events.html)
-</p></details>
+# <h1 align="center">Lab Notes MyNotes </h1>
 
-- [ ] **Propiedades Computadas y Observadores**
+![Show Mockups](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20CV/Projects/LabNotes.jpg)
 
-  <details><summary>Links</summary><p>
+<p align="center">Project Deploy:</p>
+<p align="center">In process...</p>
 
-  * [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-</p></details>
+---
 
-- [ ] **Routing**
+## Index
 
-  <details><summary>Links</summary><p>
+- [1. Summary of the project](#1.-Summary-of-the-project)
+- [2. Technical project skills](#2.-Project-Tech-Skills)
+- [3. Planning](#3.-Planning)
+- [4. UX Research](#4.-UX-Research)
+- [5. Sketches + Prototypes + Feedback](#5-Sketching-+-Prototyping-+-Iteration-Feedback)
 
-  * [Getting Started - Documentación oficial de Vue Router](https://router.vuejs.org/guide/#html)
-</p></details>
+---
 
-- [ ] **Clases y Estilos**
+<br></br>
 
-  <details><summary>Links</summary><p>
+## 1. Summary of the project
 
-  * [Enlace Clases y Estilos - Documentación oficial](https://es.vuejs.org/v2/guide/class-and-style.html)
-</p></details>
+- DESCRIPTION
 
-## 4. Consideraciones generales
+In this project we made a web application to take notes, which allows us to create, edit, delete and consult them at any time.
+There is no day that we do not take notes, we always need to write down an address, phone number, notes of a meeting or save our favorite URLs for later reference. Many times for this activity we use notebooks or agendas that end up being forgotten, or we write down in a scattered way in such a way that we lose sight of the priority and purpose of the note which results in a lost note.
 
-* Este proyecto se debe "resolver" de forma individual.
+- TECHNICAL SUMMARY
 
-* La duración estimada del proyecto es de 4 sprints, con una duración de una
-  semana cada uno.
+Web application development, designed primarily for tablet. This is an application created for taking notes using CRUD, in which you can save, edit and delete. It also has the option to give color to the note, archive, save to collection and send to trash. The notes are rendered according to the user who creates them.
 
-* Trabaja en una historia hasta terminarla antes de pasar a la siguiente.
+The application environment was created based on design patterns so that its components are reusable and scalable, this through conditional rendering and a context simulation carried out with singleton. In this project we performed usability tests using Maze for its iterations and unit tests with react testing library as well as manual tests and use of eslint to ensure the quality of development and version control through Git.
 
-* La aplicación debe ser un _Single Page App_. Las notas serán realizadas desde
-una _tablet_, pero **no debe ser una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
+<br></br>
 
-* Necesitamos pensar bien en el aspecto UX de quienes van a tomar las notas, el
-tamaño y aspecto de los botones, la visibilidad del estado actual del pedido,
-etc.
+---
 
-* Implementar pruebas unitarias de tus componentes.
+<br></br>
 
-## 5. Criterios de aceptación mínimos del proyecto
+## 2. Tech Skills del Proyecto
 
-### Definición del producto
+### HTML 5
 
-La [_Product Owner_](https://youtu.be/r2hU7MVIzxs) nos presenta este _backlog_
-que es el resultado de su trabajo colaborativo.
+- Semantics
 
-***
+### CSS 3
 
-### Historias de usuaria
+- CSS Selectors
+- Box Model
+- Flexbox
+- Grid Layout
+- Media queries
 
-#### [Historia de usuaria 1] Debería poder crear cuenta, iniciar y cerrar sesión
+### Web APIs
 
-Yo como usuaria debo poder crear una cuenta y autenticarme usando login de
-Google para acceder a mis notas.
+- Using DOM selectors
+- DOM Event Handling
+- Dynamic DOM Manipulation
+- Routing
 
-***
+### JavaScript ES6 Vanilla
 
-#### [Historia de usuaria 2] Debería poder tomar nota
+- Primitive data
+- Strings
+- Variables
+- Functions
+- Conditionals
+- Loops/cycles
+- Arrays
+- Objects
+- Callbacks
+- Promises
+- ECMAScript modules.
+- Use of linter (ESLINT)
 
-Yo como usuaria quiero tomar nota para no depender de mi mala
-memoria y tener presente en todo momento los apuntes ó cosas importantes que
-antes escribía en papel.
+### React
 
-***
+- JSX
+- Components and properties (props)
+- Event handling
+- Lists and keys
+- Conditional rendering
+- State elevation
+- Hooks
+- React Router
 
-#### [Historia de usuaria 3] Debería poder ver las notas
+### Firebase
 
-Yo como usuaria quiero leer mis notas para recordar lo que escribí
-antes.
+- Firebase Auth
+- Firestore
 
-***
+### Git- Github version control
 
-#### [Historia de usuaria 4] Debería poder editar las notas
+- Git: Version control with git (init, clone, add, commit, status, push, pull, remote)
+- GitHub: Deployment with Netlify.
 
-Yo como usuaria quiero editar notas para poder modificar lo que
-escribí antes.
+### User-centricity
 
-***
+- Designing a product or service with the user at the center.
 
-#### [Historia de usuaria 5] Debería poder borrar notas
+### Product-design
 
-Yo como usuaria quiero borrar una nota para no volver a verla.
+- Create high-fidelity prototypes that include interactions.
+- Follow basic visual design principles
 
-***
+### Research
 
-##### Criterios de aceptación
+- Plan and execute usability testing of prototypes at different levels of fidelity (Maze)
 
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario
+<br></br>
 
-* Anotar un título a mi nota
-* Agregar el contenido de mi nota.
-* Ver todas mis notas.
-* Ver la última modificación de la nota.
-* Modificar las notas.
-* Eliminar notas.
-* Se ve y funciona bien en una _Tablet_
+---
 
-##### Definición de terminado
+<br> </br>
 
-Lo acordado que debe ocurrir para decir que la historia está terminada.
+## 3. Planning
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Desplegaste tu aplicación y has etiquetado tu versión ([`git tag`](https://youtu.be/5DkX3HFgklM)).
+This project was carried out with SCRUM agile methodologies in 4 sprints of 1 week in which user stories were worked.
 
-## 6. Consideraciones técnicas
+You can see the planning [here](https://github.com/users/AnnaLizarraga/projects/1/views/2)
 
-El proyecto deberá contener los siguientes archivos base de configuración,
-aunque no serán los únicos archivos que quizás tendrás que crear.
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-1.png)
 
-* `README.md` es donde se encontrará la descripción del proyecto y elementos
-  relevantes de tu proyecto.
-* `.editorconfig` este archivo contiene la configuración para editores de texto.
-* `.gitignore`  este archivo contiene reglas para ignorar `node_modules` u otras
-  carpetas que no deban incluirse en control de versiones (`git`).
-* `.eslintrc` este archivo contiene reglas para formatear el código además de
-  ser una buena practica tener configurado un linter.
+<p align="center"> Fig 1. User story 1 </p>
 
-Para este proyecto necesitas crear una Web App con **una librería o
-framework de JavaScript** (`React`, `Angular` o `Vue`) y **Firebase**.
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-2.png)
 
-Para este proyecto tendrás que manejar _vistas_. Esto significa que cada sección
-tendrá su propia URL, la cual indica que _vista_ o _componente_ será mostrado en
-pantalla. Para ello necesitaremos investigar acerca de _la API para el manejo de
-rutas (en la librería o framework que elijas)_ y el concepto de _Single Page
-Application_.
+<p align="center"> Fig 2. User story 2 </p>
 
-## 7. Hacker Edition
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-3.png)
 
-Una vez que hayas terminado las funcionalidades base del proyecto, puedes
-pasarte a esta sección.
+<p align="center"> Fig 3.User story 3 </p>
 
-* Si la usuaria empieza a escribir una nota y por alguna razón la pestaña del
-  navegador se cierra, cuando la vuelva a abrir, la nota debería mostrarse como
-  estaba.
-* Subir imágenes.
-* Ver el número de veces que he editado mi nota.
-* Consumo de API/s (Google Maps, Spotify, Pinterest, etc.)
-* Progressive Web App (PWA).
-* Puedes crear categorías y clasificar por tipo de nota.
-* Guardar el color de la nota.
-* Crear una nota como publica.
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-4.png)
 
-## 8. Pistas, tips y lecturas complementarias
+<p align="center"> Fig 4. User story 4 </p>
 
-### Frameworks / libraries
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-5.png)
 
-* [React](https://reactjs.org/)
-* [Angular](https://angular.io/)
-* [Vue](https://es.vuejs.org/index.html)
+<p align="center"> Fig 5. User story 5 </p>
 
-### Herramientas
+![Shows User stories](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/US-6.png)
 
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
+<p align="center"> Fig 6. User story 6 </p>
 
-### PWA
+---
 
-* [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [offlinefirst.org](http://offlinefirst.org/)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
+<br></br>
 
-### Otros recursos
+## 4. UX Research
 
-* [create-react-app](https://create-react-app.dev/docs/getting-started)
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [deploy con gh-pages](https://medium.com/the-andela-way/how-to-deploy-your-react-application-to-github-pages-in-less-than-5-minutes-8c5f665a2d2a)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [What is a Single Page Application](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58)
+- Who are the users of this product?
+
+The users of this tool are mainly young people - adults who have a certain predilection for forgetting things, so they require tools to take notes or make reminders of their ideas, activities, etc.
+
+- How does this product solve user's problems?
+
+MyNotes is a tool that covers these needs to create reminders or a space to capture your ideas, besides being intuitive and gives you the option to create collections according to the type of note to be created to have these notes more organized.
+
+<br> </br>
+
+---
+
+<br></br>
+
+## 5. Sketching + Prototyping + Iteration Feedback
+
+- Summary of feedback
+
+Different usability tests were performed through the maze platform in order to corroborate that the application was being intuitive and user friendly. Points of improvement in user adaptability were observed with each one of them.
+
+<br></br>
+
+![Shows VIiews](https://raw.githubusercontent.com/AnnaLizarraga/Assets/main/Assets%20%20myNotes/prototype%20low.png)
+
+<p align="center"> Fig 1. Low fidelity prototype </p>
+
+---
+
+<br> </br>
+
+![Shows VIiews](https://github.com/AnnaLizarraga/Assets/blob/main/Assets%20%20myNotes/protoype%20high.png?raw=true)
+
+<p align="center"> Fig 1. High fidelity prototype </p>
+
+---

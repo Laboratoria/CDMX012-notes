@@ -1,0 +1,92 @@
+.background_notes {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  background-color: #343846;
+  z-index: -1;
+}
+
+.input_section {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8%;
+  left: 10%;
+}
+
+.tittle {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 1rem;
+}
+
+.input_tittle {
+  width: 96%;
+  height: 80%;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+}
+
+input {
+  width: 80%;
+  height: 20%;
+  color: #ffffff;
+  padding-left: 1.5rem;
+  font-family: 'Inter';
+  text-align: left;
+  font-weight: 700;
+  font-size: 4vh;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  background-color: rgb(255 255 255 / 0%);
+}
+
+.input_tittle::placeholder,
+textarea::placeholder {
+  color: #dcdcdc;
+}
+
+
+.text_note {
+  width: 100%;
+  height: 75%;
+  border-radius: 30px;
+  border-color: #ffffff;
+  border-width: 3px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+textarea {
+  width: 90%;
+  height: 90%;
+  color: #ffff;
+  margin: 0;
+  font-family: 'Inter';
+  text-align: left;
+  font-weight: 400;
+  font-size: 3vh;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  background-color: rgb(255 255 255 / 0%);
+}
+
+
+.current_note_date {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 59%;
+  font-family: 'Inter';
+  font-size: 2vh;
+  display: flex;
+  justify-content: center;
+}
+

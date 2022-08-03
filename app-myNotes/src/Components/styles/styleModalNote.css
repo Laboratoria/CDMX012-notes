@@ -1,0 +1,94 @@
+.modal_Overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.79);
+  z-index: 1000;
+  display: block;
+}
+
+.modal_container {
+  position: fixed;
+  width: 90%;
+  height: 60%;
+  left: 5%;
+  top: 20%;
+  background: #343846;
+  border-radius: 35px;
+  z-index: 1000;
+}
+
+.iconModal_back {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+  right: 3%;
+  top: 2%;
+  z-index: 10000;
+}
+
+
+.modal_tittle {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 15%;
+  font-size: 3rem;
+  padding-left: 10%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.modal_note {
+  position: absolute;
+  top: 15%;
+  width: 80%;
+  height: 70%;
+  font-size: 2rem;
+  padding-left: 10%;
+  text-align: left;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.line_modal {
+  width: 95%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 2.5%;
+  top: 87%;
+}
+
+
+.date_modal_container {
+  position: absolute;
+  top: 87%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 1rem;
+
+}
+
+.iconModal_edit {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+  right: 3%;
+  top: 78%;
+  z-index: 10000;
+}
